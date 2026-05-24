@@ -11,8 +11,8 @@ import { Button } from "@/components/ui/button"
 const navLinks = [
   { section: "inicio", label: "Inicio", isPage: false },
   { section: "nosotros", label: "Nosotros", isPage: true },
-  { section: "servicios", label: "Servicios", isPage: false },
-  { section: "blog", label: "Blog", isPage: false },
+  { section: "servicios", label: "Servicios", isPage: true },
+  { section: "blog", label: "Blog", isPage: true },
   { section: "contacto", label: "Contacto", isPage: false },
 ]
 
