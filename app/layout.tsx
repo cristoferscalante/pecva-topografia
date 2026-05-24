@@ -1,45 +1,61 @@
-import type { Metadata } from 'next'
-import { Inter, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
-
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-const geistMono = Geist_Mono({ 
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-})
+import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
+import { Footer } from "@/components/footer"
+import { Navbar } from "@/components/navbar"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import "./globals.css"
+import { getSiteUrl, siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
-  title: 'TopoExpert | Servicios de Topografía Profesional en Colombia',
-  description: 'Servicios de topografía profesional: levantamientos planimétricos, altimétricos, desenglobes, fotogrametría con drones, batimetría y georreferenciación MAGNA-SIRGAS. +15 años de experiencia.',
-  keywords: 'topografía, levantamiento topográfico, desengloble, engloble, fotogrametría, drones, batimetría, georreferenciación, MAGNA-SIRGAS, Colombia',
-  generator: 'v0.app',
+  metadataBase: new URL(getSiteUrl()),
+  applicationName: siteConfig.legalName,
+  title: {
+    default: `${siteConfig.name} | Servicios de topografia en Colombia`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  category: "engineering",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: 'TopoExpert | Servicios de Topografía Profesional',
-    description: 'Levantamientos topográficos, fotogrametría con drones, batimetría y más. Precisión profesional para sus proyectos.',
-    type: 'website',
-    locale: 'es_CO',
+    title: `${siteConfig.name} | Servicios de topografia en Colombia`,
+    description: siteConfig.description,
+    type: "website",
+    locale: "es_CO",
+    siteName: siteConfig.legalName,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Topografia profesional`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Servicios de topografia`,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
       },
       {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: "/icon.svg",
+        type: "image/svg+xml",
       },
     ],
-    apple: '/apple-icon.png',
+    apple: "/apple-icon.png",
   },
 }
 
@@ -49,10 +65,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${geistMono.variable} bg-background`}>
+    <html lang="es" className="bg-background">
       <body className="font-sans antialiased">
+        <Navbar />
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        <Footer />
+        <WhatsAppButton />
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )

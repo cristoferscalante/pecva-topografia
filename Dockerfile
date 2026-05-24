@@ -4,7 +4,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 FROM base AS deps
 COPY package.json pnpm-lock.yaml ./
-RUN corepack enable && pnpm install --frozen-lockfile
+RUN corepack enable && pnpm install --frozen-lockfile --ignore-scripts
 
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules

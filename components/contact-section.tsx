@@ -1,45 +1,39 @@
 "use client"
 
+import { FormEvent, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send,
-  MessageCircle,
-  CheckCircle
-} from "lucide-react"
+import { CheckCircle, Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ContourBackground } from "@/components/contour-background"
+import { buildMailtoUrl, buildWhatsAppUrl, siteConfig } from "@/lib/site-config"
+import { servicesData } from "@/lib/services-data"
 
 const contactInfo = [
   {
     icon: Phone,
-    label: "Teléfono",
-    value: "+57 300 123 4567",
-    href: "tel:+573001234567",
+    label: "Telefono",
+    value: siteConfig.phoneDisplay,
+    href: siteConfig.phoneHref,
   },
   {
     icon: Mail,
     label: "Email",
-    value: "contacto@avtopografia.co",
-    href: "mailto:contacto@avtopografia.co",
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
   },
   {
     icon: MapPin,
-    label: "Ubicación",
-    value: "Bogotá, Colombia",
-    href: "#",
+    label: "Ubicacion",
+    value: "Bogota, Colombia",
+    href: "/#contacto",
   },
   {
     icon: Clock,
     label: "Horario",
     value: "Lun - Vie: 8am - 6pm",
-    href: "#",
+    href: "/#contacto",
   },
-]
+] as const
 
 const inputVariants = {
   focus: {
@@ -48,54 +42,111 @@ const inputVariants = {
   },
 }
 
+type ContactFormState = {
+  name: string
+  phone: string
+  email: string
+  service: string
+  message: string
+}
+
+const initialFormState: ContactFormState = {
+  name: "",
+  phone: "",
+  email: "",
+  service: "",
+  message: "",
+}
+
 export function ContactSection() {
   const headerRef = useRef(null)
   const isInView = useInView(headerRef, { once: true })
   const [focusedField, setFocusedField] = useState<string | null>(null)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [formData, setFormData] = useState<ContactFormState>(initialFormState)
+
+  const selectedService = servicesData.find((service) => service.slug === formData.service)
+
+  function updateField(field: keyof ContactFormState, value: string) {
+    setFormData((current) => ({
+      ...current,
+      [field]: value,
+    }))
+  }
+
+  function buildLeadMessage() {
+    return [
+      "Hola, quiero solicitar informacion sobre un servicio de topografia.",
+      `Nombre: ${formData.name}`,
+      `Telefono: ${formData.phone}`,
+      `Correo: ${formData.email}`,
+      `Servicio: ${selectedService?.title || "No especificado"}`,
+      `Proyecto: ${formData.message}`,
+    ].join("\n")
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const message = buildLeadMessage()
+    const whatsappWindow = window.open(
+      buildWhatsAppUrl(message),
+      "_blank",
+      "noopener,noreferrer"
+    )
+
+    if (!whatsappWindow) {
+      window.location.href = buildMailtoUrl("Solicitud de cotizacion", message)
+    }
+  }
 
   return (
-    <section id="contacto" className="relative py-24 bg-muted/30 overflow-hidden">
+    <section id="contacto" className="relative overflow-hidden bg-muted/30 py-24">
       <ContourBackground variant="subtle" />
-      
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Left Column - Info */}
+
+      <div className="container relative z-10 mx-auto px-4 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div ref={headerRef}>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
-              className="inline-block px-4 py-1.5 mb-4 text-sm font-medium rounded-full bg-secondary/10 text-secondary border border-secondary/20"
+              className="mb-4 inline-block rounded-full border border-secondary/20 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary"
             >
-              Contáctenos
+              Contactenos
             </motion.span>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance"
+              className="mb-6 text-3xl font-bold text-foreground text-balance md:text-4xl"
             >
-              ¿Listo para iniciar su{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">proyecto</span>?
+              Listo para iniciar su{" "}
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                proyecto
+              </span>
+              ?
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-muted-foreground mb-8 leading-relaxed"
+              className="mb-8 text-lg leading-relaxed text-muted-foreground"
             >
-              Nuestro equipo de expertos está listo para ayudarle con sus necesidades topográficas. 
-              Contáctenos hoy para una cotización gratuita.
+              Nuestro equipo esta listo para ayudarte con tus necesidades topograficas. Cada
+              solicitud sale con una estructura mas clara para responder mejor.
             </motion.p>
 
-            {/* Contact Info Grid */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="mb-8 grid gap-4 sm:grid-cols-2">
               {contactInfo.map((item, index) => (
                 <motion.a
-                  key={index}
+                  key={item.label}
                   href={item.href}
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -103,25 +154,25 @@ export function ContactSection() {
                   onHoverStart={() => setHoveredCard(index)}
                   onHoverEnd={() => setHoveredCard(null)}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border relative overflow-hidden"
+                  className="relative flex items-center gap-4 overflow-hidden rounded-xl border border-border bg-card p-4"
                 >
-                  {/* Background glow */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: hoveredCard === index ? 1 : 0 }}
                     transition={{ duration: 0.3 }}
                   />
-                  
-                  <motion.div 
-                    className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center relative z-10"
-                    animate={{ 
-                      backgroundColor: hoveredCard === index ? "var(--secondary)" : "var(--secondary-alpha-10)",
-                      scale: hoveredCard === index ? 1.1 : 1,
-                    }}
+
+                  <motion.div
+                    className="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10"
+                    animate={{ scale: hoveredCard === index ? 1.1 : 1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <item.icon className={`w-5 h-5 transition-colors duration-300 ${hoveredCard === index ? "text-secondary-foreground" : "text-secondary"}`} />
+                    <item.icon
+                      className={`h-5 w-5 transition-colors duration-300 ${
+                        hoveredCard === index ? "text-primary" : "text-secondary"
+                      }`}
+                    />
                   </motion.div>
                   <div className="relative z-10">
                     <p className="text-sm text-muted-foreground">{item.label}</p>
@@ -131,7 +182,6 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* WhatsApp CTA */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -140,11 +190,11 @@ export function ContactSection() {
               <Button
                 asChild
                 size="lg"
-                className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20BD5A] text-white relative overflow-hidden group"
+                className="group relative w-full overflow-hidden bg-[#25D366] text-white hover:bg-[#20BD5A] sm:w-auto"
               >
-                <a 
-                  href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20de%20topografía" 
-                  target="_blank" 
+                <a
+                  href={siteConfig.whatsappHref}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
@@ -152,12 +202,11 @@ export function ContactSection() {
                     animate={{ rotate: [0, 15, -15, 0] }}
                     transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
                   >
-                    <MessageCircle className="w-5 h-5" />
+                    <MessageCircle className="h-5 w-5" />
                   </motion.div>
-                  Escríbenos por WhatsApp
-                  
-                  {/* Shine effect */}
-                  <motion.span 
+                  Escribenos por WhatsApp
+
+                  <motion.span
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: "100%" }}
@@ -168,146 +217,154 @@ export function ContactSection() {
             </motion.div>
           </div>
 
-          {/* Right Column - Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           >
-            <form className="p-8 rounded-2xl bg-card border border-border shadow-xl relative overflow-hidden">
-              {/* Decorative corner */}
-              <motion.div 
-                className="absolute -top-20 -right-20 w-40 h-40 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10"
-                animate={{ 
+            <form
+              onSubmit={handleSubmit}
+              className="relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-xl"
+            >
+              <motion.div
+                className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-gradient-to-br from-primary/10 to-secondary/10"
+                animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 90, 0],
                 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
               />
-              
-              <h3 className="text-xl font-semibold text-foreground mb-6 relative z-10">
-                Solicite una cotización
+
+              <h3 className="relative z-10 mb-6 text-xl font-semibold text-foreground">
+                Solicite una cotizacion
               </h3>
-              
-              <div className="space-y-5 relative z-10">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <motion.div
-                    animate={focusedField === "name" ? "focus" : ""}
-                    variants={inputVariants}
-                  >
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+
+              <div className="relative z-10 space-y-5">
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <motion.div animate={focusedField === "name" ? "focus" : ""} variants={inputVariants}>
+                    <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
                       Nombre completo
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={(event) => updateField("name", event.target.value)}
                       onFocus={() => setFocusedField("name")}
                       onBlur={() => setFocusedField(null)}
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      required
+                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                       placeholder="Su nombre"
                     />
                   </motion.div>
-                  <motion.div
-                    animate={focusedField === "phone" ? "focus" : ""}
-                    variants={inputVariants}
-                  >
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Teléfono
+
+                  <motion.div animate={focusedField === "phone" ? "focus" : ""} variants={inputVariants}>
+                    <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
+                      Telefono
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={(event) => updateField("phone", event.target.value)}
                       onFocus={() => setFocusedField("phone")}
                       onBlur={() => setFocusedField(null)}
-                      className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      required
+                      className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                       placeholder="+57 300 000 0000"
                     />
                   </motion.div>
                 </div>
-                
-                <motion.div
-                  animate={focusedField === "email" ? "focus" : ""}
-                  variants={inputVariants}
-                >
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Correo electrónico
+
+                <motion.div animate={focusedField === "email" ? "focus" : ""} variants={inputVariants}>
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
+                    Correo electronico
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={(event) => updateField("email", event.target.value)}
                     onFocus={() => setFocusedField("email")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                    required
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
                     placeholder="correo@ejemplo.com"
                   />
                 </motion.div>
-                
-                <motion.div
-                  animate={focusedField === "service" ? "focus" : ""}
-                  variants={inputVariants}
-                >
-                  <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                    Servicio de interés
+
+                <motion.div animate={focusedField === "service" ? "focus" : ""} variants={inputVariants}>
+                  <label htmlFor="service" className="mb-2 block text-sm font-medium text-foreground">
+                    Servicio de interes
                   </label>
                   <select
                     id="service"
                     name="service"
+                    value={formData.service}
+                    onChange={(event) => updateField("service", event.target.value)}
                     onFocus={() => setFocusedField("service")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-foreground"
+                    required
+                    className="w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary/20"
                   >
                     <option value="">Seleccione un servicio</option>
-                    <option value="levantamiento">Levantamiento Planimétrico y Altimétrico</option>
-                    <option value="desengloble">Desenglobes y Englobes</option>
-                    <option value="urbanismo">Topografía para Urbanismos</option>
-                    <option value="hidro">Redes Hidro Sanitarias</option>
-                    <option value="acueducto">Topografía para Acueductos</option>
-                    <option value="vias">Topografía para Vías</option>
-                    <option value="batimetria">Batimetría</option>
-                    <option value="georeferenciacion">Georreferenciación MAGNA-SIRGAS</option>
-                    <option value="fotogrametria">Fotogrametría con Drones</option>
-                    <option value="comision">Acompañamiento de Comisiones</option>
+                    {servicesData.map((service) => (
+                      <option key={service.slug} value={service.slug}>
+                        {service.title}
+                      </option>
+                    ))}
                   </select>
                 </motion.div>
-                
-                <motion.div
-                  animate={focusedField === "message" ? "focus" : ""}
-                  variants={inputVariants}
-                >
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Descripción del proyecto
+
+                <motion.div animate={focusedField === "message" ? "focus" : ""} variants={inputVariants}>
+                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
+                    Descripcion del proyecto
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={4}
+                    value={formData.message}
+                    onChange={(event) => updateField("message", event.target.value)}
                     onFocus={() => setFocusedField("message")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-foreground placeholder:text-muted-foreground"
-                    placeholder="Cuéntenos sobre su proyecto..."
+                    required
+                    className="w-full resize-none rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    placeholder="Cuentenos sobre su proyecto..."
                   />
                 </motion.div>
-                
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
+
+                <div className="rounded-xl border border-dashed border-secondary/30 bg-secondary/5 p-4 text-sm text-muted-foreground">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="mt-0.5 h-4 w-4 flex-none text-secondary" />
+                    <p>
+                      Puede mencionar area del predio, ubicacion, objetivo del estudio y fecha
+                      estimada. Eso ayuda a responder con mas precision.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-xs leading-6 text-muted-foreground">
+                  Al enviar, abriremos WhatsApp con el resumen del proyecto y dejaremos un correo
+                  listo como respaldo.
+                </p>
+
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground relative overflow-hidden group"
+                    className="group relative w-full overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    <span className="flex items-center justify-center gap-2 relative z-10">
-                      <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       Enviar solicitud
                     </span>
-                    
-                    {/* Animated background */}
-                    <motion.span 
+
+                    <motion.span
                       className="absolute inset-0 bg-secondary"
                       initial={{ x: "-100%" }}
                       whileHover={{ x: 0 }}
