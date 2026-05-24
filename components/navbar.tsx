@@ -13,6 +13,7 @@ const navLinks = [
   { section: "nosotros", label: "Nosotros", isPage: true },
   { section: "servicios", label: "Servicios", isPage: true },
   { section: "blog", label: "Blog", isPage: true },
+  { section: "herramientas", label: "Herramientas", isPage: true },
   { section: "contacto", label: "Contacto", isPage: false },
 ]
 
@@ -49,6 +50,8 @@ export function Navbar() {
         setActiveSection("blog")
       } else if (pathname.startsWith("/nosotros")) {
         setActiveSection("nosotros")
+      } else if (pathname.startsWith("/herramientas")) {
+        setActiveSection("herramientas")
       } else if (pathname.includes("politica") || pathname.includes("terminos")) {
         setActiveSection("")
       } else {

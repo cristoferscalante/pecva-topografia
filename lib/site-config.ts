@@ -11,8 +11,8 @@ export const siteConfig = {
   whatsappHref:
     "https://wa.me/573226219982?text=Hola,%20me%20interesa%20recibir%20informacion%20sobre%20sus%20servicios%20de%20topografia",
   address: {
-    city: "Bogota",
-    region: "Cundinamarca",
+    city: "Pitalito",
+    region: "Huila",
     country: "Colombia",
   },
   social: {

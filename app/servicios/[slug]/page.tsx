@@ -160,6 +160,46 @@ export default async function ServiceDetailPage({ params }: Props) {
         </article>
       </section>
 
+      {/* Precision Technical Specifications Datasheet */}
+      <section className="border-t border-border bg-muted/20 relative py-20 overflow-hidden">
+        <div className="container relative z-10 mx-auto px-4 lg:px-8 max-w-5xl">
+          <div className="mx-auto mb-16 text-center max-w-3xl">
+            <span className="mb-4 inline-block rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+              Rigor Metodológico
+            </span>
+            <h2 className="text-3xl font-bold text-foreground">
+              Ficha Técnica de Precisión
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Especificaciones de instrumentación, estándares de calibración y tolerancias aplicadas en la ejecución técnica de este servicio.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary block mb-2">Instrumentación de Campo</span>
+              <h3 className="text-lg font-bold text-foreground mb-2">Equipamiento Principal</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.specs.equipment}</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary block mb-2">Margen de Tolerancia</span>
+              <h3 className="text-lg font-bold text-foreground mb-2">Precisión Obtenida</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.specs.precision}</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary block mb-2">Formatos de Entrega</span>
+              <h3 className="text-lg font-bold text-foreground mb-2">Estándar de Archivos</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.specs.formats}</p>
+            </div>
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary block mb-2">Marco Regulatorio</span>
+              <h3 className="text-lg font-bold text-foreground mb-2">Normativa Aplicable</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.specs.standards}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-border bg-muted/30">
         <div className="container mx-auto px-4 py-16 lg:px-8">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

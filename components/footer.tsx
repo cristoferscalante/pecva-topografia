@@ -19,6 +19,7 @@ const footerLinks = {
     { label: "Nosotros", href: "/nosotros" },
     { label: "Servicios", href: "/servicios" },
     { label: "Blog", href: "/blog" },
+    { label: "Herramientas", href: "/herramientas" },
     { label: "Contacto", href: "/#contacto" },
   ],
   legal: [
