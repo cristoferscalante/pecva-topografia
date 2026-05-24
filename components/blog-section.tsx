@@ -241,10 +241,12 @@ export function BlogSection({ posts }: { posts: BlogPost[] }) {
           </motion.div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          {posts[0] ? <BlogCard post={posts[0]} featured /> : null}
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] items-start">
+          <div className="lg:sticky lg:top-28">
+            {posts[0] ? <BlogCard post={posts[0]} featured /> : null}
+          </div>
           <div className="space-y-6">
-            {posts.slice(1).map((post, index) => (
+            {posts.slice(1, 4).map((post, index) => (
               <BlogCard key={post.slug} post={post} index={index} />
             ))}
           </div>
