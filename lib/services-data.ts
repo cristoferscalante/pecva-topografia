@@ -34,7 +34,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Captura precisa de coordenadas, cotas y detalles del terreno para proyectos de ingenieria, arquitectura y urbanismo.",
     overview:
       "Desarrollamos levantamientos topograficos con equipos GNSS, estacion total y control de campo para entregar informacion confiable desde la etapa de prefactibilidad hasta la ejecucion de obra.",
-    image: "/illustrations/field-crew.svg",
+    image: "/images/services/levantamiento-planimetrico-altimetrico.png",
     iconKey: "map",
     color: "primary",
     highlights: ["Control horizontal y vertical", "Modelos de terreno", "Planos base para diseno"],
@@ -54,7 +54,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Soporte tecnico para subdivision, englobe, escrituracion y aclaracion de areas prediales con enfoque catastral y juridico.",
     overview:
       "Integramos trabajo de campo, revision documental y cuadros de areas para facilitar tramites prediales con informacion clara, verificable y consistente con la normativa aplicable.",
-    image: "/illustrations/duo-planning.svg",
+    image: "/images/services/desenglobes-y-englobes.png",
     iconKey: "fileText",
     color: "secondary",
     highlights: ["Cuadros de areas y linderos", "Apoyo para escrituracion", "Documentacion tecnica ordenada"],
@@ -74,7 +74,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Base topografica para urbanizaciones, redes, zonas comunes, vias internas y fases de desarrollo de proyectos habitacionales o comerciales.",
     overview:
       "Generamos informacion de detalle para urbanistas, arquitectos y calculistas que necesitan una lectura precisa del terreno y de las restricciones del sitio antes de intervenirlo.",
-    image: "/illustrations/urban-crew.svg",
+    image: "/images/services/topografia-para-urbanismos.png",
     iconKey: "building2",
     color: "accent",
     highlights: ["Levantamiento de detalle urbano", "Apoyo a implantacion", "Control para etapas de obra"],
@@ -94,7 +94,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Levantamientos especializados para redes de acueducto, alcantarillado, cajas, pozos y pendientes funcionales del sistema.",
     overview:
       "Leemos el comportamiento del terreno y la infraestructura existente para que el diseno de redes hidrosanitarias tenga pendientes coherentes, puntos de conexion confiables y menos reprocesos.",
-    image: "/illustrations/utility-team.svg",
+    image: "/images/services/topografia-redes-hidrosanitarias.png",
     iconKey: "droplets",
     color: "primary",
     highlights: ["Lectura de pendientes", "Ubicacion de estructuras", "Datos listos para diseno de redes"],
@@ -114,7 +114,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Estudios topograficos para trazados, lineas de conduccion, plantas, tanques y estructuras de abastecimiento de agua.",
     overview:
       "Levantamos corredores, puntos de control y elementos relevantes del sistema para que los proyectos de acueducto partan de informacion util desde el diseno conceptual hasta la construccion.",
-    image: "/illustrations/waterworks-team.svg",
+    image: "/images/services/topografia-para-acueductos.png",
     iconKey: "waves",
     color: "secondary",
     highlights: ["Corredores topograficos", "Control para estructuras", "Apoyo al diseno hidraulico"],
@@ -134,7 +134,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Levantamientos, corredores, secciones y apoyo al replanteo de proyectos viales urbanos, rurales e industriales.",
     overview:
       "Trabajamos la geometria del corredor vial con informacion de secciones, ejes y niveles para que el diseno y la ejecucion cuenten con control topografico desde el inicio.",
-    image: "/illustrations/road-crew.svg",
+    image: "/images/services/topografia-para-vias.png",
     iconKey: "route",
     color: "accent",
     highlights: ["Corredores y ejes", "Secciones transversales", "Control para movimiento de tierras"],
@@ -154,7 +154,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Medicion de profundidades y configuracion del fondo en cuerpos de agua para proyectos hidraulicos, ambientales y portuarios.",
     overview:
       "Ejecutamos levantamientos batimetricos para conocer la morfologia del fondo y apoyar decisiones tecnicas en embalses, lagunas, canales y otros cuerpos de agua.",
-    image: "/illustrations/marine-crew.svg",
+    image: "/images/services/batimetria.png",
     iconKey: "anchor",
     color: "primary",
     highlights: ["Perfiles del fondo", "Apoyo a dragado y mantenimiento", "Informacion para estudios ambientales"],
@@ -174,7 +174,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Materializacion y vinculacion de puntos de control al sistema de referencia oficial para dar trazabilidad a los proyectos.",
     overview:
       "Conectamos tu proyecto con la red geodesica nacional para que toda la informacion topografica tenga coherencia espacial, repetibilidad y soporte tecnico para tramites y construccion.",
-    image: "/illustrations/duo-geodesy.svg",
+    image: "/images/services/georreferenciacion-magna-sirgas.png",
     iconKey: "satellite",
     color: "secondary",
     highlights: ["Puntos de control geodesico", "Compatibilidad con normativa nacional", "Base para todas las demas actividades"],
@@ -194,7 +194,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Levantamientos aereos con UAV para ortofotos, nubes de puntos y modelos digitales en tiempos competitivos.",
     overview:
       "Aplicamos tecnologia drone para capturar grandes extensiones o zonas de dificil acceso y convertirlas en productos medibles que aceleran la toma de decisiones.",
-    image: "/illustrations/drone-crew.svg",
+    image: "/images/services/fotogrametria-con-drones.png",
     iconKey: "plane",
     color: "accent",
     highlights: ["Cobertura amplia en menos tiempo", "Ortomosaicos y modelos 3D", "Apoyo para seguimiento de obra"],
@@ -214,7 +214,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Acompanamiento tecnico en campo para constructoras, interventorias y equipos que requieren soporte topografico confiable.",
     overview:
       "Nos integramos temporal o permanentemente al frente de trabajo para reforzar levantamientos, replanteos, controles de avance y verificaciones de obra.",
-    image: "/illustrations/duo-support.svg",
+    image: "/images/services/comisiones-topograficas.png",
     iconKey: "users",
     color: "primary",
     highlights: ["Refuerzo operativo en campo", "Control diario de actividades", "Acompanamiento tecnico especializado"],

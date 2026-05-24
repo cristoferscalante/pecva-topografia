@@ -9,10 +9,11 @@ import { Menu, X, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { section: "inicio", label: "Inicio" },
-  { section: "servicios", label: "Servicios" },
-  { section: "blog", label: "Blog" },
-  { section: "contacto", label: "Contacto" },
+  { section: "inicio", label: "Inicio", isPage: false },
+  { section: "nosotros", label: "Nosotros", isPage: true },
+  { section: "servicios", label: "Servicios", isPage: false },
+  { section: "blog", label: "Blog", isPage: false },
+  { section: "contacto", label: "Contacto", isPage: false },
 ]
 
 export function Navbar() {
@@ -27,7 +28,11 @@ export function Navbar() {
     () =>
       navLinks.map((link) => ({
         ...link,
-        href: isHome ? `#${link.section}` : `/#${link.section}`,
+        href: link.isPage
+          ? `/${link.section}`
+          : isHome
+          ? `#${link.section}`
+          : `/#${link.section}`,
       })),
     [isHome]
   )
@@ -42,6 +47,8 @@ export function Navbar() {
         setActiveSection("servicios")
       } else if (pathname.startsWith("/blog")) {
         setActiveSection("blog")
+      } else if (pathname.startsWith("/nosotros")) {
+        setActiveSection("nosotros")
       } else if (pathname.includes("politica") || pathname.includes("terminos")) {
         setActiveSection("")
       } else {
@@ -51,7 +58,7 @@ export function Navbar() {
     }
 
     const handleScroll = () => {
-      const sections = navLinks.map((link) => link.section)
+      const sections = navLinks.filter((link) => !link.isPage).map((link) => link.section)
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element) {

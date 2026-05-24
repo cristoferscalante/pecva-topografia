@@ -2,10 +2,10 @@
 title: Guia practica para desenglobe de predios y aclaracion de areas
 excerpt: Una ruta clara para entender el levantamiento, los planos y la documentacion que suelen intervenir en procesos prediales.
 category: Gestion predial
-author: Equipo AV Topografia
+author: Equipo PECVA
 publishedAt: 2026-05-14
 readTime: 5 min
-image: /illustrations/duo-planning.svg
+image: /images/services/desenglobes-y-englobes.png
 seoDescription: Guia practica sobre desenglobe de predios, aclaracion de areas y soporte topografico para tramites prediales.
 keywords:
   - desenglobe

@@ -2,10 +2,10 @@
 title: Fotogrametria con drones una ventaja real para levantamientos de gran escala
 excerpt: Analizamos cuando la captura UAV acelera los tiempos del proyecto y que informacion puede producir para ingenieria, planeacion y seguimiento.
 category: Tecnologia
-author: Equipo AV Topografia
+author: Equipo PECVA
 publishedAt: 2026-05-18
 readTime: 7 min
-image: /illustrations/blog-drone.svg
+image: /images/blog/drones-revolucion.png
 seoDescription: Articulo sobre fotogrametria con drones para levantamientos topograficos, ortofotos y modelos digitales de terreno.
 keywords:
   - fotogrametria con drones

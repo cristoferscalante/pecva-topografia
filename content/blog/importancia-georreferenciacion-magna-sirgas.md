@@ -2,10 +2,10 @@
 title: La importancia de la georreferenciacion MAGNA-SIRGAS en Colombia
 excerpt: Comprende por que la referencia oficial del pais es clave para proyectos que necesitan consistencia, trazabilidad y coordinacion entre disciplinas.
 category: Georreferenciacion
-author: Equipo AV Topografia
+author: Equipo PECVA
 publishedAt: 2026-05-20
 readTime: 6 min
-image: /illustrations/duo-geodesy.svg
+image: /images/services/georreferenciacion-magna-sirgas.png
 seoDescription: Guia sobre la importancia de la georreferenciacion MAGNA-SIRGAS en Colombia y su impacto en precision, trazabilidad y cumplimiento tecnico.
 keywords:
   - magna sirgas

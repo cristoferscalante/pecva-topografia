@@ -16,9 +16,9 @@ const footerLinks = {
     { label: "Georreferenciacion", href: "/servicios/georreferenciacion-magna-sirgas" },
   ],
   empresa: [
+    { label: "Nosotros", href: "/nosotros" },
     { label: "Servicios", href: "/servicios" },
     { label: "Blog", href: "/blog" },
-    { label: "Proyectos y recursos", href: "/blog" },
     { label: "Contacto", href: "/#contacto" },
   ],
   legal: [
