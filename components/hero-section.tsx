@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, CheckCircle2, ChevronDown, Play } from "lucide-react"
+import { ArrowRight, Play, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRef } from "react"
@@ -31,12 +31,6 @@ const floatingVariants = {
     },
   },
 }
-
-const valuePoints = [
-  "Direccion tecnica cercana y trazabilidad de campo",
-  "Equipo corporativo con presencia real en obra",
-  "Base comercial y tecnica para proyectos en Colombia",
-]
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null)
@@ -80,7 +74,7 @@ export function HeroSection() {
                 animate={{ scale: [1, 1.3, 1], opacity: [1, 0.7, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               />
-              <span className="text-sm font-medium text-secondary">+15 anos de experiencia</span>
+              <span className="text-sm font-medium text-secondary">+15 años de experiencia</span>
             </motion.div>
 
             <div className="space-y-4">
@@ -92,7 +86,7 @@ export function HeroSection() {
                   animate="visible"
                   className="block"
                 >
-                  Precision que define
+                  Precisión que define
                 </motion.span>
                 <motion.span
                   custom={1}
@@ -111,8 +105,8 @@ export function HeroSection() {
                 animate="visible"
                 className="max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl"
               >
-                Servicios de topografia profesional con un equipo visible, cercano y preparado
-                para acompanar proyectos desde campo hasta entrega tecnica.
+                Servicios de topografía profesional con tecnología de punta.
+                Levantamientos, georreferenciación y fotogrametría con drones.
               </motion.p>
             </div>
 
@@ -156,26 +150,34 @@ export function HeroSection() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, rotateY: -12 }}
+            initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
             className="relative hidden lg:block"
           >
-            <div className="relative mx-auto aspect-[11/12] w-full max-w-xl">
+            <div className="perspective-1000 relative mx-auto aspect-square w-full max-w-lg">
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                className="absolute -left-4 top-8 z-20 rounded-2xl border border-border bg-card/92 p-4 shadow-xl backdrop-blur-md"
+                className="absolute left-0 top-8 z-20 rounded-xl border border-border bg-card/90 p-4 shadow-xl backdrop-blur-md"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary/20">
-                    <CheckCircle2 className="h-5 w-5 text-secondary" />
+                    <svg
+                      className="h-5 w-5 text-secondary"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                      <path d="M2 17l10 5 10-5" />
+                      <path d="M2 12l10 5 10-5" />
+                    </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">Direccion de campo</p>
-                    <p className="text-xs text-muted-foreground">
-                      Liderazgo visible en proyecto
-                    </p>
+                    <p className="text-sm font-semibold text-foreground">Levantamientos</p>
+                    <p className="text-xs text-muted-foreground">Alta precisión</p>
                   </div>
                 </div>
               </motion.div>
@@ -183,18 +185,25 @@ export function HeroSection() {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                transition={{ delay: 0.45 }}
-                className="absolute -right-3 top-24 z-20 rounded-2xl border border-border bg-card/92 p-4 shadow-xl backdrop-blur-md"
+                transition={{ delay: 0.5 }}
+                className="absolute right-0 top-1/4 z-20 rounded-xl border border-border bg-card/90 p-4 shadow-xl backdrop-blur-md"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/20">
-                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <svg
+                      className="h-5 w-5 text-primary"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                    </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">Imagen corporativa</p>
-                    <p className="text-xs text-muted-foreground">
-                      Equipo uniformado y confiable
-                    </p>
+                    <p className="text-sm font-semibold text-foreground">GPS RTK</p>
+                    <p className="text-xs text-muted-foreground">± 2mm precisión</p>
                   </div>
                 </div>
               </motion.div>
@@ -202,48 +211,61 @@ export function HeroSection() {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                transition={{ delay: 0.9 }}
-                className="absolute bottom-10 left-4 z-20 rounded-2xl border border-border bg-card/92 p-5 shadow-xl backdrop-blur-md"
+                transition={{ delay: 1 }}
+                className="absolute bottom-1/4 left-4 z-20 rounded-xl border border-border bg-card/90 p-4 shadow-xl backdrop-blur-md"
               >
-                <div className="space-y-3">
-                  <p className="text-sm font-semibold text-foreground">Equipo principal PECVA</p>
-                  <div className="space-y-2">
-                    {valuePoints.map((item) => (
-                      <div key={item} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-accent" />
-                        <span>{item}</span>
-                      </div>
-                    ))}
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/20">
+                    <svg
+                      className="h-5 w-5 text-accent"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">Drones</p>
+                    <p className="text-xs text-muted-foreground">Fotogrametría</p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="absolute inset-0 z-10 overflow-hidden rounded-[2rem] border border-border bg-card/80 shadow-2xl backdrop-blur-md"
-                initial={{ scale: 0.96, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.55, duration: 0.8 }}
+                className="absolute inset-0 flex items-center justify-center"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
               >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(76,166,73,0.18),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(77,104,140,0.18),transparent_36%)]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/95 via-card/30 to-transparent" />
-                <div className="relative h-full w-full">
-                  <Image
-                    src="/illustrations/duo-geodesy.svg"
-                    alt="Pareja principal del equipo PECVA en estilo ilustrado"
-                    fill
-                    className="object-cover"
-                    priority
+                {[...Array(4)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="absolute rounded-full border-2"
+                    style={{
+                      width: `${60 + i * 20}%`,
+                      height: `${60 + i * 20}%`,
+                      borderColor:
+                        i % 2 === 0 ? "rgba(76, 166, 73, 0.2)" : "rgba(77, 104, 140, 0.2)",
+                      borderStyle: i % 2 === 0 ? "solid" : "dashed",
+                    }}
                   />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="rounded-2xl border border-white/15 bg-foreground/55 p-5 text-white backdrop-blur-md">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-secondary/90">
-                      Equipo principal
-                    </p>
-                    <p className="mt-2 text-2xl font-semibold">
-                      Liderazgo tecnico y presencia real en cada frente de trabajo
-                    </p>
-                  </div>
+                ))}
+              </motion.div>
+
+              <motion.div
+                className="absolute inset-0 z-30 flex items-center justify-center"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
+              >
+                <div className="relative flex h-32 w-32 items-center justify-center overflow-hidden rounded-2xl border border-border bg-card/90 shadow-2xl backdrop-blur-md">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-Byc7z2G5QOHsXI7QXXZMouj9f1HqDM.png"
+                    alt="AV Topografía Logo"
+                    fill
+                    className="object-contain p-2"
+                  />
                 </div>
               </motion.div>
             </div>
