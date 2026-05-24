@@ -42,7 +42,7 @@ const valueCards = [
   {
     icon: Target,
     title: "Compromiso de Acompañamiento",
-    description: "No solo entregamos planos; acompañamos técnicamente a su equipo técnico de diseño, cálculo o legal durante todo el ciclo del proyecto para prevenir reprocesos y sobrecostos.",
+    description: "No solo entregamos planos; acompañamos técnicamente a su equipo técnico de diseño, cálculo o legal en cada paso técnico para prevenir reprocesos y sobrecostos.",
   },
 ]
 
@@ -54,7 +54,7 @@ export default function NosotrosPage() {
           "@context": "https://schema.org",
           "@type": "AboutPage",
           name: "Sobre Nosotros - AV Topografia",
-          description: "Informacion corporativa, valores, trayectoria y proyectos reales de AV Topografia Profesional en Colombia.",
+          description: "Informacion corporativa, valores, trayectoria y talento humano de AV Topografia Profesional en Colombia.",
           url: absoluteUrl("/nosotros"),
           mainEntity: {
             "@type": "LocalBusiness",
@@ -125,7 +125,7 @@ export default function NosotrosPage() {
             <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
               <span className="text-5xl font-extrabold text-primary block mb-2">+15</span>
               <h3 className="text-lg font-bold text-foreground mb-1">Años de experiencia</h3>
-              <p className="text-sm text-muted-foreground">Trayectoria sólida respaldando proyectos urbanos y de infraestructura.</p>
+              <p className="text-sm text-muted-foreground">Trayectoria sólida respaldando frentes de obra civil e infraestructura.</p>
             </div>
             <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
               <span className="text-5xl font-extrabold text-secondary block mb-2">100%</span>
@@ -139,8 +139,8 @@ export default function NosotrosPage() {
             </div>
             <div className="rounded-3xl border border-border bg-card p-8 shadow-sm">
               <span className="text-5xl font-extrabold text-foreground block mb-2">+500</span>
-              <h3 className="text-lg font-bold text-foreground mb-1">Proyectos Exitosos</h3>
-              <p className="text-sm text-muted-foreground">Clientes satisfechos en vías, acueductos, desenglobes y canteras.</p>
+              <h3 className="text-lg font-bold text-foreground mb-1">Mediciones Firmadas</h3>
+              <p className="text-sm text-muted-foreground">Clientes respaldados con planos certificados e informes de precisión.</p>
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function NosotrosPage() {
               Valores que guían nuestra precisión
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Nos regimos bajo estrictos estándares éticos y de ingeniería para brindarte la tranquilidad espacial y legal que tu proyecto exige.
+              Nos regimos bajo estrictos estándares éticos y de ingeniería para brindarte la tranquilidad espacial y legal que tu terreno exige.
             </p>
           </div>
 
@@ -190,7 +190,7 @@ export default function NosotrosPage() {
           <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full border border-background" />
         </div>
         <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-4">¿Tiene un proyecto en mente?</h2>
+          <h2 className="text-3xl font-bold mb-4">¿Necesita respaldo técnico profesional?</h2>
           <p className="text-background/70 text-lg mb-8 leading-relaxed">
             Consúltenos sin costo. Ofrecemos acompañamiento técnico personalizado y cotizaciones ajustadas a los requerimientos de su obra civil, predio rural o estudio geodésico.
           </p>

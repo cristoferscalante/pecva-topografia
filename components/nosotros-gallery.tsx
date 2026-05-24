@@ -8,38 +8,38 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react"
 const photos = [
   {
     src: "/fotos/1.webp",
-    alt: "Levantamiento de campo con estación total",
-    caption: "Control horizontal y vertical de precisión utilizando estaciones totales en zonas de difícil acceso.",
+    alt: "Nuestro Equipo Humano",
+    caption: "El pilar fundamental de nuestra empresa: profesionales integrales, éticos y altamente capacitados en ingeniería topográfica.",
   },
   {
     src: "/fotos/2.webp",
-    alt: "Medición geodésica GNSS RTK",
-    caption: "Vinculación directa de puntos de control a la red geodésica nacional MAGNA-SIRGAS.",
+    alt: "Capacitación Técnica Continuada",
+    caption: "Equipo de campo altamente preparado para resolver desafíos técnicos directamente en el terreno.",
   },
   {
     src: "/fotos/3.webp",
-    alt: "Topografía vial y movimiento de tierras",
-    caption: "Replanteo geométrico y control diario de niveles para construcción de infraestructura vial.",
+    alt: "Liderazgo y Profesionalismo",
+    caption: "Ingenieros y topógrafos certificados que supervisan cada detalle geométrico con rigurosidad matemática.",
   },
   {
     src: "/fotos/4.webp",
-    alt: "Equipo técnico de AV Topografía",
-    caption: "Profesionales certificados y matriculados con amplia experiencia en la geografía colombiana.",
+    alt: "Infraestructura Técnica Propia",
+    caption: "Amplio inventario de receptores GNSS RTK de doble frecuencia y estaciones totales de última tecnología.",
   },
   {
     src: "/fotos/5.webp",
-    alt: "Equipamiento de alta gama en campo",
-    caption: "Inversión constante en tecnologías GNSS de doble frecuencia para una precisión de ± 2mm.",
+    alt: "Garantía de Calidad y Calibración",
+    caption: "Protocolos estrictos de verificación y calibración de instrumentos para asegurar precisión milimétrica.",
   },
   {
     src: "/fotos/6.webp",
-    alt: "Planificación predial y desenglobes",
-    caption: "Verificación y alinderamiento preciso de predios urbanos y rurales con enfoque jurídico.",
+    alt: "Valores Familiares y Cercanía",
+    caption: "Somos una empresa con un fuerte sentido humano, comprometida con el desarrollo y bienestar de las familias colombianas.",
   },
   {
     src: "/fotos/7.webp",
-    alt: "Inspección fotogramétrica con drones",
-    caption: "Ortofotografías y modelos de relieve 3D a través de sensores aéreos de última generación.",
+    alt: "Innovación Tecnológica Aérea",
+    caption: "Fusión de métodos topográficos tradicionales con tecnología de drones (UAV) para agilizar el procesamiento de datos.",
   },
 ]
 
@@ -62,10 +62,10 @@ export function NosotrosGallery() {
     <div className="space-y-12">
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-          Nuestros Proyectos y Equipos en Acción
+          Compromiso, Tecnología y Talento Humano
         </h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Evidencia real de nuestro trabajo de campo, tecnología aplicada e intervenciones de ingeniería en Colombia.
+          Conoce al equipo de profesionales y la infraestructura técnica de última generación que respalda la precisión de tus mediciones.
         </p>
       </div>
 
