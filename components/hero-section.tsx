@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight, Play, ChevronDown } from "lucide-react"
+import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useRef } from "react"
@@ -139,11 +139,11 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="group relative overflow-hidden border-border hover:bg-muted"
+                className="group relative overflow-hidden border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors duration-300"
               >
-                <Link href="#blog">
-                  <Play className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
-                  Ver Proyectos
+                <Link href="#contacto">
+                  <MessageSquare className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
+                  Solicitar Cotización
                 </Link>
               </Button>
             </motion.div>
