@@ -4,6 +4,7 @@ import { ArrowRight, Compass, Shield, Zap, Target } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
 import { ContourBackground } from "@/components/contour-background"
 import { NosotrosGallery } from "@/components/nosotros-gallery"
+import { VideoShowcase } from "@/components/video-showcase"
 import { absoluteUrl, siteConfig } from "@/lib/site-config"
 import { Button } from "@/components/ui/button"
 
@@ -177,6 +178,11 @@ export default function NosotrosPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Video Showcase Section */}
+      <section className="container mx-auto px-4 py-20 lg:px-8 border-b border-border bg-[radial-gradient(circle_at_bottom_left,rgba(77,104,140,0.06),transparent_30%)]">
+        <VideoShowcase />
       </section>
 
       {/* Gallery Section */}
