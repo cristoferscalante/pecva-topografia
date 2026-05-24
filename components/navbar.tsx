@@ -98,7 +98,7 @@ export function Navbar() {
             >
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-Byc7z2G5QOHsXI7QXXZMouj9f1HqDM.png"
-                alt="AV Topografia Logo"
+                alt="PECVA Topografia Logo"
                 fill
                 className="object-contain"
               />
@@ -108,7 +108,7 @@ export function Navbar() {
                 className="text-lg font-bold leading-tight text-foreground"
                 whileHover={{ color: "var(--primary)" }}
               >
-                AV Topografia
+                PECVA Topografia
               </motion.span>
               <span className="text-xs text-muted-foreground">Topografia Profesional</span>
             </div>

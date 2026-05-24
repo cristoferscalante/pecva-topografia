@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Politica de Cookies",
-  description: "Informacion general sobre el uso de cookies y herramientas de analitica en el sitio de AV Topografia.",
+  description: "Informacion general sobre el uso de cookies y herramientas de analitica en el sitio de PECVA Topografia.",
   alternates: {
     canonical: "/politica-de-cookies",
   },

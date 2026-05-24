@@ -9,12 +9,12 @@ import { servicesData } from "@/lib/services-data"
 export const metadata: Metadata = {
   title: "Servicios de topografia",
   description:
-    "Conoce los servicios de topografia de AV Topografia: levantamientos, georreferenciacion, fotogrametria con drones, batimetria y apoyo para proyectos de ingenieria.",
+    "Conoce los servicios de topografia de PECVA Topografia: levantamientos, georreferenciacion, fotogrametria con drones, batimetria y apoyo para proyectos de ingenieria.",
   alternates: {
     canonical: "/servicios",
   },
   openGraph: {
-    title: "Servicios de topografia | AV Topografia",
+    title: "Servicios de topografia | PECVA Topografia",
     description:
       "Servicios tecnicos para ingenieria, urbanismo, predios, vias, acueductos y levantamientos con precision profesional.",
     url: absoluteUrl("/servicios"),

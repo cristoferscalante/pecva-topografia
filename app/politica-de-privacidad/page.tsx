@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Politica de Privacidad",
-  description: "Politica de privacidad para el sitio web de AV Topografia y el manejo basico de datos de contacto.",
+  description: "Politica de privacidad para el sitio web de PECVA Topografia y el manejo basico de datos de contacto.",
   alternates: {
     canonical: "/politica-de-privacidad",
   },
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
         <h1 className="text-4xl font-bold text-foreground">Politica de Privacidad</h1>
         <div className="mt-8 space-y-6 text-base leading-8 text-muted-foreground">
           <p>
-            Esta pagina describe de forma general como AV Topografia usa la informacion enviada
+            Esta pagina describe de forma general como PECVA Topografia usa la informacion enviada
             por formularios, correo o canales de contacto del sitio.
           </p>
           <p>

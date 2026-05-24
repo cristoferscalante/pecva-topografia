@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Blog de topografia | AV Topografia",
+    title: "Blog de topografia | PECVA Topografia",
     description:
       "Recursos y articulos para clientes, interventorias y equipos tecnicos que necesitan tomar mejores decisiones topograficas.",
     url: absoluteUrl("/blog"),
@@ -32,7 +32,7 @@ export default function BlogIndexPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "Blog AV Topografia",
+          name: "Blog PECVA Topografia",
           url: absoluteUrl("/blog"),
           blogPost: posts.map((post) => ({
             "@type": "BlogPosting",

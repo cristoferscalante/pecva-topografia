@@ -160,25 +160,11 @@ export function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <Link href="/" className="group mb-6 flex items-center gap-3">
-              <motion.div
-                className="relative h-14 w-14 overflow-hidden"
-                whileHover={{ scale: 1.1, rotate: 10 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-sx28B0vKkoAJIUFVaOYeFTJds05gYw.png"
-                  alt="AV Topografia Logo"
-                  fill
-                  className="object-contain"
-                />
-              </motion.div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold leading-tight text-background transition-colors group-hover:text-secondary">
-                  AV Topografia
-                </span>
-                <span className="text-xs text-background/60">Topografia Profesional</span>
-              </div>
+            <Link href="/" className="group mb-6 flex flex-col">
+              <span className="text-lg font-bold leading-tight text-background transition-colors group-hover:text-secondary">
+                PECVA Topografia
+              </span>
+              <span className="text-xs text-background/60">Topografia Profesional</span>
             </Link>
             <p className="mb-6 text-sm leading-relaxed text-background/70">
               Servicios tecnicos de topografia para proyectos de ingenieria, predios, urbanismo y
@@ -319,7 +305,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6 lg:px-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-background/60">
-              Copyright {new Date().getFullYear()} AV Topografia. Todos los derechos reservados.
+              Copyright {new Date().getFullYear()} PECVA Topografia. Todos los derechos reservados.
             </p>
             <motion.p
               className="flex items-center gap-2 text-sm text-background/60"

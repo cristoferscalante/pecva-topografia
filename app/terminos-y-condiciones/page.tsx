@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Terminos y Condiciones",
-  description: "Condiciones generales de uso del sitio de AV Topografia y de la informacion publicada.",
+  description: "Condiciones generales de uso del sitio de PECVA Topografia y de la informacion publicada.",
   alternates: {
     canonical: "/terminos-y-condiciones",
   },

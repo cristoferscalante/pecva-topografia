@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "AV Topografia",
-  legalName: "AV Topografia Profesional",
+  name: "PECVA Topografia",
+  legalName: "PECVA Topografia Profesional",
   description:
     "Servicios de topografia profesional en Colombia para levantamientos, georreferenciacion MAGNA-SIRGAS, fotogrametria con drones, batimetria y soporte tecnico para proyectos de ingenieria.",
   domain: process.env.NEXT_PUBLIC_SITE_URL || "http://2.24.104.66:3002",

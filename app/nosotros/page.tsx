@@ -54,8 +54,8 @@ export default function NosotrosPage() {
         data={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          name: "Sobre Nosotros - AV Topografia",
-          description: "Informacion corporativa, valores, trayectoria y talento humano de AV Topografia Profesional en Colombia.",
+          name: "Sobre Nosotros - PECVA Topografia",
+          description: "Informacion corporativa, valores, trayectoria y talento humano de PECVA Topografia Profesional en Colombia.",
           url: absoluteUrl("/nosotros"),
           mainEntity: {
             "@type": "LocalBusiness",

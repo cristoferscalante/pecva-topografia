@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       canonical: `/servicios/${service.slug}`,
     },
     openGraph: {
-      title: `${service.title} | AV Topografia`,
+      title: `${service.title} | PECVA Topografia`,
       description: service.seoDescription,
       url: absoluteUrl(`/servicios/${service.slug}`),
       images: [absoluteUrl(service.image)],
