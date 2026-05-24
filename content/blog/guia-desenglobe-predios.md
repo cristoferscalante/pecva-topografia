@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo AV Topografia
 publishedAt: 2026-05-14
 readTime: 5 min
-image: /illustrations/blog-cadastre.svg
+image: /illustrations/duo-planning.svg
 seoDescription: Guia practica sobre desenglobe de predios, aclaracion de areas y soporte topografico para tramites prediales.
 keywords:
   - desenglobe

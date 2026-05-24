@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo AV Topografia
 publishedAt: 2026-05-20
 readTime: 6 min
-image: /illustrations/blog-geodesy.svg
+image: /illustrations/duo-geodesy.svg
 seoDescription: Guia sobre la importancia de la georreferenciacion MAGNA-SIRGAS en Colombia y su impacto en precision, trazabilidad y cumplimiento tecnico.
 keywords:
   - magna sirgas

@@ -54,7 +54,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Soporte tecnico para subdivision, englobe, escrituracion y aclaracion de areas prediales con enfoque catastral y juridico.",
     overview:
       "Integramos trabajo de campo, revision documental y cuadros de areas para facilitar tramites prediales con informacion clara, verificable y consistente con la normativa aplicable.",
-    image: "/illustrations/planning-team.svg",
+    image: "/illustrations/duo-planning.svg",
     iconKey: "fileText",
     color: "secondary",
     highlights: ["Cuadros de areas y linderos", "Apoyo para escrituracion", "Documentacion tecnica ordenada"],
@@ -174,7 +174,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Materializacion y vinculacion de puntos de control al sistema de referencia oficial para dar trazabilidad a los proyectos.",
     overview:
       "Conectamos tu proyecto con la red geodesica nacional para que toda la informacion topografica tenga coherencia espacial, repetibilidad y soporte tecnico para tramites y construccion.",
-    image: "/illustrations/geodesy-crew.svg",
+    image: "/illustrations/duo-geodesy.svg",
     iconKey: "satellite",
     color: "secondary",
     highlights: ["Puntos de control geodesico", "Compatibilidad con normativa nacional", "Base para todas las demas actividades"],
@@ -214,7 +214,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Acompanamiento tecnico en campo para constructoras, interventorias y equipos que requieren soporte topografico confiable.",
     overview:
       "Nos integramos temporal o permanentemente al frente de trabajo para reforzar levantamientos, replanteos, controles de avance y verificaciones de obra.",
-    image: "/illustrations/site-support-team.svg",
+    image: "/illustrations/duo-support.svg",
     iconKey: "users",
     color: "primary",
     highlights: ["Refuerzo operativo en campo", "Control diario de actividades", "Acompanamiento tecnico especializado"],
