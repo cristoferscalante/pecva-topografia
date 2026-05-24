@@ -6,10 +6,10 @@ export const siteConfig = {
   domain: process.env.NEXT_PUBLIC_SITE_URL || "http://2.24.104.66:3002",
   ogImage: "/og-topografia.svg",
   email: "contacto@avtopografia.co",
-  phoneDisplay: "+57 300 123 4567",
-  phoneHref: "tel:+573001234567",
+  phoneDisplay: "+57 322 6219982",
+  phoneHref: "tel:+573226219982",
   whatsappHref:
-    "https://wa.me/573001234567?text=Hola,%20me%20interesa%20recibir%20informacion%20sobre%20sus%20servicios%20de%20topografia",
+    "https://wa.me/573226219982?text=Hola,%20me%20interesa%20recibir%20informacion%20sobre%20sus%20servicios%20de%20topografia",
   address: {
     city: "Bogota",
     region: "Cundinamarca",
@@ -42,7 +42,7 @@ export function absoluteUrl(path = "/") {
 }
 
 export function buildWhatsAppUrl(message: string) {
-  return `https://wa.me/573001234567?text=${encodeURIComponent(message)}`
+  return `https://wa.me/573226219982?text=${encodeURIComponent(message)}`
 }
 
 export function buildMailtoUrl(subject: string, body: string, to = siteConfig.email) {
