@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo AV Topografia
 publishedAt: 2026-05-18
 readTime: 7 min
-image: /blog-2.svg
+image: /illustrations/blog-drone.svg
 seoDescription: Articulo sobre fotogrametria con drones para levantamientos topograficos, ortofotos y modelos digitales de terreno.
 keywords:
   - fotogrametria con drones
