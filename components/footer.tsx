@@ -96,31 +96,60 @@ export function Footer() {
   }
 
   return (
-    <footer ref={ref} className="relative overflow-hidden bg-foreground text-background">
-      <div className="absolute inset-0 opacity-5">
-        <motion.div
-          className="absolute -right-20 -top-20 h-80 w-80 rounded-full border border-background"
-          animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            rotate: { duration: 30, repeat: Infinity, ease: "linear" },
-            scale: { duration: 8, repeat: Infinity, ease: "easeInOut" },
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full border border-background"
-          animate={{
-            rotate: -360,
-            scale: [1.1, 1, 1.1],
-          }}
-          transition={{
-            rotate: { duration: 40, repeat: Infinity, ease: "linear" },
-            scale: { duration: 10, repeat: Infinity, ease: "easeInOut" },
-          }}
-        />
-      </div>
+    <footer ref={ref} className="relative overflow-hidden bg-gradient-to-b from-[#0B1520] to-[#04080D] border-t border-white/10 text-background">
+      {/* Subtle animated topographic contour lines in footer background */}
+      <svg className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="footerContour" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="rgb(76, 166, 73)" stopOpacity="1" />
+            <stop offset="100%" stopColor="rgb(77, 104, 140)" stopOpacity="0.5" />
+          </linearGradient>
+        </defs>
+        {[...Array(6)].map((_, i) => (
+          <motion.ellipse
+            key={`fcontour-${i}`}
+            cx="100"
+            cy="350"
+            rx={150 + i * 80}
+            ry={100 + i * 60}
+            fill="none"
+            stroke="url(#footerContour)"
+            strokeWidth="1.5"
+            animate={{
+              scale: [1, 1.05, 1],
+              rotate: [0, 3, 0]
+            }}
+            transition={{
+              duration: 10 + i * 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            style={{ transformOrigin: "100px 350px" }}
+          />
+        ))}
+        {[...Array(6)].map((_, i) => (
+          <motion.ellipse
+            key={`fcontour2-${i}`}
+            cx="900"
+            cy="50"
+            rx={120 + i * 70}
+            ry={80 + i * 50}
+            fill="none"
+            stroke="url(#footerContour)"
+            strokeWidth="1.5"
+            animate={{
+              scale: [1, 1.08, 1],
+              rotate: [0, -4, 0]
+            }}
+            transition={{
+              duration: 12 + i * 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            style={{ transformOrigin: "900px 50px" }}
+          />
+        ))}
+      </svg>
 
       <div className="container relative z-10 mx-auto px-4 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">

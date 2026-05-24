@@ -191,13 +191,27 @@ export default function NosotrosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-t border-border bg-foreground text-background py-16 relative">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full border border-background" />
-        </div>
+      <section className="border-t border-white/10 bg-gradient-to-b from-[#111C28] to-[#0B1520] text-white py-16 relative overflow-hidden">
+        {/* Subtle topographic contour lines in background */}
+        <svg className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="ctaContour" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="rgb(76, 166, 73)" stopOpacity="1" />
+              <stop offset="100%" stopColor="rgb(77, 104, 140)" stopOpacity="0.5" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="200" rx="150" ry="100" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="100" cy="200" rx="230" ry="150" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="100" cy="200" rx="310" ry="200" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="100" cy="200" rx="390" ry="250" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="900" cy="50" rx="120" ry="80" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="900" cy="50" rx="190" ry="130" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+          <ellipse cx="900" cy="50" rx="260" ry="180" fill="none" stroke="url(#ctaContour)" strokeWidth="1.5" />
+        </svg>
+
         <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-3xl">
           <h2 className="text-3xl font-bold mb-4">¿Necesita respaldo técnico profesional?</h2>
-          <p className="text-background/70 text-lg mb-8 leading-relaxed">
+          <p className="text-white/70 text-lg mb-8 leading-relaxed">
             Consúltenos sin costo. Ofrecemos acompañamiento técnico personalizado y cotizaciones ajustadas a los requerimientos de su obra civil, predio rural o estudio geodésico.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -206,7 +220,7 @@ export default function NosotrosPage() {
                 Contactar por WhatsApp
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-background/20 hover:bg-background/10 text-background">
+            <Button asChild variant="outline" size="lg" className="border-white/20 hover:bg-white/10 text-white bg-transparent hover:text-white">
               <Link href="/#contacto">Ir al Formulario</Link>
             </Button>
           </div>
