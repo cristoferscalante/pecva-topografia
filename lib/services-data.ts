@@ -30,6 +30,10 @@ export type ServiceDataEntry = {
     formats: string
     standards: string
   }
+  faqs: {
+    question: string
+    answer: string
+  }[]
 }
 
 export const servicesData: ServiceDataEntry[] = [
@@ -71,7 +75,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Planimétrica: ±1.5 cm | Altimétrica: ±2.0 cm con control diferencial.",
       formats: ".DWG, .DXF, .PDF, .XLSX (coordenadas).",
       standards: "Resolución 1499 del IGAC, Normas Técnicas Colombianas de topografía."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Cuánto tiempo tarda la entrega del plano topográfico?",
+        answer: "Depende del tamaño del terreno. Para lotes típicos de hasta 5 hectáreas, el trabajo de campo se realiza en 1 día y el plano final en AutoCAD Civil 3D se entrega en 2 a 3 días hábiles."
+      },
+      {
+        question: "¿Qué equipos utilizan para garantizar la precisión?",
+        answer: "Empleamos estaciones totales de precisión angular a 1\" de segundo con medición láser directa sin prisma, complementadas con antenas GNSS satelitales multibanda RTK de doble frecuencia."
+      },
+      {
+        question: "¿Los planos topográficos vienen firmados por profesionales?",
+        answer: "Sí, todos nuestros planos y carteras de campo son procesados y certificados con la firma de un Ingeniero Topógrafo matriculado y con licencia profesional vigente."
+      }
+    ]
   },
   {
     slug: "desenglobes-y-englobes",
@@ -111,7 +129,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Posicionamiento centimétrico adaptado a regulaciones de linderos catastrales.",
       formats: ".DWG, .PDF, Informe técnico en .DOCX / .PDF.",
       standards: "Normativas catastrales de la Superintendencia de Notariado y Registro e IGAC."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué requisitos necesito para tramitar un desenglobe predial?",
+        answer: "Necesitará la escritura pública del predio mayor, el certificado de tradición y libertad vigente, la ficha catastral y, de forma obligatoria, el plano topográfico georreferenciado con las subdivisiones requeridas."
+      },
+      {
+        question: "¿Sus planos son aptos para presentar ante notaría, registro e IGAC?",
+        answer: "Sí, nuestros planos cumplen con todas las especificaciones de la Superintendencia de Notariado y Registro y del IGAC, garantizando que el trámite no tenga rechazos técnicos."
+      },
+      {
+        question: "¿Cómo se calculan los linderos de cada subdivisión?",
+        answer: "Se determinan con precisión centimétrica en campo usando GPS geodésico y se amarran al origen único nacional MAGNA-SIRGAS, definiendo un cuadro de áreas y rumbos exactos."
+      }
+    ]
   },
   {
     slug: "topografia-para-urbanismos",
@@ -147,11 +179,25 @@ export const servicesData: ServiceDataEntry[] = [
     keywords: ["topografia para urbanismo", "levantamiento urbanistico", "topografia para conjuntos"],
     relatedArticleSlugs: ["drones-revolucion-levantamientos-topograficos"],
     specs: {
-      equipment: "Estación total digital de alta precisión, Niveles de ingeniero, Receptores GNSS RTK.",
+      equipment: "Estación total digital de alta precisión, Niveles de ingeniero, Receptores GNSS RT.K.",
       precision: "Ejes y estructuras: ±3 mm | Rasantes de terrazas: ±10 mm.",
       formats: ".DWG, .XLSX (coordenadas de replanteo), .PDF.",
       standards: "Plan de Ordenamiento Territorial (POT) local, Manuales de diseño urbano."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Con qué frecuencia se realiza el control topográfico en el urbanismo?",
+        answer: "Se coordina según el ritmo de la obra. Típicamente se cuenta con una comisión de replanteo en fases críticas de excavación, movimiento de tierras y fundición de estructuras para asegurar tolerancias."
+      },
+      {
+        question: "¿Qué tolerancias de error manejan en urbanizaciones residenciales?",
+        answer: "Para ejes estructurales la tolerancia es de ±3 milímetros, y para nivelación de terrazas y rasantes es de ±10 milímetros, cumpliendo con los estándares de ingeniería más rigurosos."
+      },
+      {
+        question: "¿Cómo apoyan el licenciamiento urbano?",
+        answer: "Entregamos el plano base del terreno original con curvas de nivel detalladas y la implantación de diseños, el cual es el insumo principal exigido por curadurías y oficinas de planeación municipal."
+      }
+    ]
   },
   {
     slug: "topografia-redes-hidrosanitarias",
@@ -191,7 +237,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Altimétrica (cotas de batea): ±3 mm en nivelación geométrica cerrada.",
       formats: ".DWG, .PDF, Perfiles en AutoCAD Civil 3D.",
       standards: "Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico (RAS)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Por qué es crítica la altimetría en alcantarillados?",
+        answer: "Las redes de alcantarillado funcionan por gravedad. Una desviación milimétrica en la pendiente (batea de tubería) puede ocasionar acumulación de sedimentos, reflujos y reprocesos sumamente costosos."
+      },
+      {
+        question: "¿Qué entregables técnicos incluye este servicio?",
+        answer: "Entregamos planos de planta georreferenciados, perfiles longitudinales con cotas de batea y clave, fichas detalladas de pozos de inspección y carteras digitales en formato DWG y Excel."
+      },
+      {
+        question: "¿Cómo garantizan que la red fluya por gravedad?",
+        answer: "Realizamos nivelaciones geométricas de precisión cerrada en campo con niveles automáticos digitales, garantizando un margen de error menor a ±3 milímetros en las cotas de flujo."
+      }
+    ]
   },
   {
     slug: "topografia-para-acueductos",
@@ -231,7 +291,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Planimétrica: ±1.5 cm | Altimétrica en perfiles: ±1.0 cm.",
       formats: ".DWG, .PDF, Planos de perfil Civil 3D, Carteras XLSX.",
       standards: "Reglamento RAS, lineamientos de corporaciones autónomas regionales (CAR)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué es una faja de servidumbre y cómo la delimitan?",
+        answer: "Es el corredor de terreno a lo largo del trazado de la tubería donde se restringen ciertas actividades. La delimitamos con coordenadas de precisión para legalizar el paso del acueducto con los propietarios colindantes."
+      },
+      {
+        question: "¿Sus estudios sirven para viabilizar diseños hidráulicos?",
+        answer: "Absolutamente. El perfil longitudinal y las secciones transversales cada 10 o 20 metros permiten a los ingenieros hidráulicos realizar el cálculo exacto de presiones y pérdidas de carga."
+      },
+      {
+        question: "¿Cómo manejan terrenos escarpados o con bosque denso?",
+        answer: "Empleamos una combinación de poligonales cerradas terrestres con estación total y fotogrametría aérea con drones para cubrir zonas inaccesibles sin perder precisión."
+      }
+    ]
   },
   {
     slug: "topografia-para-vias",
@@ -251,7 +325,7 @@ export const servicesData: ServiceDataEntry[] = [
       "Carteras de coordenadas para replanteo de ejes, bordes y chaflanes"
     ],
     idealFor: [
-      "Constructoras viales y concesiones de autopistas en Colombia",
+      "Constructoras viales y de infraestructura en Colombia",
       "Interventorías viales y de obra civil general",
       "Propietarios que desarrollan patios de maniobra o accesos logísticos"
     ],
@@ -271,7 +345,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Replanteo de rasantes y ejes: ±5 mm | Cubicaciones volumétricas certificadas.",
       formats: ".DWG, .XML de Civil 3D, .XLSX (Volúmenes), .PDF.",
       standards: "Manuales de Diseño Geométrico de Vías del INVIAS (Colombia)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué es el replanteo de chaflanes y por qué es importante?",
+        answer: "Es marcar físicamente en el terreno los límites donde inician los cortes y rellenos de tierra. Evita que las excavadoras remuevan más tierra de la proyectada, ahorrando costos significativos."
+      },
+      {
+        question: "¿Cómo calculan el volumen de movimiento de tierras?",
+        answer: "Comparamos el levantamiento original del terreno con el levantamiento del estado de avance mensual en AutoCAD Civil 3D, calculando volúmenes de corte y relleno mediante el método de áreas promedio."
+      },
+      {
+        question: "¿Qué estándares viales nacionales cumplen?",
+        answer: "Nos regimos de manera estricta por el Manual de Diseño Geométrico de Vías del INVIAS, asegurando que peraltes, radios de curvatura y rasantes cumplan con la normatividad colombiana."
+      }
+    ]
   },
   {
     slug: "batimetria",
@@ -311,7 +399,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Precisión de profundidad: ±1.0 cm | Posicionamiento: ±1.5 cm.",
       formats: ".DWG, .PDF, Modelos de superficie 3D, Cartera de puntos X, Y, Z.",
       standards: "Lineamientos de la Organización Hidrográfica Internacional (OHI)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Hasta qué profundidad puede medir su equipo batimétrico?",
+        answer: "Nuestras eco-sondas digitales de alta resolución pueden medir profundidades que van desde 30 centímetros hasta más de 100 metros en lagunas, canales y embalses."
+      },
+      {
+        question: "¿Cómo relacionan las profundidades con las coordenadas terrestres?",
+        answer: "La eco-sonda está sincronizada milimétricamente con un receptor GNSS RTK a bordo del bote, lo que asocia cada punto de profundidad con una coordenada X, Y y cota Z georreferenciada."
+      },
+      {
+        question: "¿Para qué sirve medir la tasa de sedimentación?",
+        answer: "Permite a las hidroeléctricas u operadores de represas calcular la pérdida de capacidad de almacenamiento útil a lo largo del tiempo y planificar dragados eficientes."
+      }
+    ]
   },
   {
     slug: "georreferenciacion-magna-sirgas",
@@ -351,7 +453,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Precisión posicional absoluta de ±5 mm en procesamiento diferencial estático.",
       formats: "Informe en .PDF / .DOCX, archivos RINEX de datos crudos.",
       standards: "Resolución 1499 del IGAC, Sistema de Referencia Geocéntrico para las Américas (SIRGAS)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué significa amarrar un punto a la red oficial del IGAC?",
+        answer: "Significa posicionar de forma satelital un mojón físico y vincularlo matemáticamente a las estaciones de rastreo permanente del IGAC, obteniendo una coordenada única nacional y legal."
+      },
+      {
+        question: "¿Cuánto tiempo debe tomarse la lectura satelital en campo?",
+        answer: "Para puntos geodésicos oficiales, el equipo GNSS de doble frecuencia debe rastrear satélites de forma estática y continua entre 2 y 4 horas según la distancia a la base del IGAC."
+      },
+      {
+        question: "¿Este certificado me sirve para trámites jurídicos o catastrales?",
+        answer: "Sí, entregamos un informe técnico detallado con memorias de cálculo, procesamiento diferencial y firma del ingeniero certificado, plenamente válido ante el IGAC, curadurías e instrumentos públicos."
+      }
+    ]
   },
   {
     slug: "fotogrametria-con-drones",
@@ -391,7 +507,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "GSD (resolución de pixel): 1 a 3 cm/píxel | Precisión final del MDT: ±3.0 cm.",
       formats: ".TIF ortofoto, .LAS nube de puntos, .DWG curvas, .PDF.",
       standards: "Regulaciones de la Aeronáutica Civil de Colombia (RAC 91 / RAC 100)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué resolución visual (GSD) logran con sus vuelos de drones?",
+        answer: "Logramos resoluciones altísimas de entre 1 y 3 centímetros por píxel (GSD), lo que permite apreciar detalles milimétricos imposibles de ver con imágenes satelitales convencionales."
+      },
+      {
+        question: "¿Cómo garantizan la precisión métrica de las fotos del dron?",
+        answer: "Instalamos puntos de control terrestre físicos (GCP) georreferenciados con GPS diferencial. Estos puntos se usan durante el procesamiento digital para ajustar las fotos y amarrarlas al suelo."
+      },
+      {
+        question: "¿Los drones reemplazan por completo la topografía tradicional terrestre?",
+        answer: "No. Son un complemento espectacular para grandes áreas, pero en zonas con bosque extremadamente espeso o para replanteos milimétricos en obra, la topografía terrestre sigue siendo indispensable."
+      }
+    ]
   },
   {
     slug: "comisiones-topograficas",
@@ -431,7 +561,21 @@ export const servicesData: ServiceDataEntry[] = [
       precision: "Control geométrico bajo estrictas tolerancias de planos estructurales.",
       formats: "Reportes diarios en .PDF, planos .DWG de control, carteras .XLSX.",
       standards: "Sistemas de Gestión de Calidad en Obra, normas de sismorresistencia (NSR-10)."
-    }
+    },
+    faqs: [
+      {
+        question: "¿Qué compone una comisión topográfica estándar?",
+        answer: "Está integrada por un Ingeniero Topógrafo o Tecnólogo líder, auxiliares cadeneros calificados, estación total o GPS de alta gama calibrado, accesorios de medición y transporte de campo."
+      },
+      {
+        question: "¿Cómo se reporta el trabajo y avance diario en obra?",
+        answer: "Entregamos carteras de campo firmadas diariamente, reportes de volúmenes de obra civil controlados y planos As-Built en formato digital para que el residente de obra tenga control inmediato."
+      },
+      {
+        question: "¿Sus equipos cuentan con certificados de calibración vigentes?",
+        answer: "Sí, todos nuestros teodolitos, estaciones totales y niveles cuentan con certificados de calibración expedidos por laboratorios autorizados con una vigencia menor a 6 meses."
+      }
+    ]
   }
 ]
 

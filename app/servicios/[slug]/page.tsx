@@ -7,6 +7,7 @@ import { StructuredData } from "@/components/structured-data"
 import { getAllBlogPosts } from "@/lib/blog"
 import { absoluteUrl, siteConfig } from "@/lib/site-config"
 import { servicesData, servicesDataBySlug } from "@/lib/services-data"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -69,6 +70,23 @@ export default async function ServiceDetailPage({ params }: Props) {
           url: absoluteUrl(`/servicios/${service.slug}`),
         }}
       />
+
+      {service.faqs && service.faqs.length > 0 && (
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": service.faqs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          }}
+        />
+      )}
 
       <section className="border-b border-border bg-[radial-gradient(circle_at_top_right,rgba(77,104,140,0.15),transparent_38%),radial-gradient(circle_at_left,rgba(76,166,73,0.18),transparent_32%)]">
         <div className="container mx-auto px-4 py-16 lg:px-8 lg:py-20">
@@ -199,6 +217,40 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {service.faqs && service.faqs.length > 0 && (
+        <section className="border-t border-border bg-background py-20 relative overflow-hidden">
+          <div className="container relative z-10 mx-auto px-4 lg:px-8 max-w-4xl">
+            <div className="mx-auto mb-12 text-center max-w-2xl">
+              <span className="mb-4 inline-block rounded-full border border-secondary/20 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary">
+                Preguntas Frecuentes
+              </span>
+              <h2 className="text-3xl font-bold text-foreground">
+                Respuestas a tus dudas sobre este servicio
+              </h2>
+              <p className="mt-4 text-muted-foreground">
+                Aclaramos las inquietudes técnicas, logísticas y de plazos más comunes al contratar este servicio.
+              </p>
+            </div>
+
+            <div className="mx-auto bg-card rounded-3xl border border-border p-6 sm:p-8 shadow-sm">
+              <Accordion type="single" collapsible className="w-full">
+                {service.faqs.map((faq, index) => (
+                  <AccordionItem key={`faq-${index}`} value={`faq-${index}`} className="border-border">
+                    <AccordionTrigger className="text-base font-semibold text-foreground hover:no-underline py-5">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="border-y border-border bg-muted/30">
         <div className="container mx-auto px-4 py-16 lg:px-8">

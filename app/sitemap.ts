@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import { getAllBlogPosts } from "@/lib/blog"
 import { getSiteUrl } from "@/lib/site-config"
 import { servicesData } from "@/lib/services-data"
+import { citiesData } from "@/lib/cities-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl()
@@ -9,8 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes = [
     "",
+    "/nosotros",
     "/servicios",
     "/blog",
+    "/herramientas",
     "/politica-de-privacidad",
     "/politica-de-cookies",
     "/terminos-y-condiciones",
@@ -28,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.9,
+    })),
+    ...citiesData.map((city) => ({
+      url: `${siteUrl}/topografia-en/${city.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
     })),
     ...getAllBlogPosts().map((post) => ({
       url: `${siteUrl}/blog/${post.slug}`,
