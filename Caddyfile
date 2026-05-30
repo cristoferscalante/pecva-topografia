@@ -1,0 +1,46 @@
+# ==========================================
+# Configuración de Caddy para PECVA Topografía
+# Dominio: topografiapecva.com
+# Puerto de la app: 3002 (mapeado desde Docker)
+# ==========================================
+
+# -------------------------------------------------------------
+# OPCIÓN A: Con Cloudflare Proxied (Nube Naranja 🟠) + Certificado Origin de Cloudflare
+# [RECOMENDADA]: Evita problemas de renovación y es 100% segura.
+#
+# Para usar esta opción:
+# 1. En Cloudflare, ve a SSL/TLS -> Origin Server -> Create Certificate y descárgalo.
+# 2. Guarda el certificado en el VPS como: /etc/ssl/certs/topografiapecva.pem
+# 3. Guarda la clave privada en el VPS como: /etc/ssl/private/topografiapecva.key
+# 4. Asegúrate de configurar en Cloudflare el SSL/TLS en modo "Full (strict)".
+# -------------------------------------------------------------
+topografiapecva.com, www.topografiapecva.com {
+    # Redirige el tráfico al contenedor de Docker de Next.js en el puerto 3002
+    reverse_proxy 127.0.0.1:3002
+
+    # Indica a Caddy que use los certificados de Cloudflare
+    tls /etc/ssl/certs/topografiapecva.pem /etc/ssl/private/topografiapecva.key
+
+    # Opciones recomendadas de compresión y seguridad
+    encode gzip zstd
+    
+    log {
+        output file /var/log/caddy/topografiapecva_access.log
+    }
+}
+
+# -------------------------------------------------------------
+# OPCIÓN B: Con DNS Directo (Nube Gris ⚪) o Cloudflare en modo "Full"
+# [SSL Automático por Let's Encrypt de Caddy]
+#
+# Para usar esta opción:
+# Simplemente descomenta las siguientes líneas y comenta las de la OPCIÓN A.
+# Caddy obtendrá y renovará los certificados SSL gratis por su cuenta.
+# -------------------------------------------------------------
+# topografiapecva.com, www.topografiapecva.com {
+#     reverse_proxy 127.0.0.1:3002
+#     encode gzip zstd
+#     log {
+#         output file /var/log/caddy/topografiapecva_access.log
+#     }
+# }

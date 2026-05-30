@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { FormEvent, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, Youtube } from "lucide-react"
+import { ArrowUpRight, Facebook, Instagram, Mail } from "lucide-react"
 import { buildMailtoUrl, siteConfig } from "@/lib/site-config"
 
 const footerLinks = {
@@ -32,8 +32,6 @@ const footerLinks = {
 const socialLinks = [
   { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
   { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
-  { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
-  { icon: Youtube, href: siteConfig.social.youtube, label: "YouTube" },
 ] as const
 
 function FooterLink({
