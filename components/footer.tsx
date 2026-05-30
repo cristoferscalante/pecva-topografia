@@ -4,8 +4,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { FormEvent, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { ArrowUpRight, Facebook, Instagram, Mail } from "lucide-react"
+import { ArrowUpRight, Facebook, Instagram, Loader2, Mail } from "lucide-react"
 import { buildMailtoUrl, siteConfig } from "@/lib/site-config"
+import { toast } from "sonner"
 
 const footerLinks = {
   servicios: [
@@ -78,20 +79,49 @@ export function Footer() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [hoveredSocial, setHoveredSocial] = useState<number | null>(null)
   const [footerEmail, setFooterEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  function handleFooterSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleFooterSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    if (!footerEmail || typeof window === "undefined") {
+    if (!footerEmail || typeof window === "undefined" || isSubmitting) {
       return
     }
 
-    const body = [
-      "Hola, quiero recibir informacion sobre sus servicios de topografia.",
-      `Correo de contacto: ${footerEmail}`,
-    ].join("\n")
+    setIsSubmitting(true)
+    const toastId = toast.loading("Suscribiéndose al boletín...")
 
-    window.location.href = buildMailtoUrl("Solicitud de informacion", body)
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: "Suscriptor del Boletín",
+          email: footerEmail,
+          phone: "No proporcionado",
+          service: "boletin",
+          message: "Solicitud de suscripción al boletín de noticias y novedades desde el pie de página de la web.",
+        }),
+      })
+
+      if (response.ok) {
+        toast.success("¡Suscripción enviada con éxito! Revisa tu correo.", {
+          id: toastId,
+        })
+        setFooterEmail("")
+      } else {
+        throw new Error("SMTP newsletter subscription failed")
+      }
+    } catch (error) {
+      console.error("Error al suscribirse:", error)
+      toast.error("Hubo un problema al procesar tu suscripción. Intenta de nuevo.", {
+        id: toastId,
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -270,15 +300,21 @@ export function Footer() {
                 value={footerEmail}
                 onChange={(event) => setFooterEmail(event.target.value)}
                 required
-                className="flex-1 rounded-lg border border-background/20 bg-background/10 px-4 py-2 text-sm text-background placeholder:text-background/50 transition-colors focus:border-secondary focus:outline-none"
+                disabled={isSubmitting}
+                className="flex-1 rounded-lg border border-background/20 bg-background/10 px-4 py-2 text-sm text-background placeholder:text-background/50 transition-colors focus:border-secondary focus:outline-none disabled:opacity-50"
               />
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="rounded-lg bg-secondary p-2 text-secondary-foreground"
+                disabled={isSubmitting}
+                whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                className="rounded-lg bg-secondary p-2 text-secondary-foreground disabled:opacity-50 flex items-center justify-center min-w-[38px] min-h-[38px]"
               >
-                <Mail className="h-5 w-5" />
+                {isSubmitting ? (
+                  <Loader2 className="h-5 w-5 animate-spin" />
+                ) : (
+                  <Mail className="h-5 w-5" />
+                )}
               </motion.button>
             </motion.form>
 
