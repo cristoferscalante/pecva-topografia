@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo PECVA
 publishedAt: 2026-05-28
 readTime: 6 min
-image: /images/services/fotogrametria-con-drones.png
+image: /images/blog/drones-vs-lidar.png
 seoDescription: Comparacion tecnica detallada entre fotogrametria con drones y tecnologia LiDAR para levantamientos topograficos, precision, vegetacion y presupuestos.
 keywords:
   - fotogrametria con drones

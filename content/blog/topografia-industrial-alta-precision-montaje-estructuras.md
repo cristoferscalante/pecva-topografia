@@ -5,7 +5,7 @@ category: Industrial
 author: Equipo PECVA
 publishedAt: 2026-05-29
 readTime: 6 min
-image: /images/services/comisiones-topograficas.png
+image: /images/blog/topografia-industrial.png
 seoDescription: Importancia del control geometrico y dimensional en el montaje de naves industriales, alineacion de pernos de anclaje y estructuras metalicas pesadas.
 keywords:
   - topografia industrial
