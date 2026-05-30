@@ -306,10 +306,18 @@ export function Footer() {
               Copyright {new Date().getFullYear()} PECVA Topografia. Todos los derechos reservados.
             </p>
             <motion.p
-              className="flex items-center gap-2 text-sm text-background/60"
+              className="text-sm text-background/60"
               whileHover={{ color: "var(--secondary)" }}
             >
-              Sitio optimizado para SEO, contenido tecnico y generacion de demanda
+              Diseñado y desarrollado por{" "}
+              <a
+                href="https://v1tr0.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-secondary underline-offset-4 hover:underline transition-all"
+              >
+                V1TR0
+              </a>
             </motion.p>
           </div>
         </div>
