@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { MessageCircle, X } from "lucide-react"
 import { useState } from "react"
+import { siteConfig } from "@/lib/site-config"
 
 export function WhatsAppButton() {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -10,7 +11,7 @@ export function WhatsAppButton() {
 
   return (
     <motion.div
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-16 right-6 z-50"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1.5, type: "spring", stiffness: 200 }}
@@ -31,7 +32,7 @@ export function WhatsAppButton() {
                 <MessageCircle className="w-5 h-5 text-white" />
               </div>
               <div className="flex-1">
-                <p className="text-white font-medium text-sm">AV Topografía</p>
+                <p className="text-white font-medium text-sm">PECVA Topografía</p>
                 <p className="text-white/80 text-xs">En línea</p>
               </div>
               <button 
@@ -60,7 +61,7 @@ export function WhatsAppButton() {
             {/* Action */}
             <div className="p-3 bg-card border-t border-border">
               <motion.a
-                href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20solicitar%20información%20sobre%20sus%20servicios%20de%20topografía"
+                href={siteConfig.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
