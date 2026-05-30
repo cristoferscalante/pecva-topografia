@@ -5,7 +5,7 @@ export const siteConfig = {
     "Servicios de topografia profesional en Colombia para levantamientos, georreferenciacion MAGNA-SIRGAS, fotogrametria con drones, batimetria y soporte tecnico para proyectos de ingenieria.",
   domain: process.env.NEXT_PUBLIC_SITE_URL || "https://topografiapecva.com",
   ogImage: "/og-topografia.svg",
-  email: "contacto@avtopografia.co",
+  email: "estudiostopograficos@topografiapecva.com",
   phoneDisplay: "+57 322 6219982",
   phoneHref: "tel:+573226219982",
   whatsappHref:

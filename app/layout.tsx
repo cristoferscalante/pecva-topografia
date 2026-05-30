@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
 import { WhatsAppButton } from "@/components/whatsapp-button"
+import { Toaster } from "@/components/ui/sonner"
 import "./globals.css"
 import { getSiteUrl, siteConfig } from "@/lib/site-config"
 
@@ -71,6 +72,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        <Toaster />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

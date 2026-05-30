@@ -2,11 +2,12 @@
 
 import { FormEvent, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { CheckCircle, Clock, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
+import { CheckCircle, Clock, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ContourBackground } from "@/components/contour-background"
 import { buildMailtoUrl, buildWhatsAppUrl, siteConfig } from "@/lib/site-config"
 import { servicesData } from "@/lib/services-data"
+import { toast } from "sonner"
 
 const contactInfo = [
   {
@@ -64,6 +65,7 @@ export function ContactSection() {
   const [focusedField, setFocusedField] = useState<string | null>(null)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const [formData, setFormData] = useState<ContactFormState>(initialFormState)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const selectedService = servicesData.find((service) => service.slug === formData.service)
 
@@ -85,22 +87,53 @@ export function ContactSection() {
     ].join("\n")
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
     if (typeof window === "undefined") {
       return
     }
 
-    const message = buildLeadMessage()
-    const whatsappWindow = window.open(
-      buildWhatsAppUrl(message),
-      "_blank",
-      "noopener,noreferrer"
-    )
+    setIsSubmitting(true)
+    const toastId = toast.loading("Enviando tu solicitud de cotización por correo...")
 
-    if (!whatsappWindow) {
-      window.location.href = buildMailtoUrl("Solicitud de cotizacion", message)
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        toast.success("¡Solicitud enviada! Hemos enviado una confirmación a tu correo.", {
+          id: toastId,
+        })
+        
+        // Guardar copia del mensaje
+        const message = buildLeadMessage()
+        
+        // Resetear formulario
+        setFormData(initialFormState)
+
+        // Redirigir a WhatsApp de forma complementaria después de 1.5 segundos
+        setTimeout(() => {
+          window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer")
+        }, 1500)
+      } else {
+        throw new Error("SMTP send failed")
+      }
+    } catch (error) {
+      console.error("Error al enviar formulario:", error)
+      toast.error("El servidor de correo no respondió, pero abriremos WhatsApp para cotizar.", {
+        id: toastId,
+      })
+      
+      const message = buildLeadMessage()
+      window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -353,15 +386,25 @@ export function ContactSection() {
                   listo como respaldo.
                 </p>
 
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <motion.div whileHover={{ scale: isSubmitting ? 1 : 1.02 }} whileTap={{ scale: isSubmitting ? 1 : 0.98 }}>
                   <Button
                     type="submit"
                     size="lg"
-                    className="group relative w-full overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90"
+                    disabled={isSubmitting}
+                    className="group relative w-full overflow-hidden bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-70"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
-                      <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      Enviar solicitud
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="h-4 w-4 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          Enviar solicitud
+                        </>
+                      )}
                     </span>
 
                     <motion.span

@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <p>
             Si desea actualizar o eliminar informacion enviada por este medio, puede escribir a
-            contacto@avtopografia.co.
+            estudiostopograficos@topografiapecva.com.
           </p>
         </div>
       </div>
