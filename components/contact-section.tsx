@@ -2,7 +2,7 @@
 
 import { FormEvent, useRef, useState } from "react"
 import { motion, useInView } from "framer-motion"
-import { CheckCircle, Clock, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
+import { Check, CheckCircle, Clock, Copy, Loader2, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ContourBackground } from "@/components/contour-background"
 import { buildMailtoUrl, buildWhatsAppUrl, siteConfig } from "@/lib/site-config"
@@ -66,6 +66,16 @@ export function ContactSection() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const [formData, setFormData] = useState<ContactFormState>(initialFormState)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [copiedLabel, setCopiedLabel] = useState<string | null>(null)
+
+  function handleCopy(event: React.MouseEvent, value: string, label: string) {
+    event.preventDefault()
+    event.stopPropagation()
+    navigator.clipboard.writeText(value)
+    toast.success(`${label} copiado al portapapeles`)
+    setCopiedLabel(label)
+    setTimeout(() => setCopiedLabel(null), 2000)
+  }
 
   const selectedService = servicesData.find((service) => service.slug === formData.service)
 
@@ -187,7 +197,7 @@ export function ContactSection() {
                   onHoverStart={() => setHoveredCard(index)}
                   onHoverEnd={() => setHoveredCard(null)}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className="relative flex items-center gap-4 overflow-hidden rounded-xl border border-border bg-card p-4"
+                  className={`relative flex items-center justify-between overflow-hidden rounded-xl border border-border bg-card p-4 ${(item.label === "Telefono" || item.label === "Email") ? "pr-12" : ""}`}
                 >
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent"
@@ -196,21 +206,43 @@ export function ContactSection() {
                     transition={{ duration: 0.3 }}
                   />
 
-                  <motion.div
-                    className="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary/10"
-                    animate={{ scale: hoveredCard === index ? 1.1 : 1 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <item.icon
-                      className={`h-5 w-5 transition-colors duration-300 ${
-                        hoveredCard === index ? "text-primary" : "text-secondary"
-                      }`}
-                    />
-                  </motion.div>
-                  <div className="relative z-10">
-                    <p className="text-sm text-muted-foreground">{item.label}</p>
-                    <p className="font-medium text-foreground">{item.value}</p>
+                  <div className="flex items-center gap-4 min-w-0">
+                    <motion.div
+                      className="relative z-10 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary/10"
+                      animate={{ scale: hoveredCard === index ? 1.1 : 1 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <item.icon
+                        className={`h-5 w-5 transition-colors duration-300 ${
+                          hoveredCard === index ? "text-primary" : "text-secondary"
+                        }`}
+                      />
+                    </motion.div>
+                    <div className="relative z-10 min-w-0">
+                      <p className="text-sm text-muted-foreground">{item.label}</p>
+                      <p className={`font-medium text-foreground truncate ${
+                        item.label === "Email"
+                          ? "text-[11px] xs:text-xs sm:text-[10px] md:text-[12px] lg:text-[13px] xl:text-sm max-w-[170px] xs:max-w-[250px] sm:max-w-[155px] md:max-w-[200px] lg:max-w-[230px] xl:max-w-none"
+                          : "text-sm md:text-base"
+                      }`}>
+                        {item.value}
+                      </p>
+                    </div>
                   </div>
+
+                  {(item.label === "Telefono" || item.label === "Email") && (
+                    <button
+                      onClick={(e) => handleCopy(e, item.value, item.label)}
+                      className="absolute right-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground transition-all hover:bg-secondary/10 hover:text-primary active:scale-95"
+                      title={`Copiar ${item.label}`}
+                    >
+                      {copiedLabel === item.label ? (
+                        <Check className="h-4 w-4 text-green-500 animate-bounce" />
+                      ) : (
+                        <Copy className="h-4 w-4" />
+                      )}
+                    </button>
+                  )}
                 </motion.a>
               ))}
             </div>
