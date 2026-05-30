@@ -106,10 +106,10 @@ export async function POST(request: Request) {
           body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
           .wrapper { width: 100%; table-layout: fixed; background-color: #f8fafc; padding-bottom: 40px; padding-top: 20px; }
           .container { max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; }
-          .header { background-color: #0B1520; color: #ffffff; padding: 32px 24px; text-align: center; position: relative; }
+          .header { background-color: #ffffff; padding: 32px 24px; text-align: center; position: relative; }
           .logo-img { display: inline-block; vertical-align: middle; height: 56px; width: 56px; margin-bottom: 12px; }
-          .header h1 { margin: 0; font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: -0.02em; }
-          .header p { margin: 4px 0 0 0; font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; }
+          .header h1 { margin: 0; font-size: 22px; font-weight: 800; color: #0B1520; letter-spacing: -0.02em; }
+          .header p { margin: 4px 0 0 0; font-size: 12px; color: #475569; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; }
           .brand-stripe { height: 4px; background: linear-gradient(90deg, #4CA649, #4d688c); }
           .content { padding: 40px 32px; }
           .content h2 { margin: 0 0 16px 0; font-size: 20px; font-weight: 700; color: #0B1520; }
