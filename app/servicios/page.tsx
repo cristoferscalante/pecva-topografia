@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle2 } from "lucide-react"
+import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
-import { absoluteUrl, siteConfig } from "@/lib/site-config"
+import { absoluteUrl, buildWhatsAppUrl, siteConfig } from "@/lib/site-config"
 import { servicesData } from "@/lib/services-data"
 
 export const metadata: Metadata = {
@@ -76,13 +76,25 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={`/servicios/${service.slug}`}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-secondary"
-                >
-                  Ver pagina del servicio
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
+                  <Link
+                    href={`/servicios/${service.slug}`}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-secondary"
+                  >
+                    Ver detalles
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <a
+                    href={buildWhatsAppUrl(`Hola PECVA, me interesa solicitar cotización e información sobre el servicio de: ${service.title}`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-4 py-2 text-xs font-bold text-white shadow-sm hover:bg-[#20BD5A] transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    Cotizar WhatsApp
+                  </a>
+                </div>
               </div>
             </article>
           ))}
