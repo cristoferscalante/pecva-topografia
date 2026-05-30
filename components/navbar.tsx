@@ -103,15 +103,6 @@ export function Navbar() {
                 className="object-contain"
               />
             </motion.div>
-            <div className="flex flex-col">
-              <motion.span
-                className="text-lg font-bold leading-tight text-foreground"
-                whileHover={{ color: "var(--primary)" }}
-              >
-                PECVA Topografia
-              </motion.span>
-              <span className="text-xs text-muted-foreground">Topografia Profesional</span>
-            </div>
           </Link>
 
           <div className="hidden items-center gap-1 md:flex">
