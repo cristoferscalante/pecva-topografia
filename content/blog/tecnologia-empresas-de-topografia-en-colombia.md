@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo PECVA
 publishedAt: 2026-06-14
 readTime: 6 min
-image: /images/blog/drones-revolucion.png
+image: /images/blog/tecnologia-empresas-de-topografia-en-colombia.png
 seoDescription: Conozca las tecnologías más modernas empleadas por las empresas de topografía en Colombia para levantamientos de alta precisión.
 keywords:
   - empresas de topografia en colombia

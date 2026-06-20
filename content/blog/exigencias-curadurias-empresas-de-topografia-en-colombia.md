@@ -5,7 +5,7 @@ category: Urbanismo
 author: Equipo PECVA
 publishedAt: 2026-06-12
 readTime: 5 min
-image: /images/services/desenglobes-y-englobes.png
+image: /images/blog/exigencias-curadurias-empresas-de-topografia-en-colombia.png
 seoDescription: Guía sobre las especificaciones y normativas de curadurías urbanas para planos levantados por empresas de topografía en Colombia.
 keywords:
   - empresas de topografia en colombia

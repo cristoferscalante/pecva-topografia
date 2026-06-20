@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-06-08
 readTime: 6 min
-image: /images/blog/catastro-multiproposito.png
+image: /images/blog/catastro-multiproposito-empresas-de-topografia-en-colombia.png
 seoDescription: Conozca la importancia de las empresas de topografía en Colombia en la implementación del Catastro Multipropósito y la georreferenciación de predios.
 keywords:
   - empresas de topografia en colombia

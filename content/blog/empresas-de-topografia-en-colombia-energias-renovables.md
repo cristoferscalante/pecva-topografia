@@ -5,7 +5,7 @@ category: Energia
 author: Equipo PECVA
 publishedAt: 2026-06-16
 readTime: 5 min
-image: /images/blog/topografia-solar.png
+image: /images/blog/empresas-de-topografia-en-colombia-energias-renovables.png
 seoDescription: El rol de las empresas de topografía en Colombia en la construcción y diseño de parques solares y proyectos de energías limpias.
 keywords:
   - empresas de topografia en colombia

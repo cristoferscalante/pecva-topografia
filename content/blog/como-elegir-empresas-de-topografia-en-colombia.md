@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-06-18
 readTime: 6 min
-image: /images/services/levantamiento-planimetrico-altimetrico.png
+image: /images/blog/como-elegir-empresas-de-topografia-en-colombia.png
 seoDescription: Guía práctica para contratar empresas de topografía en Colombia. Conozca los requisitos técnicos, licencias y tecnologías clave para su proyecto.
 keywords:
   - empresas de topografia en colombia
