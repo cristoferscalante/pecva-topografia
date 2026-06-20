@@ -66,14 +66,18 @@ export default function BlogIndexPage() {
               key={post.slug}
               className="overflow-hidden rounded-[2rem] border border-border bg-card shadow-sm transition-shadow hover:shadow-xl"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
-                <Image src={post.image} alt={post.title} fill className="object-cover" />
-              </div>
+              <Link href={`/blog/${post.slug}`} className="block relative aspect-[16/10] overflow-hidden group">
+                <Image src={post.image} alt={post.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
+              </Link>
               <div className="p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary">
                   {post.category}
                 </p>
-                <h2 className="mt-3 text-2xl font-semibold text-foreground">{post.title}</h2>
+                <h2 className="mt-3 text-2xl font-semibold text-foreground hover:text-primary transition-colors">
+                  <Link href={`/blog/${post.slug}`}>
+                    {post.title}
+                  </Link>
+                </h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{post.excerpt}</p>
                 <div className="mt-5 flex items-center gap-4 text-xs text-muted-foreground">
                   <span>{post.author}</span>
