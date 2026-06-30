@@ -28,6 +28,17 @@ export const siteConfig = {
     "topografia para vias",
     "desenglobe de predios",
     "topografia para urbanismo",
+    "topografia",
+    "topografía",
+    "topografo",
+    "topógrafo",
+    "topógrafos",
+    "trabajos topograficos",
+    "trabajos topográficos",
+    "equipo topografico",
+    "equipo topográfico",
+    "equipos topograficos",
+    "servicios de topografia",
   ],
 } as const
 
