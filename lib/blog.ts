@@ -5,7 +5,7 @@ import type { BlogPost } from "@/lib/blog-shared"
 const blogDirectory = path.join(process.cwd(), "content", "blog")
 
 function parseFrontmatter(raw: string) {
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/)
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
 
   if (!match) {
     return { data: {} as Record<string, string | string[]>, content: raw.trim() }
