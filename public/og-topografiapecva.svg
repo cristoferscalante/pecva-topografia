@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1520"/>
+      <stop offset="100%" stop-color="#111C28"/>
+    </linearGradient>
+    <linearGradient id="contour" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CA649" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4D688C" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4CA649"/>
+      <stop offset="100%" stop-color="#4D688C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.15" stroke="url(#contour)" stroke-width="1.5" fill="none">
+    <ellipse cx="1050" cy="315" rx="80" ry="180"/>
+    <ellipse cx="1050" cy="315" rx="160" ry="260"/>
+    <ellipse cx="1050" cy="315" rx="240" ry="340"/>
+    <ellipse cx="1050" cy="315" rx="320" ry="420"/>
+    <ellipse cx="1050" cy="315" rx="400" ry="500"/>
+    <ellipse cx="1050" cy="315" rx="480" ry="580"/>
+  </g>
+  <rect x="80" y="180" width="6" height="80" rx="3" fill="url(#accent)"/>
+  <text x="110" y="243" font-family="Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="800" fill="white" letter-spacing="-1">PECVA</text>
+  <text x="110" y="315" font-family="Helvetica Neue, Arial, sans-serif" font-size="72" font-weight="300" fill="white" letter-spacing="-1">Topografia</text>
+  <rect x="80" y="345" width="500" height="1.5" fill="url(#accent)" opacity="0.5"/>
+  <text x="80" y="385" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" fill="#4CA649" font-weight="600" letter-spacing="2">Levantamientos · Georreferenciacion · Fotogrametria</text>
+  <text x="80" y="430" font-family="Helvetica Neue, Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.55)">Topografia profesional de precision en Colombia</text>
+  <text x="80" y="550" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.35)" letter-spacing="1">topografiapecva.com</text>
+  <rect x="80" y="485" width="210" height="40" rx="20" fill="rgba(76,166,73,0.15)" stroke="#4CA649" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="100" y="510" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" fill="#4CA649" font-weight="600">Colombia</text>
+</svg>

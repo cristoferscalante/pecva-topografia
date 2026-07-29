@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   category: "engineering",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: `${siteConfig.name} | Servicios de topografia en Colombia`,
     description: siteConfig.description,

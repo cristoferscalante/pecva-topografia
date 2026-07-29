@@ -26,13 +26,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {}
   }
 
-  const title = `Topografía en ${cityData.name} | AV Topografía`
+  const title = `Topografía en ${cityData.name} | PECVA Topografía`
   const description = `${cityData.description} Equipamiento de precisión y profesionales certificados para sus levantamientos y loteamientos.`
 
   return {
     title,
     description,
     keywords: cityData.keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googlebot: { index: true, follow: true },
+    },
     alternates: {
       canonical: `/topografia-en/${cityData.slug}`,
     },

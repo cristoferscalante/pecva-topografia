@@ -30,6 +30,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.title,
     description: post.seoDescription,
     keywords: post.keywords,
+    robots: {
+      index: true,
+      follow: true,
+      googlebot: { index: true, follow: true },
+    },
     alternates: {
       canonical: `/blog/${post.slug}`,
     },
