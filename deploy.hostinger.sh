@@ -20,7 +20,7 @@ fi
 ( cd "$REPO_DIR" && tar --exclude=.git --exclude=.deploy -cf - . ) | ( cd "$APP_DIR" && tar -xf - )
 
 # Keep Docker builds compatible with the current pnpm policy on the VPS.
-if grep -q 'pnpm install --frozen-lockfile' "$APP_DIR/Dockerfile"; then
+if grep -q 'pnpm install --frozen-lockfile' "$APP_DIR/Dockerfile" && ! grep -q -- '--ignore-scripts' "$APP_DIR/Dockerfile"; then
   sed -i 's/pnpm install --frozen-lockfile/pnpm install --frozen-lockfile --ignore-scripts/' "$APP_DIR/Dockerfile"
 fi
 
