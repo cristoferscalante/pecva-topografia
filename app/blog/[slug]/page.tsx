@@ -14,6 +14,30 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 
+function extractFaqs(content: string): { question: string; answer: string }[] {
+  const faqMatch = content.match(/##\s*(?:Preguntas\s+[Ff]recuentes|FAQs?)\s*([\s\S]*)$/i)
+  if (!faqMatch) return []
+
+  const block = faqMatch[1]
+  const items: { question: string; answer: string }[] = []
+  const rawSections = block.split(/(?=###\s+)/)
+
+  for (const sec of rawSections) {
+    const trimmed = sec.trim()
+    if (!trimmed.startsWith("###")) continue
+
+    const lines = trimmed.split("\n")
+    const question = lines[0].replace(/^###\s+/, "").trim()
+    const answer = lines.slice(1).join(" ").trim().replace(/\s+/g, " ")
+
+    if (question && answer) {
+      items.push({ question, answer })
+    }
+  }
+
+  return items
+}
+
 export async function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }))
 }
@@ -26,6 +50,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {}
   }
 
+  const imageUrl = absoluteUrl(post.image)
+  const canonicalUrl = `/blog/${post.slug}`
+
   return {
     title: post.title,
     description: post.seoDescription,
@@ -36,13 +63,29 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       googlebot: { index: true, follow: true },
     },
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
       title: post.title,
       description: post.seoDescription,
-      url: absoluteUrl(`/blog/${post.slug}`),
-      images: [absoluteUrl(post.image)],
+      url: absoluteUrl(canonicalUrl),
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 675,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.seoDescription,
+      images: [imageUrl],
     },
   }
 }
@@ -55,12 +98,14 @@ export default async function BlogArticlePage({ params }: Props) {
     notFound()
   }
 
+  const faqs = extractFaqs(post.content)
   const relatedServices = servicesData.filter((service) =>
     post.relatedServiceSlugs.includes(service.slug)
   )
 
   return (
     <main className="min-h-screen bg-background pt-24">
+      {/* Schema.org BlogPosting */}
       <StructuredData
         data={{
           "@context": "https://schema.org",
@@ -80,6 +125,24 @@ export default async function BlogArticlePage({ params }: Props) {
           mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
         }}
       />
+
+      {/* Schema.org FAQPage for Google Rich Snippets */}
+      {faqs.length > 0 && (
+        <StructuredData
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }}
+        />
+      )}
 
       <article className="pb-20">
         <section className="border-b border-border bg-[radial-gradient(circle_at_top_left,rgba(76,166,73,0.16),transparent_35%),linear-gradient(180deg,rgba(77,104,140,0.12),transparent_68%)]">
@@ -107,8 +170,15 @@ export default async function BlogArticlePage({ params }: Props) {
 
         <section className="container mx-auto grid gap-12 px-4 pt-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:px-8">
           <div>
-            <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-[2rem] border border-border">
-              <Image src={post.image} alt={post.title} fill className="object-cover" />
+            <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-[2rem] border border-border shadow-sm">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 800px"
+              />
             </div>
             <MarkdownRenderer content={post.content} />
           </div>
@@ -126,7 +196,13 @@ export default async function BlogArticlePage({ params }: Props) {
                     className="block rounded-2xl border border-border p-4 transition-colors hover:bg-muted"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                      <Image src={service.image} alt={service.title} fill className="object-cover" />
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                        sizes="300px"
+                      />
                     </div>
                     <h3 className="mt-4 font-semibold text-foreground">{service.title}</h3>
                     <p className="mt-2 text-sm leading-6 text-muted-foreground">

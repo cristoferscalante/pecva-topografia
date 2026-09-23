@@ -1,8 +1,22 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { HelpCircle } from "lucide-react"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 type MarkdownRendererProps = {
   content: string
+}
+
+type FaqItem = {
+  question: string
+  answer: string
 }
 
 type Block =
@@ -13,6 +27,7 @@ type Block =
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
   | { type: "image"; alt: string; src: string }
+  | { type: "faq"; title: string; items: FaqItem[] }
 
 type InlineToken =
   | { type: "text"; value: string }
@@ -113,8 +128,68 @@ function parseMarkdown(content: string): Block[] {
   while (index < lines.length) {
     const line = lines[index].trim()
 
-    if (!line) {
+    if (!line || line === "---" || line === "***") {
       index += 1
+      continue
+    }
+
+    // Detect FAQs section for interactive accordion
+    if (/^##\s*(Preguntas\s+[Ff]recuentes|FAQs?)/i.test(line)) {
+      const faqTitle = line.replace(/^##\s+/, "")
+      const faqItems: FaqItem[] = []
+      index += 1
+
+      while (index < lines.length) {
+        const curLine = lines[index].trim()
+
+        if (!curLine || curLine === "---" || curLine === "***") {
+          index += 1
+          continue
+        }
+
+        // Stop if a new H2 begins
+        if (curLine.startsWith("## ")) {
+          break
+        }
+
+        if (curLine.startsWith("### ")) {
+          const question = curLine.replace(/^###\s+/, "")
+          index += 1
+          const answerParagraphs: string[] = []
+
+          while (index < lines.length) {
+            const nextL = lines[index].trim()
+            if (
+              !nextL ||
+              nextL === "---" ||
+              nextL.startsWith("### ") ||
+              nextL.startsWith("## ")
+            ) {
+              if (nextL.startsWith("### ") || nextL.startsWith("## ")) {
+                break
+              }
+              index += 1
+              continue
+            }
+            answerParagraphs.push(nextL)
+            index += 1
+          }
+
+          faqItems.push({
+            question,
+            answer: answerParagraphs.join(" "),
+          })
+          continue
+        }
+
+        index += 1
+      }
+
+      if (faqItems.length > 0) {
+        blocks.push({ type: "faq", title: faqTitle, items: faqItems })
+      } else {
+        blocks.push({ type: "h2", text: faqTitle })
+      }
       continue
     }
 
@@ -168,6 +243,7 @@ function parseMarkdown(content: string): Block[] {
       const current = lines[index].trim()
       if (
         !current ||
+        current === "---" ||
         current.startsWith("## ") ||
         current.startsWith("### ") ||
         current.startsWith("> ") ||
@@ -193,6 +269,46 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <div className="space-y-8">
       {blocks.map((block, index) => {
+        if (block.type === "faq") {
+          return (
+            <div
+              key={`faq-${index}`}
+              className="mt-12 rounded-[2rem] border border-border/90 bg-card/70 p-6 md:p-8 shadow-sm backdrop-blur-xs"
+            >
+              <div className="mb-6 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <HelpCircle className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold tracking-tight text-foreground">
+                    {renderInline(block.title)}
+                  </h2>
+                  <p className="text-xs text-muted-foreground mt-0.5">
+                    Respuestas técnicas directas del equipo de ingeniería de Consorcio PECVA
+                  </p>
+                </div>
+              </div>
+
+              <Accordion type="single" collapsible className="w-full space-y-3">
+                {block.items.map((item, itemIdx) => (
+                  <AccordionItem
+                    key={`faq-item-${itemIdx}`}
+                    value={`faq-${itemIdx}`}
+                    className="rounded-2xl border border-border/80 bg-background/60 px-5 transition-colors data-[state=open]:border-primary/40 data-[state=open]:bg-primary/[0.02]"
+                  >
+                    <AccordionTrigger className="py-4 text-left text-base font-semibold text-foreground transition-colors hover:text-primary hover:no-underline">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4 pt-1 text-sm leading-7 text-muted-foreground">
+                      {renderInline(item.answer)}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          )
+        }
+
         if (block.type === "h2") {
           return (
             <h2 key={`h2-${index}`} className="text-2xl font-semibold text-foreground">
