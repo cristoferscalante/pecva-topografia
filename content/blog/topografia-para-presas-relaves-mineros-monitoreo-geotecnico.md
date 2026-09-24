@@ -3,7 +3,7 @@ title: "Topografía para depósitos y presas de relaves mineros: Monitoreo geot�
 excerpt: "Evite desastres ambientales en la minería moderna con sistemas topográficos de monitoreo continuo de deformaciones, bordes libres y filtraciones en relaveras."
 category: Energía y Minería
 author: Equipo PECVA
-publishedAt: 2026-10-24
+publishedAt: 2026-09-23
 readTime: 7 min
 image: /images/blog/topografia-para-presas-relaves-mineros-monitoreo-geotecnico.png
 seoDescription: "Servicios de topografía para presas de relaves mineros en Colombia. Monitoreo automatizado con prismas, drones y control de borde libre con Consorcio PECVA."

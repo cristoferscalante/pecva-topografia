@@ -3,7 +3,7 @@ title: "Servicios topográficos con sistemas móviles de mapeo (Mobile Mapping L
 excerpt: "Cartografíe cientos de kilómetros de carreteras e inventarios viales en días con sistemas de escaneo láser móvil montados en vehículos."
 category: Tecnología Avanzada
 author: Equipo PECVA
-publishedAt: 2026-10-08
+publishedAt: 2026-09-21
 readTime: 7 min
 image: /images/blog/servicios-topograficos-con-sistemas-moviles-lidar-vial.png
 seoDescription: "Servicios de Mobile Mapping LiDAR vial en Colombia. Cartografía móvil de alta velocidad, inventario de vías y nubes de puntos 3D con PECVA."

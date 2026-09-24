@@ -3,7 +3,7 @@ title: "Fotogrametría con drones RTK: Ortomosaicos y nubes de puntos 3D"
 excerpt: "Aprenda cómo la fotogrametría con drones RTK revoluciona los levantamientos topográficos mediante ortomosaicos y modelos digitales detallados."
 category: Tecnología
 author: Equipo PECVA
-publishedAt: 2026-07-09
+publishedAt: 2026-07-07
 readTime: 6 min
 image: /images/blog/fotogrametria-drones-rtk-ortomosaicos-nubes-puntos.png
 seoDescription: "Optimice los tiempos de entrega de sus planos. Conozca cómo la fotogrametría con drones RTK genera ortomosaicos y nubes de puntos de alta precisión."

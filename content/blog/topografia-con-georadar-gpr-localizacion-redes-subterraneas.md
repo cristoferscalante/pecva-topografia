@@ -3,7 +3,7 @@ title: "Topografía con georradar (GPR) y localización de redes subterráneas"
 excerpt: "Evite roturas de tuberías y cables enterrados mapeando el subsuelo de forma no destructiva con georradar GPR y topografía de alta precisión."
 category: Tecnología Avanzada
 author: Equipo PECVA
-publishedAt: 2026-10-06
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/topografia-con-georadar-gpr-localizacion-redes-subterraneas.png
 seoDescription: "Servicios de georradar GPR y topografía de redes subterráneas en Colombia. Detección no destructiva de tuberías y cables con Consorcio PECVA."

@@ -3,7 +3,7 @@ title: "Topografía para puentes peatonales urbanos y rampas de accesibilidad un
 excerpt: "Garantice la seguridad ciudadana y el cumplimiento de normativas de accesibilidad peatonal en puentes urbanos con topografía de alta precisión."
 category: Obras Civiles
 author: Equipo PECVA
-publishedAt: 2026-11-05
+publishedAt: 2026-09-23
 readTime: 7 min
 image: /images/blog/topografia-para-puentes-peatonales-rampas-accesibilidad.png
 seoDescription: "Servicios de topografía para puentes peatonales urbanos en Colombia. Replanteo de rampas accesibles, gálibos viales y estribos con Consorcio PECVA."

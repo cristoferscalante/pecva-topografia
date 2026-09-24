@@ -3,7 +3,7 @@ title: "Servicios topográficos para actualización de cabida y linderos ante no
 excerpt: "Corrija inconsistencias en el área de su predio en escrituras y certificados de tradición mediante levantamientos topográficos certificados."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-09-26
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/servicios-topograficos-para-actualizacion-cabidas-linderos.png
 seoDescription: "Servicios topográficos para rectificación de cabida y linderos en Colombia. Trámites notariales y catastrales sin errores con Consorcio PECVA."

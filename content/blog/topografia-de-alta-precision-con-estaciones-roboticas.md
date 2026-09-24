@@ -3,7 +3,7 @@ title: "Topografía de alta precisión con estaciones totales robóticas y prism
 excerpt: "Descubra cómo la automatización con estaciones robóticas de un segundo y prismas activos multiplica la productividad y precisión en obras civiles."
 category: Tecnología Avanzada
 author: Equipo PECVA
-publishedAt: 2026-10-10
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/topografia-de-alta-precision-con-estaciones-roboticas.png
 seoDescription: "Servicios de topografía con estaciones totales robóticas en Colombia. Máxima velocidad de replanteo y precisión de 1 segundo con Consorcio PECVA."

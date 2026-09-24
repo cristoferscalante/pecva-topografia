@@ -3,7 +3,7 @@ title: "Servicios topográficos para modelado BIM en infraestructura y gemelos d
 excerpt: "Aprenda cómo la integración de datos topográficos precisos en flujos BIM e IFC optimiza el ciclo de vida de carreteras, puentes y túneles."
 category: Tecnología Avanzada
 author: Equipo PECVA
-publishedAt: 2026-10-04
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/servicios-topograficos-para-modelado-bim-infraestructura.png
 seoDescription: "Servicios topográficos para flujos BIM y gemelos digitales en Colombia. Integración de superficies y coordenadas georreferenciadas con PECVA."

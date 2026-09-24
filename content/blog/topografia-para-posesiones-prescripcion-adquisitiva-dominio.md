@@ -3,7 +3,7 @@ title: "Topografía para procesos de pertenencia y prescripción adquisitiva de 
 excerpt: "Legalice la titularidad de su predio rural o urbano con planos topográficos georreferenciados certificados para demandas de pertenencia."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-09-24
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/topografia-para-posesiones-prescripcion-adquisitiva-dominio.png
 seoDescription: "Servicios de topografía para demandas de pertenencia en Colombia. Planos georreferenciados para prescripción adquisitiva de dominio con PECVA."

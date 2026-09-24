@@ -11,3 +11,4 @@ Siempre que el usuario solicite crear o editar artículos de blog para PECVA Top
 4. **Tono**: Riguroso técnicamente (normativa colombiana, tolerancias, equipos) pero redactado en lenguaje accesible y amigable.
 5. **Imágenes**: 100% únicas, hiperrealistas, proporción 16:9 (1200x675), optimizadas para la web (< 200 KB).
 6. **Despliegue**: Build local (`npx next build`), push a `origin main` y ejecución de despliegue en el VPS (`deploy.hostinger.sh main`).
+7. **Fecha de Publicación (`publishedAt`)**: DEBE ser exactamente igual a la fecha real del día del push/publicación (`AAAA-MM-DD`). Queda estrictamente prohibido colocar fechas futuras o de días que aún no han pasado.

@@ -34,7 +34,7 @@ title: "Título SEO optimizado con palabra clave principal (55-65 caracteres)"
 excerpt: "Resumen persuasivo de 140 a 160 caracteres con llamada a la acción."
 category: "Obras Civiles | Infraestructura | Hidráulica | Energía y Minería | Catastro y Legal | Tecnología Avanzada"
 author: "Equipo PECVA"
-publishedAt: "AAAA-MM-DD"
+publishedAt: "AAAA-MM-DD" # OBLIGATORIO: Fecha real del día del push/publicación. PROHIBIDO fechas futuras.
 readTime: "7 min"
 image: "/images/blog/<slug>.png"
 seoDescription: "Meta descripción con palabra clave al inicio, propuesta de valor y llamada a la acción."
@@ -49,6 +49,10 @@ relatedServiceSlugs:
   - slug-de-servicio-2
 ---
 ```
+
+### Regla Obligatoria de Fechas (`publishedAt`)
+* **Fecha Exacta del Push**: La fecha `publishedAt` DEBE coincidir obligatoriamente con el día en curso en el momento en que se realiza el commit y push de la publicación (`AAAA-MM-DD`).
+* **PROHIBICIÓN ESTRICTA DE FECHAS FUTURAS**: Bajo ninguna circunstancia se deben programar o asignar fechas de días o meses posteriores a la fecha actual ("días que no han pasado"). Todos los artículos publicados deben reflejar fechas pasadas o la fecha del día del push.
 
 ### Marcado Estructurado (Schema.org)
 * **BlogPosting**: Título, descripción, autoría (Consorcio PECVA), fecha y URL canónica.

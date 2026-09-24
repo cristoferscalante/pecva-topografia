@@ -3,7 +3,7 @@ title: "Cómo contratar comisiones topográficas por días para control de obra"
 excerpt: "Guía práctica sobre la conformación, equipos y criterios clave al momento de contratar comisiones topográficas por días o meses para sus obras civiles."
 category: Infraestructura
 author: Equipo PECVA
-publishedAt: 2026-07-10
+publishedAt: 2026-07-07
 readTime: 6 min
 image: /images/blog/como-contratar-comisiones-topograficas-control-obra.png
 seoDescription: "Optimice sus presupuestos de construcción. Aprenda qué buscar al contratar una comisión topográfica por días y los roles indispensables de campo."

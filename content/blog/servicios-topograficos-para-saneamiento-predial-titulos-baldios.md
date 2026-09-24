@@ -3,7 +3,7 @@ title: "Servicios topográficos para saneamiento predial, clarificación y titul
 excerpt: "Obtenga la titulación legal de su propiedad rural y resuelva traslapes ante la ANT e IGAC con levantamientos topográficos prediales certificados."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-11-02
+publishedAt: 2026-09-23
 readTime: 7 min
 image: /images/blog/servicios-topograficos-para-saneamiento-predial-titulos-baldios.png
 seoDescription: "Servicios topográficos para clarificación de baldíos y saneamiento de títulos en Colombia. Planos georreferenciados para la ANT y notarías con Consorcio PECVA."

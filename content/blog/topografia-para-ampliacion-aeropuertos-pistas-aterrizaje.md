@@ -3,7 +3,7 @@ title: "Topografía para ampliación de aeropuertos: Pistas de aterrizaje, calle
 excerpt: "Descubra la ingeniería topográfica de ultra-precisión requerida en pavimentos aeroportuarios, umbrales de pista y superficies limitadoras de obstáculos OACI."
 category: Infraestructura
 author: Equipo PECVA
-publishedAt: 2026-10-30
+publishedAt: 2026-09-23
 readTime: 8 min
 image: /images/blog/topografia-para-ampliacion-aeropuertos-pistas-aterrizaje.png
 seoDescription: "Servicios de topografía para pistas de aterrizaje y aeropuertos en Colombia. Control milimétrico de rasantes, franjas de pista y normas OACI con Consorcio PECVA."

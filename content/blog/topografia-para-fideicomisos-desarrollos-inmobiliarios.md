@@ -3,7 +3,7 @@ title: "Topografía para fideicomisos y estructuración de proyectos inmobiliari
 excerpt: "Blinde las inversiones de preventa y fiducias inmobiliarias con levantamientos topográficos de precisión que validan áreas útiles y cesiones viales."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-09-28
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/topografia-para-fideicomisos-desarrollos-inmobiliarios.png
 seoDescription: "Servicios de topografía para fideicomisos y fondos inmobiliarios en Colombia. Validación de áreas vendibles, cesiones y licenciamiento con PECVA."

@@ -3,7 +3,7 @@ title: "Topografía para túneles viales: Control de convergencia, guiado y exca
 excerpt: "Descubra cómo la topografía de precisión milimétrica guía la excavación de túneles viales, el control de convergencia de bóvedas y el calado exacto en cordilleras."
 category: Infraestructura
 author: Equipo PECVA
-publishedAt: 2026-10-12
+publishedAt: 2026-09-23
 readTime: 8 min
 image: /images/blog/topografia-para-tuneles-viales-control-convergencia-excavacion.png
 seoDescription: "Servicios de topografía para túneles viales en Colombia. Guiado láser subterráneo, control de convergencia y calado milimétrico con Consorcio PECVA."

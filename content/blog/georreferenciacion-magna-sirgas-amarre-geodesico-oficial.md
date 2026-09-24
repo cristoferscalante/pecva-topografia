@@ -3,7 +3,7 @@ title: "Georreferenciación MAGNA-SIRGAS: Amarre geodésico oficial en Colombia"
 excerpt: "Aprenda qué es la georreferenciación MAGNA-SIRGAS, por qué es obligatoria para trámites del IGAC y cómo se realiza un amarre geodésico de precisión."
 category: Tecnología
 author: Equipo PECVA
-publishedAt: 2026-07-08
+publishedAt: 2026-07-07
 readTime: 6 min
 image: /images/blog/georreferenciacion-magna-sirgas-amarre-geodesico-oficial.png
 seoDescription: "Evite problemas jurídicos y notariales. Conozca la georreferenciación MAGNA-SIRGAS y los requisitos de amarre geodésico oficial del IGAC en Colombia."

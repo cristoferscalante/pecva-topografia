@@ -3,7 +3,7 @@ title: "Servicios topográficos para resguardos indígenas y tierras colectivas"
 excerpt: "Descubra cómo la cartografía de precisión y la topografía comunitaria apoyan la delimitación de territorios colectivos y titulación de baldíos."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-09-30
+publishedAt: 2026-09-21
 readTime: 6 min
 image: /images/blog/servicios-topograficos-para-resguardos-tierras-colectivas.png
 seoDescription: "Servicios topográficos para delimitación de resguardos y tierras colectivas en Colombia. Cartografía rural y clarificación de baldíos con Consorcio PECVA."

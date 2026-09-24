@@ -3,7 +3,7 @@ title: "Servicios topográficos y batimétricos para monitoreo de erosión coste
 excerpt: "Proteja el litoral caribe y pacífico mediante levantamientos topográficos y batimétricos integrados para control de playas, espolones y diques."
 category: Hidráulica
 author: Equipo PECVA
-publishedAt: 2026-11-08
+publishedAt: 2026-09-23
 readTime: 8 min
 image: /images/blog/servicios-topograficos-para-monitoreo-erosion-costera-playas.png
 seoDescription: "Servicios topográficos y batimetría para erosión costera en Colombia. Monitoreo de playas, espolones y línea de costa con Consorcio PECVA."

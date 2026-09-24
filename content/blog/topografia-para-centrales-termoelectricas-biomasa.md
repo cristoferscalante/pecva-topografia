@@ -3,7 +3,7 @@ title: "Topografía para centrales termoeléctricas y plantas de generación por
 excerpt: "Garantice la alineación milimétrica de turbinas de vapor, calderas industriales y silos de almacenamiento con topografía de alta precisión industrial."
 category: Energía y Minería
 author: Equipo PECVA
-publishedAt: 2026-10-18
+publishedAt: 2026-09-23
 readTime: 7 min
 image: /images/blog/topografia-para-centrales-termoelectricas-biomasa.png
 seoDescription: "Servicios de topografía industrial para centrales térmicas y biomasa en Colombia. Alineamiento de turbo-generadores, calderas y silos con Consorcio PECVA."

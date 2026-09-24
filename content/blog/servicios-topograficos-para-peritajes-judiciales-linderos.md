@@ -3,7 +3,7 @@ title: "Servicios topográficos para peritajes judiciales y litigios de linderos
 excerpt: "Resuelva pleitos de linderos, servidumbres y disputas de tierras con dictámenes periciales topográficos con validez probatoria ante jueces civiles."
 category: Catastro y Legal
 author: Equipo PECVA
-publishedAt: 2026-09-22
+publishedAt: 2026-09-21
 readTime: 7 min
 image: /images/blog/servicios-topograficos-para-peritajes-judiciales-linderos.png
 seoDescription: "Servicios topográficos para peritajes judiciales en Colombia. Dictámenes periciales de linderos, servidumbres y ocupaciones con Consorcio PECVA."

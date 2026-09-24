@@ -3,7 +3,7 @@ title: "Topografía con escáner láser terrestre (TLS) y levantamientos Scan-to
 excerpt: "Digitalice edificios históricos, plantas industriales e infraestructuras complejas con escaneo láser 3D terrestre y modelos Scan-to-BIM de alta fidelidad."
 category: Tecnología Avanzada
 author: Equipo PECVA
-publishedAt: 2026-10-02
+publishedAt: 2026-09-21
 readTime: 7 min
 image: /images/blog/topografia-con-escaner-laser-terrestre-nubes-puntos-bim.png
 seoDescription: "Servicios de escaneo láser terrestre TLS y Scan to BIM en Colombia. Nubes de puntos millonarias y modelado 3D de alta fidelidad con Consorcio PECVA."

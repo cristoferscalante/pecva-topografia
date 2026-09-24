@@ -3,7 +3,7 @@ title: "Servicios topográficos para estaciones de bombeo de agua potable y resi
 excerpt: "Optimice el funcionamiento electromecánico e hidráulico de estaciones de bombeo mediante servicios topográficos de implantación de pozos y rasantes."
 category: Hidráulica
 author: Equipo PECVA
-publishedAt: 2026-10-27
+publishedAt: 2026-09-23
 readTime: 7 min
 image: /images/blog/servicios-topograficos-para-estaciones-bombeo-aguas-residuales.png
 seoDescription: "Servicios topográficos para estaciones de bombeo EBAR y de agua potable en Colombia. Alineación de bombas, cotas de succión y cámaras húmedas con PECVA."
