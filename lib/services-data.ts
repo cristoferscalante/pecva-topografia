@@ -580,3 +580,27 @@ export const servicesData: ServiceDataEntry[] = [
 ]
 
 export const servicesDataBySlug = new Map(servicesData.map((service) => [service.slug, service]))
+
+export const SERVICE_CATEGORIES: { id: string; label: string; slugs: string[] }[] = [
+  {
+    id: "terreno",
+    label: "Terreno y catastro",
+    slugs: ["levantamiento-planimetrico-altimetrico", "desenglobes-y-englobes", "georreferenciacion-magna-sirgas"],
+  },
+  {
+    id: "urbanismo",
+    label: "Urbanismo e infraestructura",
+    slugs: [
+      "topografia-para-urbanismos",
+      "topografia-para-vias",
+      "topografia-redes-hidrosanitarias",
+      "topografia-para-acueductos",
+    ],
+  },
+  { id: "agua-aire", label: "Agua y aire", slugs: ["batimetria", "fotogrametria-con-drones"] },
+  { id: "acompanamiento", label: "Acompañamiento en obra", slugs: ["comisiones-topograficas"] },
+]
+
+export function categoryOfService(slug: string) {
+  return SERVICE_CATEGORIES.find((c) => c.slugs.includes(slug))
+}

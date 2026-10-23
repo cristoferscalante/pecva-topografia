@@ -19,7 +19,7 @@ import {
   Plane,
   Users,
 } from "lucide-react"
-import { servicesData, type ServiceDataEntry } from "@/lib/services-data"
+import { servicesData, type ServiceDataEntry, SERVICE_CATEGORIES, categoryOfService } from "@/lib/services-data"
 import { buildWhatsAppUrl } from "@/lib/site-config"
 
 const iconMap = {
@@ -41,15 +41,10 @@ const colorClasses = {
   accent: { bg: "bg-accent/10", border: "border-accent/20", hoverBorder: "hover:border-accent/40", text: "text-accent", solid: "bg-accent hover:bg-accent/90" },
 } as const
 
-const CATEGORIES: { id: string; label: string; slugs: string[] }[] = [
-  { id: "terreno", label: "Terreno y catastro", slugs: ["levantamiento-planimetrico-altimetrico", "desenglobes-y-englobes", "georreferenciacion-magna-sirgas"] },
-  { id: "urbanismo", label: "Urbanismo e infraestructura", slugs: ["topografia-para-urbanismos", "topografia-para-vias", "topografia-redes-hidrosanitarias", "topografia-para-acueductos"] },
-  { id: "agua-aire", label: "Agua y aire", slugs: ["batimetria", "fotogrametria-con-drones"] },
-  { id: "acompanamiento", label: "Acompañamiento en obra", slugs: ["comisiones-topograficas"] },
-]
+const CATEGORIES = SERVICE_CATEGORIES
 
 function categoryOf(slug: string) {
-  return CATEGORIES.find((c) => c.slugs.includes(slug))?.id ?? "otros"
+  return categoryOfService(slug)?.id ?? "otros"
 }
 
 function ServiceCard({ service, index }: { service: ServiceDataEntry; index: number }) {
