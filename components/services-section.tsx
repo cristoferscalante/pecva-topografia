@@ -152,9 +152,9 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-6 text-3xl font-bold text-foreground text-balance md:text-4xl lg:text-5xl"
           >
-            Un catálogo listo para{" "}
+            Soluciones topográficas para cada etapa de{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              cotizar
+              su proyecto
             </span>
           </motion.h2>
 
@@ -164,8 +164,8 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg leading-relaxed text-muted-foreground"
           >
-            Diez servicios, organizados por frente de trabajo. Cada uno con sus entregables y un
-            botón directo para pedir cotización por WhatsApp.
+            Desde el levantamiento inicial hasta el control de obra, respaldados por equipos
+            calibrados y profesionales matriculados ante el CPNT en toda Colombia.
           </motion.p>
         </div>
 
