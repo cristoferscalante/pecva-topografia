@@ -1,14 +1,13 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
-import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
+import { motion, AnimatePresence, useInView } from "framer-motion"
+import { useMemo, useRef, useState } from "react"
 import {
-  ArrowUpRight,
+  ArrowRight,
   CheckCircle2,
   MessageCircle,
-  ArrowRight,
+  FileCheck2,
   Map,
   FileText,
   Building2,
@@ -20,7 +19,6 @@ import {
   Plane,
   Users,
 } from "lucide-react"
-import { ContourBackground } from "@/components/contour-background"
 import { servicesData, type ServiceDataEntry } from "@/lib/services-data"
 import { buildWhatsAppUrl } from "@/lib/site-config"
 
@@ -38,165 +36,107 @@ const iconMap = {
 } as const
 
 const colorClasses = {
-  primary: {
-    bg: "bg-primary/10",
-    border: "border-primary/20",
-    hoverBorder: "hover:border-primary/50",
-    iconColor: "text-primary",
-    gradient: "from-primary/10 via-primary/5 to-transparent",
-  },
-  secondary: {
-    bg: "bg-secondary/10",
-    border: "border-secondary/20",
-    hoverBorder: "hover:border-secondary/50",
-    iconColor: "text-secondary",
-    gradient: "from-secondary/10 via-secondary/5 to-transparent",
-  },
-  accent: {
-    bg: "bg-accent/10",
-    border: "border-accent/20",
-    hoverBorder: "hover:border-accent/50",
-    iconColor: "text-accent",
-    gradient: "from-accent/10 via-accent/5 to-transparent",
-  },
+  primary: { bg: "bg-primary/10", border: "border-primary/20", hoverBorder: "hover:border-primary/40", text: "text-primary", solid: "bg-primary hover:bg-primary/90" },
+  secondary: { bg: "bg-secondary/10", border: "border-secondary/20", hoverBorder: "hover:border-secondary/40", text: "text-secondary", solid: "bg-secondary hover:bg-secondary/90" },
+  accent: { bg: "bg-accent/10", border: "border-accent/20", hoverBorder: "hover:border-accent/40", text: "text-accent", solid: "bg-accent hover:bg-accent/90" },
 } as const
 
-const FLAGSHIP_SLUGS = [
-  "levantamiento-planimetrico-altimetrico",
-  "topografia-para-urbanismos",
-  "fotogrametria-con-drones",
+const CATEGORIES: { id: string; label: string; slugs: string[] }[] = [
+  { id: "terreno", label: "Terreno y catastro", slugs: ["levantamiento-planimetrico-altimetrico", "desenglobes-y-englobes", "georreferenciacion-magna-sirgas"] },
+  { id: "urbanismo", label: "Urbanismo e infraestructura", slugs: ["topografia-para-urbanismos", "topografia-para-vias", "topografia-redes-hidrosanitarias", "topografia-para-acueductos"] },
+  { id: "agua-aire", label: "Agua y aire", slugs: ["batimetria", "fotogrametria-con-drones"] },
+  { id: "acompanamiento", label: "Acompañamiento en obra", slugs: ["comisiones-topograficas"] },
 ]
 
-const CATALOG_GROUPS: { label: string; slugs: string[] }[] = [
-  {
-    label: "Catastro y legal",
-    slugs: ["desenglobes-y-englobes", "georreferenciacion-magna-sirgas", "comisiones-topograficas"],
-  },
-  {
-    label: "Agua e infraestructura",
-    slugs: ["topografia-redes-hidrosanitarias", "topografia-para-acueductos", "topografia-para-vias", "batimetria"],
-  },
-]
+function categoryOf(slug: string) {
+  return CATEGORIES.find((c) => c.slugs.includes(slug))?.id ?? "otros"
+}
 
-function FlagshipCard({ service, index, badge }: { service: ServiceDataEntry; index: number; badge: string }) {
-  const [isHovered, setIsHovered] = useState(false)
+function ServiceCard({ service, index }: { service: ServiceDataEntry; index: number }) {
   const colors = colorClasses[service.color]
   const Icon = iconMap[service.iconKey]
+  const category = CATEGORIES.find((c) => c.id === categoryOf(service.slug))
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card ${colors.border} ${colors.hoverBorder} transition-all duration-500`}
-      whileHover={{ y: -8, transition: { duration: 0.3 } }}
+      layout
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -12 }}
+      transition={{ duration: 0.35, delay: index * 0.03, ease: [0.25, 0.4, 0.25, 1] }}
+      whileHover={{ y: -6 }}
+      className={`group flex h-full flex-col rounded-2xl border bg-card p-6 shadow-sm transition-colors duration-300 ${colors.border} ${colors.hoverBorder}`}
     >
-      <Link href={`/servicios/${service.slug}`} className="relative block aspect-[16/11] w-full flex-shrink-0 overflow-hidden">
-        <motion.div className="absolute inset-0" animate={{ scale: isHovered ? 1.06 : 1 }} transition={{ duration: 0.5 }}>
-          <Image src={service.image} alt={service.title} fill className="object-cover" />
-        </motion.div>
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/15 to-transparent" />
-        <span className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-          {badge}
+      <div className="mb-4 flex items-start justify-between">
+        <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${colors.bg} transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3`}>
+          <Icon className={`h-5 w-5 ${colors.text}`} />
+        </div>
+        <span className="rounded-full bg-muted px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+          {category?.label}
         </span>
-        <div
-          className={`absolute bottom-5 left-5 flex h-11 w-11 items-center justify-center rounded-xl ${colors.bg} border ${colors.border} backdrop-blur-md`}
-        >
-          <Icon className={`h-5 w-5 ${colors.iconColor}`} />
-        </div>
-      </Link>
+      </div>
 
-      <div className="flex flex-grow flex-col p-6">
-        <h3 className="mb-3 text-lg font-semibold text-foreground">
-          <Link href={`/servicios/${service.slug}`} className="transition-colors hover:text-primary">
-            {service.title}
-          </Link>
-        </h3>
-        <p className="mb-5 flex-grow text-sm leading-relaxed text-muted-foreground line-clamp-3">
-          {service.shortDescription}
-        </p>
-        <ul className="mb-5 space-y-2.5">
-          {service.highlights.slice(0, 2).map((item) => (
-            <li key={item} className="flex items-start gap-2.5 text-sm text-foreground">
-              <CheckCircle2 className={`mt-0.5 h-4 w-4 flex-none ${colors.iconColor}`} />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="mt-auto flex items-center gap-2 border-t border-border/50 pt-4">
-          <Link
-            href={`/servicios/${service.slug}`}
-            className={`flex-1 rounded-xl px-4 py-2.5 text-center text-xs font-bold text-white shadow-sm transition-all duration-300 hover:shadow-md ${
-              service.color === "primary"
-                ? "bg-primary hover:bg-primary/95"
-                : service.color === "secondary"
-                  ? "bg-secondary hover:bg-secondary/95"
-                  : "bg-accent hover:bg-accent/95"
-            }`}
+      <h3 className="mb-2 text-base font-semibold leading-snug text-foreground">
+        <Link href={`/servicios/${service.slug}`} className="transition-colors hover:text-primary">
+          {service.title}
+        </Link>
+      </h3>
+      <p className="mb-4 flex-grow text-sm leading-relaxed text-muted-foreground line-clamp-2">
+        {service.shortDescription}
+      </p>
+
+      <div className="mb-5 flex flex-wrap gap-1.5">
+        {service.highlights.slice(0, 2).map((item) => (
+          <span
+            key={item}
+            className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium text-foreground"
           >
-            Ver servicio
-          </Link>
-          <a
-            href={buildWhatsAppUrl(`Hola PECVA, me interesa solicitar cotización e información sobre el servicio de: ${service.title}`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#25D366]/20 bg-[#25D366]/10 text-[#25D366] shadow-sm transition-all duration-300 hover:bg-[#25D366] hover:text-white"
-            title="Consultar por WhatsApp"
-          >
-            <MessageCircle className="h-4 w-4" />
-          </a>
-        </div>
+            <CheckCircle2 className={`h-3 w-3 ${colors.text}`} />
+            {item}
+          </span>
+        ))}
+        <span className="inline-flex items-center gap-1 rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium text-muted-foreground">
+          <FileCheck2 className="h-3 w-3" />
+          {service.deliverables.length} entregables
+        </span>
+      </div>
+
+      <div className="mt-auto flex items-center gap-2 border-t border-border/60 pt-4">
+        <Link
+          href={`/servicios/${service.slug}`}
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl border border-border px-3 py-2.5 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+        >
+          Ver detalle
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+        </Link>
+        <a
+          href={buildWhatsAppUrl(`Hola PECVA, quiero cotizar el servicio de: ${service.title}`)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex flex-1 items-center justify-center gap-1.5 rounded-xl px-3 py-2.5 text-xs font-bold text-white shadow-sm transition-all ${colors.solid}`}
+        >
+          <MessageCircle className="h-3.5 w-3.5" />
+          Cotizar
+        </a>
       </div>
     </motion.article>
-  )
-}
-
-function CatalogRow({ service, index }: { service: ServiceDataEntry; index: number }) {
-  const colors = colorClasses[service.color]
-  const Icon = iconMap[service.iconKey]
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 24 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.45, delay: index * 0.06 }}
-    >
-      <Link
-        href={`/servicios/${service.slug}`}
-        className="group flex items-start gap-4 border-b border-border/60 py-5 transition-colors last:border-b-0 hover:pl-1.5"
-      >
-        <div className={`flex h-10 w-10 flex-none items-center justify-center rounded-lg ${colors.bg} transition-transform duration-300 group-hover:scale-110`}>
-          <Icon className={`h-[18px] w-[18px] ${colors.iconColor}`} />
-        </div>
-        <div className="min-w-0 flex-1">
-          <h4 className="text-[15px] font-semibold text-foreground transition-colors group-hover:text-primary">{service.title}</h4>
-          <p className="mt-1 text-sm leading-snug text-muted-foreground line-clamp-1">{service.shortDescription}</p>
-        </div>
-        <ArrowUpRight className="mt-1 h-4 w-4 flex-none text-muted-foreground transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
-      </Link>
-    </motion.div>
   )
 }
 
 export function ServicesSection() {
   const headerRef = useRef(null)
   const isInView = useInView(headerRef, { once: true, margin: "-100px" })
+  const [activeCategory, setActiveCategory] = useState<string>("todos")
 
-  const flagship = FLAGSHIP_SLUGS.map((slug) => servicesData.find((s) => s.slug === slug)).filter(
-    (s): s is ServiceDataEntry => Boolean(s)
-  )
+  const filtered = useMemo(() => {
+    if (activeCategory === "todos") return servicesData
+    return servicesData.filter((s) => categoryOf(s.slug) === activeCategory)
+  }, [activeCategory])
 
   return (
     <section id="servicios" className="relative overflow-hidden bg-muted/30 py-24">
-      <ContourBackground variant="subtle" />
-
       <div className="container relative z-10 mx-auto px-4 lg:px-8">
-        <div ref={headerRef} className="mx-auto mb-14 max-w-3xl text-center">
+        <div ref={headerRef} className="mx-auto mb-10 max-w-3xl text-center">
           <motion.span
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -212,9 +152,9 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-6 text-3xl font-bold text-foreground text-balance md:text-4xl lg:text-5xl"
           >
-            Un portafolio técnico,{" "}
+            Un catálogo listo para{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              con jerarquía clara
+              cotizar
             </span>
           </motion.h2>
 
@@ -224,56 +164,46 @@ export function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg leading-relaxed text-muted-foreground"
           >
-            Los tres servicios que sostienen la mayoría de proyectos, al frente. El resto del
-            catálogo, organizado por frente de trabajo.
+            Diez servicios, organizados por frente de trabajo. Cada uno con sus entregables y un
+            botón directo para pedir cotización por WhatsApp.
           </motion.p>
         </div>
 
-        <div className="mb-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {flagship.map((service, index) => (
-            <FlagshipCard key={service.slug} service={service} index={index} badge="Servicio insignia" />
-          ))}
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-2">
-          {CATALOG_GROUPS.map((group, groupIndex) => (
-            <motion.div
-              key={group.label}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
-              className="rounded-2xl border border-border bg-card px-6 py-2"
-            >
-              <div className="flex items-center justify-between border-b border-border/60 py-4">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                  {group.label}
-                </h3>
-                <span className="text-xs font-medium text-muted-foreground">{group.slugs.length} servicios</span>
-              </div>
-              {group.slugs.map((slug, index) => {
-                const service = servicesData.find((s) => s.slug === slug)
-                if (!service) return null
-                return <CatalogRow key={slug} service={service} index={index} />
-              })}
-            </motion.div>
-          ))}
-        </div>
-
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-10 flex items-center justify-center gap-2"
+          initial={{ opacity: 0, y: 16 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mb-10 flex flex-wrap items-center justify-center gap-2"
         >
-          <Link
-            href="/servicios"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-primary"
-          >
-            Ver el catálogo completo de servicios ({servicesData.length})
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          {[{ id: "todos", label: `Todos (${servicesData.length})` }, ...CATEGORIES.map((c) => ({ id: c.id, label: `${c.label} (${c.slugs.length})` }))].map(
+            (cat) => (
+              <button
+                key={cat.id}
+                type="button"
+                onClick={() => setActiveCategory(cat.id)}
+                className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  activeCategory === cat.id ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {activeCategory === cat.id && (
+                  <motion.span
+                    layoutId="activeServiceCategory"
+                    className="absolute inset-0 rounded-full bg-primary"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{cat.label}</span>
+              </button>
+            )
+          )}
+        </motion.div>
+
+        <motion.div layout className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((service, index) => (
+              <ServiceCard key={service.slug} service={service} index={index} />
+            ))}
+          </AnimatePresence>
         </motion.div>
       </div>
     </section>
