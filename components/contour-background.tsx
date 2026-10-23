@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 interface ContourBackgroundProps {
   className?: string
@@ -8,6 +9,12 @@ interface ContourBackgroundProps {
 }
 
 export function ContourBackground({ className = "", variant = "section" }: ContourBackgroundProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const opacityMap = {
     hero: 0.2,
     section: 0.1,
@@ -19,7 +26,7 @@ export function ContourBackground({ className = "", variant = "section" }: Conto
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {/* Floating particles */}
-      {variant === "hero" && (
+      {variant === "hero" && mounted && (
         <>
           {[...Array(20)].map((_, i) => (
             <motion.div

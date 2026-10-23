@@ -1,10 +1,10 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
 import { ArrowRight, MessageSquare, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { useRef } from "react"
+import { useRef, type MouseEvent } from "react"
 import { Button } from "@/components/ui/button"
 import { ContourBackground } from "@/components/contour-background"
 
@@ -42,6 +42,22 @@ export function HeroSection() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 150])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const tiltX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), { stiffness: 150, damping: 20 })
+  const tiltY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), { stiffness: 150, damping: 20 })
+
+  function handleVisualMouseMove(event: MouseEvent<HTMLDivElement>) {
+    const rect = event.currentTarget.getBoundingClientRect()
+    mouseX.set((event.clientX - rect.left) / rect.width - 0.5)
+    mouseY.set((event.clientY - rect.top) / rect.height - 0.5)
+  }
+
+  function handleVisualMouseLeave() {
+    mouseX.set(0)
+    mouseY.set(0)
+  }
+
   return (
     <section
       ref={ref}
@@ -49,6 +65,14 @@ export function HeroSection() {
       className="relative flex min-h-screen items-center overflow-hidden bg-background"
     >
       <ContourBackground variant="hero" />
+
+      <div
+        className="pointer-events-none absolute inset-0 z-[1] opacity-[0.035] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        }}
+      />
 
       <motion.div
         className="absolute inset-0 bg-[linear-gradient(rgba(77,104,140,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(77,104,140,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"
@@ -155,7 +179,12 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.4 }}
             className="relative hidden lg:block"
           >
-            <div className="perspective-1000 relative mx-auto aspect-square w-full max-w-lg">
+            <motion.div
+              className="perspective-1000 relative mx-auto aspect-square w-full max-w-lg"
+              style={{ transformPerspective: 1000, rotateX: tiltX, rotateY: tiltY, transformStyle: "preserve-3d" }}
+              onMouseMove={handleVisualMouseMove}
+              onMouseLeave={handleVisualMouseLeave}
+            >
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
@@ -253,6 +282,42 @@ export function HeroSection() {
                 ))}
               </motion.div>
 
+              <svg
+                className="pointer-events-none absolute inset-0 h-full w-full"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="heroFlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="rgb(76,166,73)" stopOpacity="0.55" />
+                    <stop offset="100%" stopColor="rgb(77,104,140)" stopOpacity="0.55" />
+                  </linearGradient>
+                </defs>
+                {[
+                  "M9,18 Q30,32 50,50",
+                  "M91,27 Q70,38 50,50",
+                  "M9,70 Q28,62 50,50",
+                ].map((d, i) => (
+                  <motion.path
+                    key={d}
+                    d={d}
+                    fill="none"
+                    stroke="url(#heroFlowGradient)"
+                    strokeWidth={0.5}
+                    strokeLinecap="round"
+                    strokeDasharray="2 2.5"
+                    initial={{ pathLength: 0, opacity: 0 }}
+                    animate={{ pathLength: 1, opacity: 1, strokeDashoffset: [0, -9] }}
+                    transition={{
+                      pathLength: { duration: 1, delay: 0.6 + i * 0.15 },
+                      opacity: { duration: 0.6, delay: 0.6 + i * 0.15 },
+                      strokeDashoffset: { duration: 1.6, repeat: Infinity, ease: "linear", delay: 1.2 },
+                    }}
+                  />
+                ))}
+              </svg>
+
               <motion.div
                 className="absolute inset-0 z-30 flex items-center justify-center"
                 initial={{ scale: 0, opacity: 0 }}
@@ -268,7 +333,7 @@ export function HeroSection() {
                   />
                 </div>
               </motion.div>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </motion.div>
