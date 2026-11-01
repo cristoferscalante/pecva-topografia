@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { HeroSection } from "@/components/hero-section"
+import { ToolBanner } from "@/components/tool-banner"
 import { ServicesSection } from "@/components/services-section"
 import { StatsSection } from "@/components/stats-section"
 import { BlogSection } from "@/components/blog-section"
@@ -50,6 +51,7 @@ export default function HomePage() {
         }}
       />
       <HeroSection />
+      <ToolBanner />
       <ServicesSection />
       <StatsSection />
       <BlogSection posts={posts} />
