@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-10
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-presas-hidroelectricas-aliviaderos.png
+image: /images/blog/servicios-topograficos-para-presas-hidroelectricas-aliviaderos.webp
 seoDescription: "Servicios topográficos para presas hidroeléctricas y vertederos en Colombia. Geodesia de precisión y control geométrico de túneles con Consorcio PECVA."
 keywords:
   - servicios topograficos presas hidroelectricas

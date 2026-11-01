@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-25
 readTime: 6 min
-image: /images/blog/software-topografia-utilizados-ingenieria-civil-catastro.png
+image: /images/blog/software-topografia-utilizados-ingenieria-civil-catastro.webp
 seoDescription: "Conozca los software de topografía estándar de la industria. Programas de procesamiento de datos GNSS, modelado de terreno 3D y diseño vial en AutoCAD."
 keywords:
   - software de topografia

@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-07-21
 readTime: 6 min
-image: /images/blog/requisitos-topografia-licencias-construccion-curadurias.png
+image: /images/blog/requisitos-topografia-licencias-construccion-curadurias.webp
 seoDescription: "Evite rechazos en sus trámites. Conozca los requisitos técnicos de topografía y planos georreferenciados para obtener licencias de construcción."
 keywords:
   - licencia de construccion topografia

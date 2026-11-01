@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-autonomos-estaciones-roboticas-drones-rtk.png"
+image: "/images/blog/equipos-de-topografos-autonomos-estaciones-roboticas-drones-rtk.webp"
 seoDescription: "Descubra los equipos de topógrafos autónomos en Colombia: estaciones robóticas de un solo operador, drones con Terrain Following y automatización en campo."
 keywords:
   - equipos de topografos autonomos

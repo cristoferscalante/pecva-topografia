@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/topografia-colombia-normativa-metodos-exigencias-tecnicas.png"
+image: "/images/blog/topografia-colombia-normativa-metodos-exigencias-tecnicas.webp"
 seoDescription: "Conozca cómo opera la topografía en Colombia: marco legal del IGAC, sistema MAGNA-SIRGAS, licencias urbanísticas y estándares de precisión milimétrica."
 keywords:
   - topografia colombia

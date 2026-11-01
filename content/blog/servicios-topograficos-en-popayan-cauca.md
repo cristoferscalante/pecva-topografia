@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-06-13
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-popayan-cauca.png
+image: /images/blog/servicios-topograficos-en-popayan-cauca.webp
 seoDescription: "Descubra dónde contratar servicios topográficos en Popayán y Cauca. PECVA ofrece planos prediales amarrados a Magna-Sirgas para sucesiones y el IGAC."
 keywords:
   - donde contratar servicios topograficos en popayan

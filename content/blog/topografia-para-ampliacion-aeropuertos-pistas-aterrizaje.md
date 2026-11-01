@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 8 min
-image: /images/blog/topografia-para-ampliacion-aeropuertos-pistas-aterrizaje.png
+image: /images/blog/topografia-para-ampliacion-aeropuertos-pistas-aterrizaje.webp
 seoDescription: "Servicios de topografía para pistas de aterrizaje y aeropuertos en Colombia. Control milimétrico de rasantes, franjas de pista y normas OACI con Consorcio PECVA."
 keywords:
   - topografia para aeropuertos

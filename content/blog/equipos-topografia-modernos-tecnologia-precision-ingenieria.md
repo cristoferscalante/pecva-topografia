@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-26
 readTime: 6 min
-image: /images/blog/equipos-topografia-modernos-tecnologia-precision-ingenieria.png
+image: /images/blog/equipos-topografia-modernos-tecnologia-precision-ingenieria.webp
 seoDescription: "Optimice sus proyectos con tecnología de punta. Conozca las diferencias entre estaciones totales, GNSS RTK y escáneres láser en topografía."
 keywords:
   - equipos de topografia

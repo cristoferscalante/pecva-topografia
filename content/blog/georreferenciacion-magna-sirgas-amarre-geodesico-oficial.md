@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-07
 readTime: 6 min
-image: /images/blog/georreferenciacion-magna-sirgas-amarre-geodesico-oficial.png
+image: /images/blog/georreferenciacion-magna-sirgas-amarre-geodesico-oficial.webp
 seoDescription: "Evite problemas jurídicos y notariales. Conozca la georreferenciación MAGNA-SIRGAS y los requisitos de amarre geodésico oficial del IGAC en Colombia."
 keywords:
   - georreferenciacion magna sirgas

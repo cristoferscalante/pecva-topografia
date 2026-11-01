@@ -5,7 +5,7 @@ category: "Hidráulica"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-redes-acueducto-alcantarillado-gpr-niveles.png"
+image: "/images/blog/equipos-de-topografos-redes-acueducto-alcantarillado-gpr-niveles.webp"
 seoDescription: "Conozca los equipos de topógrafos para acueducto y alcantarillado en Colombia: georradar GPR, niveles ópticos de precisión, reglamento RAS y trazado de redes."
 keywords:
   - equipos de topografos redes hidraulicas

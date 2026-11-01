@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-08-28
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-estabilidad-taludes-contencion.png
+image: /images/blog/servicios-topograficos-para-estabilidad-taludes-contencion.webp
 seoDescription: "Servicios topográficos para estabilidad de taludes y obras de contención en Colombia. Control de bermas, anclajes y monitoreo geotécnico con PECVA."
 keywords:
   - servicios topograficos estabilidad taludes

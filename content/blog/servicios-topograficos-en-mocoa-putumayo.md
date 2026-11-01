@@ -5,7 +5,7 @@ category: Infraestructura vial
 author: Equipo PECVA
 publishedAt: 2026-06-11
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-mocoa-putumayo.png
+image: /images/blog/servicios-topograficos-en-mocoa-putumayo.webp
 seoDescription: "Busca dónde contratar servicios topográficos en Mocoa, Puerto Asís y Putumayo? PECVA ofrece levantamiento de vías, catastro y comisiones de campo."
 keywords:
   - donde contratar servicios topograficos en mocoa

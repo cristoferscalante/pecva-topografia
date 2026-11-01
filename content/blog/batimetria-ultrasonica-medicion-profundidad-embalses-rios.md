@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-07
 readTime: 6 min
-image: /images/blog/batimetria-ultrasonica-medicion-profundidad-embalses-rios.png
+image: /images/blog/batimetria-ultrasonica-medicion-profundidad-embalses-rios.webp
 seoDescription: "Optimice la gestión de recursos hídricos. Conozca cómo la batimetría ultrasónica calcula sedimentación y capacidades en embalses y ríos."
 keywords:
   - batimetria ultrasonica

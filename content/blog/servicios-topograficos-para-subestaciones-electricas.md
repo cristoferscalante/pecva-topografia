@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-20
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-subestaciones-electricas.png
+image: /images/blog/servicios-topograficos-para-subestaciones-electricas.webp
 seoDescription: "Servicios topográficos para subestaciones eléctricas en Colombia. Nivelación de patios, pórticos de alta tensión y mallas a tierra con Consorcio PECVA."
 keywords:
   - servicios topograficos subestaciones electricas

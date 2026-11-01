@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-14
 readTime: 6 min
-image: /images/blog/topografia-para-parques-eolicos-aerogeneradores.png
+image: /images/blog/topografia-para-parques-eolicos-aerogeneradores.webp
 seoDescription: "Servicios de topografía para parques eólicos en Colombia. Diseño de accesos extrapesados, plataformas de izaje y cimentación de torres con PECVA."
 keywords:
   - topografia para parques eolicos

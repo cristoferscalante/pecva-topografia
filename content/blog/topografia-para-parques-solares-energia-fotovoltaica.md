@@ -5,7 +5,7 @@ category: Energia
 author: Equipo PECVA
 publishedAt: 2026-05-30
 readTime: 6 min
-image: /images/blog/topografia-solar.png
+image: /images/blog/topografia-solar.webp
 seoDescription: Importancia de los levantamientos topograficos y analisis de pendientes en el diseño, hincado de hincas e instalacion de seguidores solares en Colombia.
 keywords:
   - topografia para parques solares

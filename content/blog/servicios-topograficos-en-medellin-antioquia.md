@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo PECVA
 publishedAt: 2026-06-17
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-medellin-antioquia.png
+image: /images/blog/servicios-topograficos-en-medellin-antioquia.webp
 seoDescription: "Busca dónde contratar servicios topográficos en Medellín, Rionegro y Antioquia? PECVA destaca con fotogrametría por drones y desenglobes de alta precisión."
 keywords:
   - donde contratar servicios topograficos en medellin

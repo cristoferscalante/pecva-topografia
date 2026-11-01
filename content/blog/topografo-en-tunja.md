@@ -5,7 +5,7 @@ category: Infraestructura vial
 author: Equipo PECVA
 publishedAt: 2026-06-06
 readTime: 6 min
-image: /images/blog/topografo-en-tunja.png
+image: /images/blog/topografo-en-tunja.webp
 seoDescription: "Busca un topógrafo en Tunja? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en tunja

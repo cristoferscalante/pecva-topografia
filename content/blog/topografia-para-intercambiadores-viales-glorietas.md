@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-08-26
 readTime: 7 min
-image: /images/blog/topografia-para-intercambiadores-viales-glorietas.png
+image: /images/blog/topografia-para-intercambiadores-viales-glorietas.webp
 seoDescription: "Servicios de topografía para intercambiadores viales y glorietas en Colombia. Replanteo de lazos, pasos a desnivel y rasantes complejas con Consorcio PECVA."
 keywords:
   - topografia para intercambiadores viales

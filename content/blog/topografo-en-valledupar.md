@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-06-11
 readTime: 6 min
-image: /images/blog/topografo-en-valledupar.png
+image: /images/blog/topografo-en-valledupar.webp
 seoDescription: "Busca un topógrafo en Valledupar? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en valledupar

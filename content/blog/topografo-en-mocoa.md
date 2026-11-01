@@ -5,7 +5,7 @@ category: Infraestructura vial
 author: Equipo PECVA
 publishedAt: 2026-06-23
 readTime: 6 min
-image: /images/blog/topografo-en-mocoa.png
+image: /images/blog/topografo-en-mocoa.webp
 seoDescription: "Busca un topógrafo en Mocoa? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en mocoa

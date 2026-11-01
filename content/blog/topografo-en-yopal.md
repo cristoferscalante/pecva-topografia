@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-06-09
 readTime: 6 min
-image: /images/blog/topografo-en-yopal.png
+image: /images/blog/topografo-en-yopal.webp
 seoDescription: "Busca un topógrafo en Yopal? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en yopal

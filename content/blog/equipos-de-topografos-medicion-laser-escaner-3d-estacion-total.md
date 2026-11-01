@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-medicion-laser-escaner-3d-estacion-total.png"
+image: "/images/blog/equipos-de-topografos-medicion-laser-escaner-3d-estacion-total.webp"
 seoDescription: "Conozca los mejores equipos de topógrafos para medición láser en Colombia: diferencias entre escáner 3D terrestre y estación total láser para obras civiles y BIM."
 keywords:
   - equipos de topografos laser

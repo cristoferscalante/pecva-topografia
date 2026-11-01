@@ -5,7 +5,7 @@ category: Hidraulica
 author: Equipo PECVA
 publishedAt: 2026-06-05
 readTime: 6 min
-image: /images/blog/topografo-en-cartagena.png
+image: /images/blog/topografo-en-cartagena.webp
 seoDescription: "Busca un topógrafo en Cartagena? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en cartagena

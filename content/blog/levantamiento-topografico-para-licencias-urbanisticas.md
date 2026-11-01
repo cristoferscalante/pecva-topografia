@@ -5,7 +5,7 @@ category: Urbanismo
 author: Equipo PECVA
 publishedAt: 2026-05-24
 readTime: 7 min
-image: /images/services/desenglobes-y-englobes.png
+image: /images/services/desenglobes-y-englobes.webp
 seoDescription: Guia sobre levantamiento topografico para licencias urbanisticas, planos base, restricciones del lote y coordinacion con diseno en Colombia.
 keywords:
   - levantamiento topografico para licencias

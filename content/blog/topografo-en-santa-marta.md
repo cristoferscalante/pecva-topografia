@@ -5,7 +5,7 @@ category: Hidraulica
 author: Equipo PECVA
 publishedAt: 2026-06-19
 readTime: 6 min
-image: /images/blog/topografo-en-santa-marta.png
+image: /images/blog/topografo-en-santa-marta.webp
 seoDescription: "Busca un topógrafo en Santa Marta? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en santa marta

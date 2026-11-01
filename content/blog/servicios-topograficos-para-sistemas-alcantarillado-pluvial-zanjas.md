@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-sistemas-alcantarillado-pluvial-zanjas.png
+image: /images/blog/servicios-topograficos-para-sistemas-alcantarillado-pluvial-zanjas.webp
 seoDescription: "Servicios topográficos para alcantarillado pluvial y redes de drenaje en Colombia. Control milimétrico de pendientes, cotas de batea y zanjas con PECVA."
 keywords:
   - servicios topograficos alcantarillado pluvial

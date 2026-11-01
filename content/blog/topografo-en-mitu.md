@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-06-25
 readTime: 6 min
-image: /images/blog/topografo-en-mitu.png
+image: /images/blog/topografo-en-mitu.webp
 seoDescription: "Busca un topógrafo en Mitú? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en mitú

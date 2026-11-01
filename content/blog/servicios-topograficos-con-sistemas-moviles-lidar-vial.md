@@ -5,7 +5,7 @@ category: Tecnología Avanzada
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 7 min
-image: /images/blog/servicios-topograficos-con-sistemas-moviles-lidar-vial.png
+image: /images/blog/servicios-topograficos-con-sistemas-moviles-lidar-vial.webp
 seoDescription: "Servicios de Mobile Mapping LiDAR vial en Colombia. Cartografía móvil de alta velocidad, inventario de vías y nubes de puntos 3D con PECVA."
 keywords:
   - servicios topograficos mobile mapping

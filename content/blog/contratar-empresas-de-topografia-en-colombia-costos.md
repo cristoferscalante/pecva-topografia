@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-06-10
 readTime: 5 min
-image: /images/blog/contratar-empresas-de-topografia-en-colombia-costos.png
+image: /images/blog/contratar-empresas-de-topografia-en-colombia-costos.webp
 seoDescription: Guía detallada sobre precios, presupuestos y modalidades de contratación de las empresas de topografía en Colombia.
 keywords:
   - empresas de topografia en colombia

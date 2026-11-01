@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-06-16
 readTime: 6 min
-image: /images/blog/topografo-en-san-jose-del-guaviare.png
+image: /images/blog/topografo-en-san-jose-del-guaviare.webp
 seoDescription: "Busca un topógrafo en San José del Guaviare? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en san josé del guaviare

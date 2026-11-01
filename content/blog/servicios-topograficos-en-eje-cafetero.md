@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-06-05
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-eje-cafetero.png
+image: /images/blog/servicios-topograficos-en-eje-cafetero.webp
 seoDescription: "Descubra dónde contratar servicios topográficos en el Eje Cafetero. PECVA ofrece planos para licencias de construcción, desenglobes y control de taludes."
 keywords:
   - donde contratar servicios topograficos en el eje cafetero

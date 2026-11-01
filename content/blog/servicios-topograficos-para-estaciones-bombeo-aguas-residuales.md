@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-estaciones-bombeo-aguas-residuales.png
+image: /images/blog/servicios-topograficos-para-estaciones-bombeo-aguas-residuales.webp
 seoDescription: "Servicios topográficos para estaciones de bombeo EBAR y de agua potable en Colombia. Alineación de bombas, cotas de succión y cámaras húmedas con PECVA."
 keywords:
   - servicios topograficos estaciones de bombeo

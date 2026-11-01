@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-05
 readTime: 6 min
-image: /images/blog/topografia-redes-acueducto-trazado-perfiles.png
+image: /images/blog/topografia-redes-acueducto-trazado-perfiles.webp
 seoDescription: "Maximice la eficiencia de sus redes de presión. Conozca cómo el trazado topográfico y los perfiles longitudinales optimizan las redes de acueducto."
 keywords:
   - topografia para redes de acueducto

@@ -5,7 +5,7 @@ category: Tecnología Avanzada
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 7 min
-image: /images/blog/topografia-con-escaner-laser-terrestre-nubes-puntos-bim.png
+image: /images/blog/topografia-con-escaner-laser-terrestre-nubes-puntos-bim.webp
 seoDescription: "Servicios de escaneo láser terrestre TLS y Scan to BIM en Colombia. Nubes de puntos millonarias y modelado 3D de alta fidelidad con Consorcio PECVA."
 keywords:
   - topografia con escaner laser terrestre

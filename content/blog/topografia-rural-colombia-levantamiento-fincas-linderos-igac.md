@@ -5,7 +5,7 @@ category: "Predial"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/topografia-rural-colombia-levantamiento-fincas-linderos-igac.png"
+image: "/images/blog/topografia-rural-colombia-levantamiento-fincas-linderos-igac.webp"
 seoDescription: "Aprenda cómo realizar levantamientos de topografía rural en Colombia: medición de fincas con GPS geodésico, linderos del IGAC, escrituras y trámites prediales."
 keywords:
   - topografia rural colombia

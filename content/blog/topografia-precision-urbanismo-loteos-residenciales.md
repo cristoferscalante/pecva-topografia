@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-03
 readTime: 6 min
-image: /images/blog/topografia-precision-urbanismo-loteos-residenciales.png
+image: /images/blog/topografia-precision-urbanismo-loteos-residenciales.webp
 seoDescription: "Optimice sus proyectos urbanísticos. Descubra la importancia de la topografía en el diseño de loteos residenciales y el replanteo preciso de calles."
 keywords:
   - topografia para urbanismos y loteos

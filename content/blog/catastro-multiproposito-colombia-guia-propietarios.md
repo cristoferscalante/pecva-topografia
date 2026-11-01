@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-05-30
 readTime: 7 min
-image: /images/blog/catastro-multiproposito.png
+image: /images/blog/catastro-multiproposito.webp
 seoDescription: Que es el Catastro Multiproposito en Colombia, su importancia en la legalizacion de predios, diferencias con el catastro clasico y el rol de la topografia certificada.
 keywords:
   - catastro multiproposito

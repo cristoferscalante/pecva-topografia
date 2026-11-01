@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/topografia-para-presas-relaves-mineros-monitoreo-geotecnico.png
+image: /images/blog/topografia-para-presas-relaves-mineros-monitoreo-geotecnico.webp
 seoDescription: "Servicios de topografía para presas de relaves mineros en Colombia. Monitoreo automatizado con prismas, drones y control de borde libre con Consorcio PECVA."
 keywords:
   - topografia para presas de relaves

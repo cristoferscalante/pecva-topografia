@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-07-27
 readTime: 6 min
-image: /images/blog/como-constituir-medir-servidumbre-paso-topografia.png
+image: /images/blog/como-constituir-medir-servidumbre-paso-topografia.webp
 seoDescription: "Evite disputas de tierras. Conozca los requisitos legales y técnicos para medir y constituir una servidumbre de paso con planos topográficos en Colombia."
 keywords:
   - servidumbre de paso topografia

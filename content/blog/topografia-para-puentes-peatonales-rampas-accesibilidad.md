@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/topografia-para-puentes-peatonales-rampas-accesibilidad.png
+image: /images/blog/topografia-para-puentes-peatonales-rampas-accesibilidad.webp
 seoDescription: "Servicios de topografía para puentes peatonales urbanos en Colombia. Replanteo de rampas accesibles, gálibos viales y estribos con Consorcio PECVA."
 keywords:
   - topografia para puentes peatonales

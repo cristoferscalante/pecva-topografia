@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/topografia-satelital-colombia-receptores-gnss-magna-eco.png"
+image: "/images/blog/topografia-satelital-colombia-receptores-gnss-magna-eco.webp"
 seoDescription: "Aprenda cómo opera la topografía satelital en Colombia: constelaciones GNSS, enlace a la Red MAGNA-ECO del IGAC, correcciones NTRIP y precisiones milimétricas."
 keywords:
   - topografia satelital colombia

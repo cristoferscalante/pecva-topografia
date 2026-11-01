@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/topografia-para-centrales-termoelectricas-biomasa.png
+image: /images/blog/topografia-para-centrales-termoelectricas-biomasa.webp
 seoDescription: "Servicios de topografía industrial para centrales térmicas y biomasa en Colombia. Alineamiento de turbo-generadores, calderas y silos con Consorcio PECVA."
 keywords:
   - topografia para centrales termoelectricas

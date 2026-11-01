@@ -5,7 +5,7 @@ category: Catastro y Legal
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-saneamiento-predial-titulos-baldios.png
+image: /images/blog/servicios-topograficos-para-saneamiento-predial-titulos-baldios.webp
 seoDescription: "Servicios topográficos para clarificación de baldíos y saneamiento de títulos en Colombia. Planos georreferenciados para la ANT y notarías con Consorcio PECVA."
 keywords:
   - servicios topograficos saneamiento predial

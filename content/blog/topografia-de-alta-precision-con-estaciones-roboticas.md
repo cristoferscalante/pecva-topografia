@@ -5,7 +5,7 @@ category: Tecnología Avanzada
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 6 min
-image: /images/blog/topografia-de-alta-precision-con-estaciones-roboticas.png
+image: /images/blog/topografia-de-alta-precision-con-estaciones-roboticas.webp
 seoDescription: "Servicios de topografía con estaciones totales robóticas en Colombia. Máxima velocidad de replanteo y precisión de 1 segundo con Consorcio PECVA."
 keywords:
   - topografia con estaciones roboticas

@@ -5,7 +5,7 @@ category: Hidraulica
 author: Equipo PECVA
 publishedAt: 2026-06-13
 readTime: 6 min
-image: /images/blog/topografo-en-monteria.png
+image: /images/blog/topografo-en-monteria.webp
 seoDescription: "Busca un topógrafo en Montería? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en montería

@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-01
 readTime: 6 min
-image: /images/blog/guia-levantamiento-planimetrico-altimetrico-precision.png
+image: /images/blog/guia-levantamiento-planimetrico-altimetrico-precision.webp
 seoDescription: "¿Necesita un levantamiento planimétrico y altimétrico? Conozca la diferencia entre planimetría y altimetría, sus métodos técnicos y cómo asegurar precisión."
 keywords:
   - levantamiento planimetrico y altimetrico

@@ -5,7 +5,7 @@ category: "Energía y Minería"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/topografos-para-mineria-colombia-control-subterraneo-volumetria.png"
+image: "/images/blog/topografos-para-mineria-colombia-control-subterraneo-volumetria.webp"
 seoDescription: "Descubra las funciones de los topógrafos para minería en Colombia: topografía subterránea de socavón, giroteodolitos, normatividad ANM y cálculo volumétrico."
 keywords:
   - topografos mineria colombia

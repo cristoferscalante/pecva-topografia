@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-06-21
 readTime: 6 min
-image: /images/blog/topografo-en-pasto.png
+image: /images/blog/topografo-en-pasto.webp
 seoDescription: "Busca un topógrafo en Pasto? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en pasto

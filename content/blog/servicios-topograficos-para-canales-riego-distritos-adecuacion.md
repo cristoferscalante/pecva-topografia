@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-08-31
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-canales-riego-distritos-adecuacion.png
+image: /images/blog/servicios-topograficos-para-canales-riego-distritos-adecuacion.webp
 seoDescription: "Servicios topográficos para canales de riego y distritos de riego en Colombia. Nivelación milimétrica de pendientes y diseño de drenajes con PECVA."
 keywords:
   - servicios topograficos canales de riego

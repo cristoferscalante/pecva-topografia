@@ -5,7 +5,7 @@ category: Drones
 author: Equipo PECVA
 publishedAt: 2026-05-16
 readTime: 6 min
-image: /images/services/fotogrametria-con-drones.png
+image: /images/services/fotogrametria-con-drones.webp
 seoDescription: Uso de fotogrametria con drones para seguimiento de obra, reportes visuales, control de avance y comparativos de frentes.
 keywords:
   - drone para seguimiento de obra

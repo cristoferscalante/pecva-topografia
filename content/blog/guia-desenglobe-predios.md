@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-05-14
 readTime: 5 min
-image: /images/services/desenglobes-y-englobes.png
+image: /images/services/desenglobes-y-englobes.webp
 seoDescription: Guia practica sobre desenglobe de predios, aclaracion de areas y soporte topografico para tramites prediales.
 keywords:
   - desenglobe

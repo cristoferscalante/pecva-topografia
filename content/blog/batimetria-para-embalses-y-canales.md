@@ -5,7 +5,7 @@ category: Hidraulica
 author: Equipo PECVA
 publishedAt: 2026-05-19
 readTime: 6 min
-image: /images/services/batimetria.png
+image: /images/services/batimetria.webp
 seoDescription: Aplicaciones de la batimetria en embalses, canales y lagunas para estudios hidraulicos, mantenimiento, dragado y evaluacion ambiental.
 keywords:
   - batimetria

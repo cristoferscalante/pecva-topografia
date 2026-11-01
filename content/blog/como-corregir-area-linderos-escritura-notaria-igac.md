@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-07-22
 readTime: 7 min
-image: /images/blog/como-corregir-area-linderos-escritura-notaria-igac.png
+image: /images/blog/como-corregir-area-linderos-escritura-notaria-igac.webp
 seoDescription: "Solucione errores de escrituras en Colombia. Aprenda a tramitar la rectificación de área y linderos con planos georreferenciados oficiales ante el IGAC."
 keywords:
   - rectificacion de area y linderos

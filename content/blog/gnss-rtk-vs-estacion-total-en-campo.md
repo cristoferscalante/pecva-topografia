@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo PECVA
 publishedAt: 2026-05-22
 readTime: 8 min
-image: /images/services/levantamiento-planimetrico-altimetrico.png
+image: /images/services/levantamiento-planimetrico-altimetrico.webp
 seoDescription: Comparativa entre GNSS RTK y estacion total para levantamientos topograficos, control de obra, visibilidad y precision en campo.
 keywords:
   - gnss rtk

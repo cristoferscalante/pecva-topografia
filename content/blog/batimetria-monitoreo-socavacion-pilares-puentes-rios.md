@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-08
 readTime: 6 min
-image: /images/blog/batimetria-monitoreo-socavacion-pilares-puentes-rios.png
+image: /images/blog/batimetria-monitoreo-socavacion-pilares-puentes-rios.webp
 seoDescription: "Servicios de batimetría para evaluar socavación en puentes sobre ríos en Colombia. Detección de fosas de erosión en cimentaciones con Consorcio PECVA."
 keywords:
   - batimetria socavacion puentes

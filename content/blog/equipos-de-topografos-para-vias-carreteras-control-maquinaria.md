@@ -5,7 +5,7 @@ category: "Infraestructura"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-para-vias-carreteras-control-maquinaria.png"
+image: "/images/blog/equipos-de-topografos-para-vias-carreteras-control-maquinaria.webp"
 seoDescription: "Descubra los equipos de topógrafos para proyectos viales en Colombia: sistemas de guiado 3D para motoniveladoras, estaciones totales y manuales del INVIAS."
 keywords:
   - equipos de topografos para vias

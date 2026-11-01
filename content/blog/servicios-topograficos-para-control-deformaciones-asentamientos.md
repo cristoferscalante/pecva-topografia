@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-08-08
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-control-deformaciones-asentamientos.png
+image: /images/blog/servicios-topograficos-para-control-deformaciones-asentamientos.webp
 seoDescription: "Monitoreo y control topográfico de asentamientos y deformaciones estructurales en Colombia. Detección temprana de movimientos milimétricos con Consorcio PECVA."
 keywords:
   - servicios topograficos control deformaciones

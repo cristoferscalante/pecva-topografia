@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-06-09
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-florencia-caqueta.png
+image: /images/blog/servicios-topograficos-en-florencia-caqueta.webp
 seoDescription: "Descubra dónde contratar servicios topográficos en Florencia y Caquetá. PECVA ofrece planos para titulación de tierras, desenglobes y georreferenciación."
 keywords:
   - donde contratar servicios topograficos en florencia

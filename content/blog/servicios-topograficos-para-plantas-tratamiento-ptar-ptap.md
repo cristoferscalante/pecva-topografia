@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-05
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-plantas-tratamiento-ptar-ptap.png
+image: /images/blog/servicios-topograficos-para-plantas-tratamiento-ptar-ptap.webp
 seoDescription: "Servicios topográficos para plantas de tratamiento PTAR y PTAP en Colombia. Control de cotas de agua, tanques y tuberías de proceso con PECVA."
 keywords:
   - servicios topograficos PTAR PTAP

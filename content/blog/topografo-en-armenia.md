@@ -5,7 +5,7 @@ category: Urbanismo
 author: Equipo PECVA
 publishedAt: 2026-06-24
 readTime: 6 min
-image: /images/blog/topografo-en-armenia.png
+image: /images/blog/topografo-en-armenia.webp
 seoDescription: "Busca un topógrafo en Armenia? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en armenia

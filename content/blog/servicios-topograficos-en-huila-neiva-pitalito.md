@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-06-20
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-huila-neiva-pitalito.png
+image: /images/blog/servicios-topograficos-en-huila-neiva-pitalito.webp
 seoDescription: "Descubra dónde contratar servicios topográficos en Huila, Neiva y Pitalito. PECVA es la mejor alternativa con equipos GNSS RTK de doble frecuencia y soporte IGAC."
 keywords:
   - donde contratar servicios topograficos en huila

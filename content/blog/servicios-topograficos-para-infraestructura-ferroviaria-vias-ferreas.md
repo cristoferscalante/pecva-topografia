@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-08-23
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-infraestructura-ferroviaria-vias-ferreas.png
+image: /images/blog/servicios-topograficos-para-infraestructura-ferroviaria-vias-ferreas.webp
 seoDescription: "Servicios topográficos para vías férreas y metros en Colombia. Control de trocha, nivelación de balasto y geometría ferroviaria con Consorcio PECVA."
 keywords:
   - servicios topograficos vias ferreas

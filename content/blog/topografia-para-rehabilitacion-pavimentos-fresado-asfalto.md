@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-08-20
 readTime: 6 min
-image: /images/blog/topografia-para-rehabilitacion-pavimentos-fresado-asfalto.png
+image: /images/blog/topografia-para-rehabilitacion-pavimentos-fresado-asfalto.webp
 seoDescription: "Servicios de topografía para fresado y repavimentación asfáltica en Colombia. Control de rasantes, espesores y optimización de IRI con Consorcio PECVA."
 keywords:
   - topografia para fresado asfalto

@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-08-17
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-construccion-puentes-viaductos.png
+image: /images/blog/servicios-topograficos-para-construccion-puentes-viaductos.webp
 seoDescription: "Servicios topográficos de alta precisión para puentes y viaductos en Colombia. Control geométrico de estribos, dovelas y pilas con Consorcio PECVA."
 keywords:
   - servicios topograficos para puentes

@@ -5,7 +5,7 @@ category: Catastro y Legal
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 6 min
-image: /images/blog/topografia-para-fideicomisos-desarrollos-inmobiliarios.png
+image: /images/blog/topografia-para-fideicomisos-desarrollos-inmobiliarios.webp
 seoDescription: "Servicios de topografía para fideicomisos y fondos inmobiliarios en Colombia. Validación de áreas vendibles, cesiones y licenciamiento con PECVA."
 keywords:
   - topografia para fideicomisos inmobiliarios

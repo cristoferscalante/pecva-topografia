@@ -5,7 +5,7 @@ category: Energia
 author: Equipo PECVA
 publishedAt: 2026-06-18
 readTime: 6 min
-image: /images/blog/topografo-en-riohacha.png
+image: /images/blog/topografo-en-riohacha.webp
 seoDescription: "Busca un topógrafo en Riohacha? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en riohacha

@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografia-con-drones-sensores-lidar-fotogrametria.png"
+image: "/images/blog/equipos-de-topografia-con-drones-sensores-lidar-fotogrametria.webp"
 seoDescription: "Conozca los mejores equipos de topografía con drones en Colombia: ventajas de sensores RGB, cámaras con obturador mecánico, LiDAR aéreo y reglamentación RAC."
 keywords:
   - equipos de topografia con drones

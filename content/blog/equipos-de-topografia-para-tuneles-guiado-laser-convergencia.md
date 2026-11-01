@@ -5,7 +5,7 @@ category: "Infraestructura"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografia-para-tuneles-guiado-laser-convergencia.png"
+image: "/images/blog/equipos-de-topografia-para-tuneles-guiado-laser-convergencia.webp"
 seoDescription: "Conozca los equipos de topografía para túneles viales en Colombia: estaciones robotizadas, dianas de convergencia, perfilómetros láser y tolerancias de calado."
 keywords:
   - equipos de topografia para tuneles

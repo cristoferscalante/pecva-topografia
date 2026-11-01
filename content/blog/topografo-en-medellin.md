@@ -5,7 +5,7 @@ category: Urbanismo
 author: Equipo PECVA
 publishedAt: 2026-06-02
 readTime: 6 min
-image: /images/blog/topografo-en-medellin.png
+image: /images/blog/topografo-en-medellin.webp
 seoDescription: "Busca un topógrafo en Medellín? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en medellín

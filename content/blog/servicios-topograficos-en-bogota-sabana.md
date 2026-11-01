@@ -5,7 +5,7 @@ category: Urbanismo
 author: Equipo PECVA
 publishedAt: 2026-06-19
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-bogota-sabana.png
+image: /images/blog/servicios-topograficos-en-bogota-sabana.webp
 seoDescription: "Encuentre dónde contratar servicios topográficos en Bogotá, Chía, Cajicá y la Sabana. PECVA ofrece comisiones de obra y planos aprobados para curadurías."
 keywords:
   - donde contratar servicios topograficos en bogota

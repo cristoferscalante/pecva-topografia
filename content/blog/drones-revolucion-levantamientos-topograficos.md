@@ -5,7 +5,7 @@ category: Tecnologia
 author: Equipo PECVA
 publishedAt: 2026-05-18
 readTime: 7 min
-image: /images/blog/drones-revolucion.png
+image: /images/blog/drones-revolucion.webp
 seoDescription: Articulo sobre fotogrametria con drones para levantamientos topograficos, ortofotos y modelos digitales de terreno.
 keywords:
   - fotogrametria con drones

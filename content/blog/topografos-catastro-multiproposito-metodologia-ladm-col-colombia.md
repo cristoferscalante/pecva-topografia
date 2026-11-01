@@ -5,7 +5,7 @@ category: "Catastro y Legal"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/topografos-catastro-multiproposito-metodologia-ladm-col-colombia.png"
+image: "/images/blog/topografos-catastro-multiproposito-metodologia-ladm-col-colombia.webp"
 seoDescription: "Aprenda cómo los topógrafos aplican la metodología LADM-COL en el Catastro Multipropósito en Colombia: captura masiva, validación en QGIS y normas del IGAC."
 keywords:
   - topografos catastro multiproposito

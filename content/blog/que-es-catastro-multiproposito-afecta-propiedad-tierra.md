@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-24
 readTime: 6 min
-image: /images/blog/que-es-catastro-multiproposito-afecta-propiedad-tierra.png
+image: /images/blog/que-es-catastro-multiproposito-afecta-propiedad-tierra.webp
 seoDescription: "Entienda la actualización catastral en Colombia. Conozca qué es el Catastro Multipropósito y cómo preparar sus predios con planos georreferenciados."
 keywords:
   - catastro multipropósito que es

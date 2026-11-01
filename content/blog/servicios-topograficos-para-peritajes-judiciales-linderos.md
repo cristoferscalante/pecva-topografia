@@ -5,7 +5,7 @@ category: Catastro y Legal
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-peritajes-judiciales-linderos.png
+image: /images/blog/servicios-topograficos-para-peritajes-judiciales-linderos.webp
 seoDescription: "Servicios topográficos para peritajes judiciales en Colombia. Dictámenes periciales de linderos, servidumbres y ocupaciones con Consorcio PECVA."
 keywords:
   - servicios topograficos peritajes judiciales

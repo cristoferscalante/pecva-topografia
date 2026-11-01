@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-07
 readTime: 6 min
-image: /images/blog/como-contratar-comisiones-topograficas-control-obra.png
+image: /images/blog/como-contratar-comisiones-topograficas-control-obra.webp
 seoDescription: "Optimice sus presupuestos de construcción. Aprenda qué buscar al contratar una comisión topográfica por días y los roles indispensables de campo."
 keywords:
   - contratar comisiones topográficas por dias

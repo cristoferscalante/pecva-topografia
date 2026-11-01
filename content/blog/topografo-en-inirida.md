@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-06-15
 readTime: 6 min
-image: /images/blog/topografo-en-inirida.png
+image: /images/blog/topografo-en-inirida.webp
 seoDescription: "Busca un topógrafo en Inírida? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en inírida

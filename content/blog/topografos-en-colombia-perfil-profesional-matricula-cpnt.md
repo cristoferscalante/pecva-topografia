@@ -5,7 +5,7 @@ category: "Catastro y Legal"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/topografos-en-colombia-perfil-profesional-matricula-cpnt.png"
+image: "/images/blog/topografos-en-colombia-perfil-profesional-matricula-cpnt.webp"
 seoDescription: "Guía completa sobre topógrafos en Colombia: requisitos del CPNT, funciones en obras y catastro, responsabilidades legales y claves para contratar profesionales idóneos."
 keywords:
   - topografos

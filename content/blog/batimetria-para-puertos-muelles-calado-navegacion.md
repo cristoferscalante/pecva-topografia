@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-02
 readTime: 7 min
-image: /images/blog/batimetria-para-puertos-muelles-calado-navegacion.png
+image: /images/blog/batimetria-para-puertos-muelles-calado-navegacion.webp
 seoDescription: "Servicios de batimetría portuaria en Colombia. Medición de calados, dragados y perfiles subacuáticos en muelles y canales de acceso con Consorcio PECVA."
 keywords:
   - batimetria para puertos y muelles

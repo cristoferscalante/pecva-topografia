@@ -5,7 +5,7 @@ category: Catastro y Legal
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-resguardos-tierras-colectivas.png
+image: /images/blog/servicios-topograficos-para-resguardos-tierras-colectivas.webp
 seoDescription: "Servicios topográficos para delimitación de resguardos y tierras colectivas en Colombia. Cartografía rural y clarificación de baldíos con Consorcio PECVA."
 keywords:
   - servicios topograficos resguardos indigenas

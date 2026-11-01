@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-08-05
 readTime: 7 min
-image: /images/blog/topografia-para-estructuras-metalicas-montaje-industrial.png
+image: /images/blog/topografia-para-estructuras-metalicas-montaje-industrial.webp
 seoDescription: "Servicios de topografía para montaje de estructuras metálicas. Replanteo de pernos de anclaje, aplomado de columnas y tolerancias milimétricas en Colombia."
 keywords:
   - topografia para estructuras metalicas

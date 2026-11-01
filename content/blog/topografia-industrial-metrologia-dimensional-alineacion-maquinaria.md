@@ -5,7 +5,7 @@ category: "Obras Civiles"
 author: "Equipo PECVA"
 publishedAt: "2026-10-26"
 readTime: "8 min"
-image: "/images/blog/topografia-industrial-metrologia-dimensional-alineacion-maquinaria.png"
+image: "/images/blog/topografia-industrial-metrologia-dimensional-alineacion-maquinaria.webp"
 seoDescription: "Conozca los métodos de topografía industrial en Colombia: alineación de ejes con Laser Tracker, nivelación de bancadas de motores y tolerancias micrométricas."
 keywords:
   - topografia industrial colombia

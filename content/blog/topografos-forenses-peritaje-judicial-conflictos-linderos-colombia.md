@@ -5,7 +5,7 @@ category: "Catastro y Legal"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/topografos-forenses-peritaje-judicial-conflictos-linderos-colombia.png"
+image: "/images/blog/topografos-forenses-peritaje-judicial-conflictos-linderos-colombia.webp"
 seoDescription: "Conozca cómo los topógrafos forenses resuelven conflictos de linderos en Colombia: peritajes para juzgados civiles, deslinde, servidumbres y Código General del Proceso."
 keywords:
   - topografos forenses

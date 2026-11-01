@@ -5,7 +5,7 @@ category: Infraestructura vial
 author: Equipo PECVA
 publishedAt: 2026-05-21
 readTime: 7 min
-image: /images/services/topografia-para-vias.png
+image: /images/services/topografia-para-vias.webp
 seoDescription: Buenas practicas de topografia vial para corredores, secciones transversales, control de movimiento de tierras y replanteo de obra.
 keywords:
   - topografia vial

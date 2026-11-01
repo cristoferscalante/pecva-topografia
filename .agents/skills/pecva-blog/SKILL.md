@@ -36,7 +36,7 @@ category: "Obras Civiles | Infraestructura | Hidráulica | Energía y Minería |
 author: "Equipo PECVA"
 publishedAt: "AAAA-MM-DD" # OBLIGATORIO: Fecha real del día del push/publicación. PROHIBIDO fechas futuras.
 readTime: "7 min"
-image: "/images/blog/<slug>.png"
+image: "/images/blog/<slug>.webp"
 seoDescription: "Meta descripción con palabra clave al inicio, propuesta de valor y llamada a la acción."
 keywords:
   - palabra clave principal
@@ -69,14 +69,21 @@ relatedServiceSlugs:
 
 ---
 
-## 4. Estándares de Imágenes Hiperrealistas y Optimización Web
+## 4. Estándares de Imágenes Hiperrealistas y Optimización Automática WebP
 
 * **Unicidad**: Cero imágenes duplicadas o reutilizadas. Cada artículo debe contar con una fotografía o render hiperrealista original que represente fielmente la temática.
+* **Formato Estándar**: **WebP (`.webp`)** para máxima velocidad de carga Core Web Vitals.
 * **Proporción y Dimensiones**: Relación **16:9** horizontal estándar (**1200 x 675 píxeles**), ideal para banners de cabecera y tarjetas de previsualización (OG/Twitter).
 * **Peso y Compresión**:
-  * Las imágenes deben optimizarse para que pesen **menos de 200 KB** (idealmente entre 70 KB y 150 KB).
-  * Si se procesan con Python (PIL) o sharp, guardar con compresión optimizada (`optimize=True`, calidad 80-85%) en formato PNG o WebP.
-  * El nombre de archivo debe coincidir con el slug: `public/images/blog/<slug>.png`.
+  * Las imágenes deben pesar estrictamente **menos de 185 KB** (idealmente entre 90 KB y 150 KB).
+  * El nombre de archivo debe coincidir con el slug: `public/images/blog/<slug>.webp`.
+* **Automatización con Script / Librería**:
+  * Se cuenta con el script automatizado `scripts/optimize_images.py`.
+  * Ejecutar en cualquier momento o al agregar nuevos artículos:
+    ```bash
+    npm run optimize:images
+    ```
+  * El script automáticamente detecta imágenes nuevas (.png, .jpg o .webp no optimizadas), las escala a 1200x675 px con filtro Lanczos, aplica compresión WebP adaptativa hasta situarlas por debajo de 185 KB, limpia los archivos temporales/pesados y sincroniza los frontmatter `.md`.
 
 ---
 

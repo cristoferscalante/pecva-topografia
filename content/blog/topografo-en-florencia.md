@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-06-08
 readTime: 6 min
-image: /images/blog/topografo-en-florencia.png
+image: /images/blog/topografo-en-florencia.webp
 seoDescription: "Busca un topógrafo en Florencia? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en florencia

@@ -5,7 +5,7 @@ category: Tecnología Avanzada
 author: Equipo PECVA
 publishedAt: 2026-09-21
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-modelado-bim-infraestructura.png
+image: /images/blog/servicios-topograficos-para-modelado-bim-infraestructura.webp
 seoDescription: "Servicios topográficos para flujos BIM y gemelos digitales en Colombia. Integración de superficies y coordenadas georreferenciadas con PECVA."
 keywords:
   - servicios topograficos modelado BIM

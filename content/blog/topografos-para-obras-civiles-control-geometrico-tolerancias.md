@@ -5,7 +5,7 @@ category: "Obras Civiles"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/topografos-para-obras-civiles-control-geometrico-tolerancias.png"
+image: "/images/blog/topografos-para-obras-civiles-control-geometrico-tolerancias.webp"
 seoDescription: "Aprenda cómo los topógrafos para obras civiles garantizan la estabilidad de estructuras en Colombia: control geométrico, plomeo, ejes y tolerancias NSR-10."
 keywords:
   - topografos para obras civiles

@@ -5,7 +5,7 @@ category: Hidraulica
 author: Equipo PECVA
 publishedAt: 2026-06-15
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-ibague-tolima.png
+image: /images/blog/servicios-topograficos-en-ibague-tolima.webp
 seoDescription: "Busca dónde contratar servicios topográficos en Ibagué y Tolima? PECVA provee levantamientos para redes hidráulicas, vías y movimiento de tierras."
 keywords:
   - donde contratar servicios topograficos en ibague

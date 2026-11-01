@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-07-02
 readTime: 7 min
-image: /images/blog/como-hacer-desenglobe-lote-rural-colombia.png
+image: /images/blog/como-hacer-desenglobe-lote-rural-colombia.webp
 seoDescription: "Aprenda cómo hacer un desenglobe de lote rural en Colombia. Conozca los requisitos del IGAC, linderos georreferenciados y el papel de la topografía."
 keywords:
   - desenglobe de lote rural

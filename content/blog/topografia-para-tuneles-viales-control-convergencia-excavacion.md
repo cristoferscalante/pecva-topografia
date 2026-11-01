@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 8 min
-image: /images/blog/topografia-para-tuneles-viales-control-convergencia-excavacion.png
+image: /images/blog/topografia-para-tuneles-viales-control-convergencia-excavacion.webp
 seoDescription: "Servicios de topografía para túneles viales en Colombia. Guiado láser subterráneo, control de convergencia y calado milimétrico con Consorcio PECVA."
 keywords:
   - topografia para tuneles viales

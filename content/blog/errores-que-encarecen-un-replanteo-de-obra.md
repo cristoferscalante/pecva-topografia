@@ -5,7 +5,7 @@ category: Control de obra
 author: Equipo PECVA
 publishedAt: 2026-05-23
 readTime: 6 min
-image: /images/services/comisiones-topograficas.png
+image: /images/services/comisiones-topograficas.webp
 seoDescription: Errores comunes en replanteo de obra, control topografico y verificacion de ejes, niveles y referencias para proyectos de construccion.
 keywords:
   - replanteo de obra

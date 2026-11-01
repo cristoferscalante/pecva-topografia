@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-23
 readTime: 6 min
-image: /images/blog/topografia-minera-subterranea-control-tuneles-volumenes.png
+image: /images/blog/topografia-minera-subterranea-control-tuneles-volumenes.webp
 seoDescription: "Garantice la seguridad y precisión en excavaciones. Conozca el control topográfico subterráneo en minería, trazado de túneles y cálculo de volúmenes."
 keywords:
   - topografia de minas

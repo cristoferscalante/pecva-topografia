@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-12
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-lineas-transmision-electrica-torres.png
+image: /images/blog/servicios-topograficos-para-lineas-transmision-electrica-torres.webp
 seoDescription: "Servicios topográficos para líneas de transmisión eléctrica en Colombia. Trazado de corredores, catenarias y replanteo de torres con Consorcio PECVA."
 keywords:
   - servicios topograficos lineas transmision electrica

@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-06-18
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-cali-valle-del-cauca.png
+image: /images/blog/servicios-topograficos-en-cali-valle-del-cauca.webp
 seoDescription: "Busca dónde contratar servicios topográficos en Cali y Valle del Cauca? PECVA ofrece levantamiento de linderos, desenglobes y batimetrías con la mayor precisión."
 keywords:
   - donde contratar servicios topograficos en cali

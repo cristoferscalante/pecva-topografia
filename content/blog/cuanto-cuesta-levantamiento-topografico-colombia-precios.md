@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-07-20
 readTime: 6 min
-image: /images/blog/cuanto-cuesta-levantamiento-topografico-colombia-precios.png
+image: /images/blog/cuanto-cuesta-levantamiento-topografico-colombia-precios.webp
 seoDescription: "Conozca los precios y tarifas de un levantamiento topográfico en Colombia. Factores que determinan el costo por hectárea, lote rural y urbano."
 keywords:
   - precio levantamiento topografico

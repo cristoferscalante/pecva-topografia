@@ -5,7 +5,7 @@ category: Gestion predial
 author: Equipo PECVA
 publishedAt: 2026-06-10
 readTime: 6 min
-image: /images/blog/topografo-en-popayan.png
+image: /images/blog/topografo-en-popayan.webp
 seoDescription: "Busca un topógrafo en Popayán? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en popayán

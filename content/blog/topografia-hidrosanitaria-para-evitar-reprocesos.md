@@ -5,7 +5,7 @@ category: Redes hidrosanitarias
 author: Equipo PECVA
 publishedAt: 2026-05-17
 readTime: 7 min
-image: /images/services/topografia-redes-hidrosanitarias.png
+image: /images/services/topografia-redes-hidrosanitarias.webp
 seoDescription: Claves de topografia para redes hidrosanitarias, pendientes, cajas, pozos y coordinacion de diseno para reducir reprocesos.
 keywords:
   - topografia hidrosanitaria

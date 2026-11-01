@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/software-para-topografos-colombia-civil3d-nubes-puntos-sig.png"
+image: "/images/blog/software-para-topografos-colombia-civil3d-nubes-puntos-sig.webp"
 seoDescription: "Descubra el mejor software para topógrafos en Colombia: herramientas clave para post-proceso GNSS, diseño en Civil 3D, fotogrametría y modelado de nubes de puntos."
 keywords:
   - software para topografos

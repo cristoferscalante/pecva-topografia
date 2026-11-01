@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-08-03
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-cimentaciones-profundas-pilotes.png
+image: /images/blog/servicios-topograficos-para-cimentaciones-profundas-pilotes.webp
 seoDescription: "Optimice sus obras con servicios topográficos para cimentaciones profundas. Control milimétrico de verticalidad, replanteo de pilotes y pantallas de contención en Colombia."
 keywords:
   - servicios topograficos para cimentaciones

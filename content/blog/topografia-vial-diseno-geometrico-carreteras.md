@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-06
 readTime: 7 min
-image: /images/blog/topografia-vial-diseno-geometrico-carreteras.png
+image: /images/blog/topografia-vial-diseno-geometrico-carreteras.webp
 seoDescription: "Optimice sus proyectos viales. Conozca cómo la topografía vial y el control de taludes reducen costos en pavimentación y movimiento de tierras."
 keywords:
   - topografia vial

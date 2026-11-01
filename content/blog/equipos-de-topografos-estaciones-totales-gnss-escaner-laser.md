@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-estaciones-totales-gnss-escaner-laser.png"
+image: "/images/blog/equipos-de-topografos-estaciones-totales-gnss-escaner-laser.webp"
 seoDescription: "Descubra los principales equipos de topógrafos en Colombia: especificaciones técnicas de estaciones totales, sistemas GNSS RTK y escáneres láser terrestres."
 keywords:
   - equipos de topografos

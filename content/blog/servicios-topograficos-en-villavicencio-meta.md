@@ -5,7 +5,7 @@ category: Predial
 author: Equipo PECVA
 publishedAt: 2026-06-07
 readTime: 6 min
-image: /images/blog/servicios-topograficos-en-villavicencio-meta.png
+image: /images/blog/servicios-topograficos-en-villavicencio-meta.webp
 seoDescription: "Busca dónde contratar servicios topográficos en Villavicencio y el Meta? PECVA ofrece levantamiento de grandes fincas y parcelaciones con drones y GPS."
 keywords:
   - donde contratar servicios topograficos en villavicencio

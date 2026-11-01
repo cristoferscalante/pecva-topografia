@@ -5,7 +5,7 @@ category: "Obras Civiles"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/comision-de-topografos-en-colombia-estructura-rendimiento-costos.png"
+image: "/images/blog/comision-de-topografos-en-colombia-estructura-rendimiento-costos.webp"
 seoDescription: "Descubra cómo opera una comisión de topógrafos en Colombia: composición de la cuadrilla, equipos, rendimientos por hectárea y factores de costo por día o mes."
 keywords:
   - comision de topografos

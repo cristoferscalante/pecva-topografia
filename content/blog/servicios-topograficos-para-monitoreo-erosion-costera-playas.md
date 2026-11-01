@@ -5,7 +5,7 @@ category: Hidráulica
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 8 min
-image: /images/blog/servicios-topograficos-para-monitoreo-erosion-costera-playas.png
+image: /images/blog/servicios-topograficos-para-monitoreo-erosion-costera-playas.webp
 seoDescription: "Servicios topográficos y batimetría para erosión costera en Colombia. Monitoreo de playas, espolones y línea de costa con Consorcio PECVA."
 keywords:
   - servicios topograficos erosion costera

@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-08-11
 readTime: 6 min
-image: /images/blog/topografia-para-pisos-industriales-nivelacion-laser.png
+image: /images/blog/topografia-para-pisos-industriales-nivelacion-laser.webp
 seoDescription: "Servicios de topografía para pisos industriales en Colombia. Evaluación de números F (FF/FL), nivelación láser y planicidad en centros logísticos con PECVA."
 keywords:
   - topografia para pisos industriales

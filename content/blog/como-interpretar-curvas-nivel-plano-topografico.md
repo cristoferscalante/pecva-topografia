@@ -5,7 +5,7 @@ category: Tecnología
 author: Equipo PECVA
 publishedAt: 2026-07-29
 readTime: 6 min
-image: /images/blog/como-interpretar-curvas-nivel-plano-topografico.png
+image: /images/blog/como-interpretar-curvas-nivel-plano-topografico.webp
 seoDescription: "Aprenda a leer planos topográficos. Guía sencilla para interpretar curvas de nivel, pendientes y formas del relieve en sus terrenos y proyectos civiles."
 keywords:
   - curvas de nivel topografia

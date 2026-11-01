@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-28
 readTime: 6 min
-image: /images/blog/topografia-solar-replanteo-montaje-parques-fotovoltaicos.png
+image: /images/blog/topografia-solar-replanteo-montaje-parques-fotovoltaicos.webp
 seoDescription: "Optimice el rendimiento de sus paneles. Conozca cómo la topografía solar de alta precisión asegura el correcto hincado y alineación de estructuras fotovoltaicas."
 keywords:
   - topografia para paneles solares

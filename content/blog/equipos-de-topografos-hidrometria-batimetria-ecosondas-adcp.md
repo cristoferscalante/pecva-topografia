@@ -5,7 +5,7 @@ category: "Hidráulica"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/equipos-de-topografos-hidrometria-batimetria-ecosondas-adcp.png"
+image: "/images/blog/equipos-de-topografos-hidrometria-batimetria-ecosondas-adcp.webp"
 seoDescription: "Conozca los equipos de topógrafos para hidrometría y batimetría en Colombia: ecosondas, perfiladores ADCP, GPS náutico y medición precisa de fondos acuáticos."
 keywords:
   - equipos de topografos batimetria

@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-06-17
 readTime: 6 min
-image: /images/blog/topografo-en-neiva.png
+image: /images/blog/topografo-en-neiva.webp
 seoDescription: "Busca un topógrafo en Neiva? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en neiva

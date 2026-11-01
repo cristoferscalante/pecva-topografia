@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-16
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-lineas-gasoductos-oleoductos.png
+image: /images/blog/servicios-topograficos-para-lineas-gasoductos-oleoductos.webp
 seoDescription: "Servicios topográficos para gasoductos y oleoductos en Colombia. Control de franjas de derecho de vía, zanjado y cruces dirigidos con Consorcio PECVA."
 keywords:
   - servicios topograficos para gasoductos

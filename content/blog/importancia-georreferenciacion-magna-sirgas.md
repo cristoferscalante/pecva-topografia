@@ -5,7 +5,7 @@ category: Georreferenciacion
 author: Equipo PECVA
 publishedAt: 2026-05-20
 readTime: 6 min
-image: /images/services/georreferenciacion-magna-sirgas.png
+image: /images/services/georreferenciacion-magna-sirgas.webp
 seoDescription: Guia sobre la importancia de la georreferenciacion MAGNA-SIRGAS en Colombia y su impacto en precision, trazabilidad y cumplimiento tecnico.
 keywords:
   - magna sirgas

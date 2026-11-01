@@ -5,7 +5,7 @@ category: Infraestructura vial
 author: Equipo PECVA
 publishedAt: 2026-06-25
 readTime: 6 min
-image: /images/blog/topografo-en-ibague.png
+image: /images/blog/topografo-en-ibague.webp
 seoDescription: "Busca un topógrafo en Ibagué? PECVA ofrece levantamientos catastrales, georreferenciación oficial IGAC y comisiones de obra de alta precisión."
 keywords:
   - topografo en ibagué

@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-09-23
 readTime: 7 min
-image: /images/blog/servicios-topograficos-para-redes-gas-natural-domiciliario.png
+image: /images/blog/servicios-topograficos-para-redes-gas-natural-domiciliario.webp
 seoDescription: "Servicios topográficos para redes de gas natural domiciliario en Colombia. Georreferenciación de tuberías de polietileno, válvulas y planos GIS con PECVA."
 keywords:
   - servicios topograficos gas natural domiciliario

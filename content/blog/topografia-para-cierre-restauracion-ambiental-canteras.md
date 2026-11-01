@@ -5,7 +5,7 @@ category: Energía y Minería
 author: Equipo PECVA
 publishedAt: 2026-09-18
 readTime: 6 min
-image: /images/blog/topografia-para-cierre-restauracion-ambiental-canteras.png
+image: /images/blog/topografia-para-cierre-restauracion-ambiental-canteras.webp
 seoDescription: "Servicios de topografía para restauración y cierre de canteras en Colombia. Modelado 3D, terrazas de revegetación y control ambiental con Consorcio PECVA."
 keywords:
   - topografia para cierre de canteras

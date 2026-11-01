@@ -5,7 +5,7 @@ category: Obras Civiles
 author: Equipo PECVA
 publishedAt: 2026-08-14
 readTime: 6 min
-image: /images/blog/servicios-topograficos-para-demoliciones-excavaciones-masivas.png
+image: /images/blog/servicios-topograficos-para-demoliciones-excavaciones-masivas.webp
 seoDescription: "Servicios topográficos para excavaciones masivas y demoliciones en Colombia. Cubicaciones de tierra precisas y monitoreo de predios vecinos con PECVA."
 keywords:
   - servicios topograficos excavaciones masivas

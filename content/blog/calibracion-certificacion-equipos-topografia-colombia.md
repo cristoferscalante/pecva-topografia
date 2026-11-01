@@ -5,7 +5,7 @@ category: "Tecnología Avanzada"
 author: "Equipo PECVA"
 publishedAt: "2026-09-24"
 readTime: "8 min"
-image: "/images/blog/calibracion-certificacion-equipos-topografia-colombia.png"
+image: "/images/blog/calibracion-certificacion-equipos-topografia-colombia.webp"
 seoDescription: "Aprenda todo sobre la calibración de equipos de topografía en Colombia: certificados válidos, pruebas de colimador, baselíneas EDM y exigencias en pliegos de obra."
 keywords:
   - calibracion equipos topografia

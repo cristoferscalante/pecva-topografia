@@ -5,7 +5,7 @@ category: Infraestructura
 author: Equipo PECVA
 publishedAt: 2026-07-04
 readTime: 6 min
-image: /images/blog/topografia-hidrosanitaria-control-pendientes-alcantarillados.png
+image: /images/blog/topografia-hidrosanitaria-control-pendientes-alcantarillados.webp
 seoDescription: "Asegure la vida útil de sus redes sanitarias. Conozca cómo la topografía hidrosanitaria previene el estancamiento de aguas mediante el control de pendientes."
 keywords:
   - topografia hidrosanitaria
